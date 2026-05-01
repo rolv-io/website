@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rolv - AI-assisted data analysis for science</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <!-- Using inline SVG for easy color control on dark background -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="32" preserveAspectRatio="xMidYMid meet">
+                    <g transform="matrix(1.6794,0,0,2.27631,188.384,-1051.21)">
+                        <ellipse cx="192.698" cy="686.728" rx="304.871" ry="224.925" fill="none"/>
+                    </g>
+                    <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
+                        <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
+                    </g>
+                </svg>
+                rolv
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <!-- <a href="#pricing">Pricing</a> -->
+                <a href="page.html?md=contact">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Data insights at<br>your command</h1>
+            <p class="subtitle">Elevate your data analysis with our AI-assistant for science. Execute data analysis workflows right on your own computer.</p>
+            <button class="btn btn-primary" id="primary-download-btn">
+                Download App<span id="os-name"></span>
+            </button>
+            <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                Free for basic use. No credit card required.
+            </p>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="grid">
+            <div class="card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                    </svg>                      
+                </div>
+                <h3>Local Models Compatible</h3>
+                <p>Compatible with local AI models for privacy-first analysis. A subscription unlocks access to optimized cloud LLMs and our premium recipe database.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+                    </svg>                      
+                </div>
+                <h3>Data Graph & Recipes</h3>
+                <p>Build complex analytical workflows. Use our models to get data analysis workflows for your specific scientific problems.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>                      
+                </div>
+                <h3>Data & Web Search</h3>
+                <p>Execute AI-assisted data, literature, and patent research seamlessly within the unified agentic interface.</p>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" style="margin-top: 8rem; text-align: center; display: none;">
+            <h2>Simple, transparent pricing</h2>
+            <p>Start for free, upgrade when you need cloud compute and advanced recipes.</p>
+            
+            <div class="pricing-grid">
+                <!-- Free Tier -->
+                <div class="card" style="text-align: left;">
+                    <h3>Free</h3>
+                    <div class="price">$0<span> / month</span></div>
+                    <ul class="pricing-features">
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Local LLM models</li>
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Base recipes</li>
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Complete privacy</li>
+                    </ul>
+                    <button class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Download App</button>
+                </div>
+                
+                <!-- Pro Tier -->
+                <div class="card" style="text-align: left; border-color: var(--accent); position: relative;">
+                    <div style="position: absolute; top: -12px; right: 24px; background: var(--accent); color: white; padding: 2px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">$10<span> / month</span></div>
+                    <ul class="pricing-features">
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> 10,000 cloud credits</li>
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Premium recipe DB</li>
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Optimized cloud LLM models</li>
+                    </ul>
+                    <a href="page.html?md=contact" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Subscribe in App</a>
+                </div>
+
+                <!-- Pro+ Tier -->
+                <div class="card" style="text-align: left;">
+                    <h3>Pro+</h3>
+                    <div class="price">$20<span> / month</span></div>
+                    <ul class="pricing-features">
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> 25,000 cloud credits</li>
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Premium recipe DB</li>
+                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Optimized cloud LLM models</li>
+                    </ul>
+                    <a href="page.html?md=contact" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Subscribe in App</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="24" preserveAspectRatio="xMidYMid meet">
+                        <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
+                            <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    rolv
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="page.html?md=contact">Contact Us</a>
+                        <span style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 1rem;">
+                            rolv technologies LLC<br>
+                            hello@rolv.io
+                        </span>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="page.html?md=terms">Terms of Service</a>
+                        <a href="page.html?md=privacy">Privacy Policy</a>
+                        <a href="page.html?md=refund">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 4rem; font-size: 0.85rem; color: var(--text-secondary);">
+                Documentation is built into the app — access it from the sidebar after installing.<br>
+                &copy; 2026 rolv technologies LLC. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
