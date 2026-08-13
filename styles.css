@@ -103,6 +103,52 @@ nav {
   margin: 0 auto 3rem auto;
 }
 
+.download-alts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.download-alts[hidden] {
+  display: none;
+}
+
+.download-alt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.download-alt:hover {
+  color: var(--text-primary);
+  background: var(--surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.download-note {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.download-note a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.download-note a:hover {
+  color: var(--accent-hover);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
