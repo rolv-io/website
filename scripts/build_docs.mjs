@@ -154,7 +154,7 @@ function buildDocPage(doc, index) {
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=3">
 </head>
 <body>
     <div class="container">
