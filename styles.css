@@ -19,6 +19,8 @@
 
 /* Subtle custom scrollbar matching across all pages */
 html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
   scrollbar-color: #232738 #0E1017;
 }
 
