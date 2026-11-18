@@ -1,0 +1,1031 @@
+{
+  "posts": [
+    {
+      "audience": "everyone",
+      "audience_before_archived": null,
+      "canonical_url": "https://biodatahacks.substack.com/p/why-we-must-develop-and-practice",
+      "default_comment_sort": null,
+      "editor_v2": false,
+      "exempt_from_archive_paywall": false,
+      "free_unlock_required": false,
+      "id": 222710362,
+      "podcast_art_url": null,
+      "podcast_duration": null,
+      "podcast_preview_upload_id": null,
+      "podcast_upload_id": null,
+      "podcast_url": null,
+      "post_date": "2026-10-30T22:08:37.934Z",
+      "updated_at": "2026-11-09T08:46:10.670Z",
+      "publication_id": 10168527,
+      "search_engine_description": null,
+      "search_engine_title": null,
+      "section_id": 490538,
+      "should_send_free_preview": false,
+      "show_guest_bios": true,
+      "slug": "why-we-must-develop-and-practice",
+      "social_title": null,
+      "subtitle": "Preserve your cognitive muscles, don\u2019t offload your your critical thinking and reasoning to AI",
+      "teaser_post_eligible": true,
+      "title": "Why we must develop and practice meta-skills in the age of AI",
+      "type": "newsletter",
+      "video_upload_id": null,
+      "write_comment_permissions": "everyone",
+      "meter_type": "none",
+      "live_stream_id": null,
+      "is_published": true,
+      "restacks": 3,
+      "reactions": {
+        "\u2764": 0
+      },
+      "top_exclusions": [],
+      "pins": [],
+      "section_pins": [],
+      "has_shareable_clips": false,
+      "previous_post_slug": null,
+      "next_post_slug": null,
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!gFCh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png",
+      "cover_image_is_square": false,
+      "cover_image_is_explicit": false,
+      "videoUpload": null,
+      "podcastFields": {
+        "post_id": 222710362,
+        "podcast_episode_number": null,
+        "podcast_season_number": null,
+        "podcast_episode_type": null,
+        "should_syndicate_to_other_feed": null,
+        "syndicate_to_section_id": null,
+        "hide_from_feed": false,
+        "free_podcast_url": null,
+        "free_podcast_duration": null,
+        "preview_contains_ad": false,
+        "was_imported_self_serve_sync": false,
+        "draft_free_podcast_url": null,
+        "draft_free_podcast_duration": null
+      },
+      "podcastUpload": null,
+      "podcastPreviewUpload": null,
+      "voiceover_upload_id": null,
+      "voiceoverUpload": null,
+      "has_voiceover": false,
+      "description": "Preserve your cognitive muscles, don\u2019t offload your your critical thinking and reasoning to AI",
+      "body_html": "<p>If you write code or analyze data, you are living through the greatest cognitive offloading experiment in human history. But away from the headlines, a much more personal crisis is playing out on our monitors. It\u2019s happening in code reviews, design docs, and troubleshooting sessions: <strong>our core mental muscles are starting to rust. Or worse, for the younger generation, these muscles may never develop as AI removes friction and obfuscates process details. </strong></p><p>As someone who builds AI tools and works in biomedical data science, I see both sides of the coin. I love the support these tools provide. But I am also aware that our minds can fall into a trap, what aviation engineers call <strong>automation complacency</strong>. When a pilot relies on autopilot for too long, manual flying skills atrophy. More dangerously, pilots lose their internal \u201cmental model\u201d of the system, making them helpless the moment something unexpected goes wrong.</p><div class=\"subscription-widget-wrap-editor\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe&quot;,&quot;language&quot;:&quot;en&quot;}\" data-component-name=\"SubscribeWidgetToDOM\"><div class=\"subscription-widget show-subscribe\"><div class=\"preamble\"><p class=\"cta-caption\">Thanks for reading &gt;_ Hacks &amp; Recipes! Subscribe for free to receive new posts </p></div><form class=\"subscription-widget-subscribe\"><input type=\"email\" class=\"email-input\" name=\"email\" placeholder=\"Type your email\u2026\" tabindex=\"-1\"><input type=\"submit\" class=\"button primary\" value=\"Subscribe\"><div class=\"fake-input-wrapper\"><div class=\"fake-input\"></div><div class=\"fake-button\"></div></div></form></div></div><p>When you remove all the friction and frustration from technical work, you remove the very resistance that builds your intuition and meta-skills.</p><h3>Domain experts benefit more from the AI</h3><p>Automation doesn't affect everyone equally and this puzzled me for a while. I assumed that once AI agents capable of assisting with code arrived, everyone in our lab would become infinitely more productive. But productivity didn't rise across the board, even though everyone adopted agentic AI in some form. The seniors in the lab consistently obtained far more value from the AI tools than juniors.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!gFCh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!gFCh!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 424w, https://substackcdn.com/image/fetch/$s_!gFCh!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 848w, https://substackcdn.com/image/fetch/$s_!gFCh!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 1272w, https://substackcdn.com/image/fetch/$s_!gFCh!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!gFCh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png\" width=\"1224\" height=\"556\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:556,&quot;width&quot;:1224,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:120534,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/222710362?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!gFCh!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 424w, https://substackcdn.com/image/fetch/$s_!gFCh!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 848w, https://substackcdn.com/image/fetch/$s_!gFCh!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 1272w, https://substackcdn.com/image/fetch/$s_!gFCh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4140d44d-3ab2-4a0b-85e6-7bee06c692f8_1224x556.png 1456w\" sizes=\"100vw\" fetchpriority=\"high\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">\u201cAI equalizes performance on well-structured, routine tasks where the \u201ccorrect\u201d approach is well-represented \u2026 But on complex tasks requiring deep domain judgment, contextual reasoning, and iterative refinement AI functions as a cognitive amplifier that widens rather than narrows the expertise gap.\u201d An T. <em>HHAI 2026 </em>doi:<a href=\"https://doi.org/10.3233/FAIA260506\">10.3233/FAIA260506</a></figcaption></figure></div><p>The clues lie in recent findings by  <a href=\"https://doi.org/10.1287/orsc.2025.21838\">Dell\u2019Acqua et al.</a> and <a href=\"https://ebooks.iospress.nl/doi/10.3233/FAIA260506\">Tao An</a>. What those papers argue is that the AI has a context specific effect on output quality. It depends on task complexity and user\u2019s domain expertise. For low complexity tasks, it acts as an equalizer. Now everyone can make a nice figure or a web page just by prompting. But for high-complexity tasks, experts benefit more. Why is that though?<br><br>Research work wether wet-lab or computational needs experimentation and cycling through ideas that are born out of failures or past experiences. Pre-AI, we had time, expertise and intuition to explore only a few ideas. With AI, we can explore far more ideas or paths regarding a research problem. However, <strong>being able to explore more doesn\u2019t mean you know where to go</strong>. You need the domain expertise and intuition, possibly build through failures, to steer your research to productive paths.</p><p></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!KX0n!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!KX0n!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 424w, https://substackcdn.com/image/fetch/$s_!KX0n!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 848w, https://substackcdn.com/image/fetch/$s_!KX0n!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 1272w, https://substackcdn.com/image/fetch/$s_!KX0n!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!KX0n!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png\" width=\"1456\" height=\"624\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/b6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:624,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:177296,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/222710362?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!KX0n!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 424w, https://substackcdn.com/image/fetch/$s_!KX0n!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 848w, https://substackcdn.com/image/fetch/$s_!KX0n!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 1272w, https://substackcdn.com/image/fetch/$s_!KX0n!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6a4304e-bfea-415c-9a98-be6a94179051_2072x888.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">AI expands exploration, not necessarily productivity: Without AI, few paths are practical to explore. With AI, exploration becomes easier but one can also get stuck more frequently in non-productive paths if domain knowledge to steer the AI is lacking.</figcaption></figure></div><p></p><p>Seniors already possess the internalized mental models needed to decompose problems, steer the models, and spot subtle hallucinations or drift from initial goals; juniors possibly lack that reference frame. AI has taken over the routine mechanics of coding. What\u2019s left are the <strong>meta-skills</strong>: the higher-level abilities that govern how we think, how we come up with tests, formulate hypotheses, and know when a system is lying to us.</p><h3>The recruitment test born out of necessity </h3><p>If meta-skills are the only differentiator that matters, traditional coding challenges that we used to send to candidates are obsolete. AI solves them instantly. That\u2019s why I had to invent a test for raw reasoning and critical thinking. </p><p>The mechanics  of the test were trivial: You provide input variables and you observe one output. To solve it, a candidate had to reverse-engineer the hidden mathematical rule by running tests and observing the responses. I assumed experienced engineers, data scientists, and sharp graduates would breeze through it. However, many smart candidates repeatedly failed in predictable ways: changing multiple variables at once, ignoring edge cases, and guessing from memory rather than tracking results.</p><p>When we outsource our thinking to AI that fails with fluent confidence, we will forget how to systematically interrogate a black box. If systematic reasoning is an atrophied skill, how do we train it when software removes all friction?</p><h3>Three rules for \u201cdeliberate friction\u201d</h3><p>If we want to stay sovereign over our work instead of becoming passive passengers, throwing away our tools isn't the answer. We have to introduce deliberate friction into our training and daily habits. Just as physical workouts became essential once manual labor was automated, we now need cognitive calisthenics to keep our technical meta-skills sharp.</p><p>Here is how you can practice it starting today:</p><h4>1. Start with a blank page</h4><p>Never hand a raw, unstructured problem straight to an AI prompt. Before you open a screen or type a query, spend 10 minutes with a physical pen and a piece of paper. Sketch out your hypothesis, map the state transitions, or write down what you <em>think</em> is causing the bug. The physical act of structuring a thought before a machine touches it builds the neural pathway required to audit the machine\u2019s output later. You cannot edit what you do not understand.</p><h4>2. Probe the boundaries, don\u2019t take the easiest path</h4><p>When troubleshooting an unfamiliar system, be it an AI-generated script, or a third-party report, humans usually only test what confirms our biases. We check if it works for standard inputs. An adversarial thinker does the opposite. You must actively hunt for the breaking point: <em>What happens at zero? What happens with negative values? What if I inject a decoy variable?</em> True understanding of a system lives at the edges, not in the middle.</p><h4>3. Own the hypothesis, outsource the legwork</h4><p>Let AI handle the mechanical tasks such as formatting data, scaffolding boilerplate, scraping documentation, or translating your rough logic into code. But <strong>never outsource hypothesis formation or verification to AI.</strong> If the machine writes both the core implementation and the tests, you are living in a closed loop of hallucinated confidence.</p><h3>Test your own skills</h3><p>Reading about cognitive fitness is like reading about lifting weights, it doesn\u2019t build any muscle unless you do the reps.</p><p>To see how your own troubleshooting meta-skills hold up under pressure, I\u2019ve adapted our black-box recruitment diagnostic into a short, 3-round interactive challenge called <strong>Beat the Black Box</strong>.</p><p>Grab a pen and paper, see if you can make it through.</p><p>\ud83d\udc49 <strong><a href=\"https://blackboxgame.web.app\">[Play the \u201cBeat the Black Box\u201d here]</a></strong></p><p></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!Itks!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!Itks!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 424w, https://substackcdn.com/image/fetch/$s_!Itks!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 848w, https://substackcdn.com/image/fetch/$s_!Itks!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 1272w, https://substackcdn.com/image/fetch/$s_!Itks!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!Itks!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png\" width=\"426\" height=\"403.5113122171946\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1256,&quot;width&quot;:1326,&quot;resizeWidth&quot;:426,&quot;bytes&quot;:223421,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/222710362?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" title=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!Itks!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 424w, https://substackcdn.com/image/fetch/$s_!Itks!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 848w, https://substackcdn.com/image/fetch/$s_!Itks!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 1272w, https://substackcdn.com/image/fetch/$s_!Itks!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e836a9d-9f7b-4df8-a0a1-f26112c14641_1326x1256.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div class=\"subscription-widget-wrap-editor\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe&quot;,&quot;language&quot;:&quot;en&quot;}\" data-component-name=\"SubscribeWidgetToDOM\"><div class=\"subscription-widget show-subscribe\"><div class=\"preamble\"><p class=\"cta-caption\">Thanks for reading &gt;_ Hacks &amp; Recipes! Subscribe for free to receive new posts and support my work.</p></div><form class=\"subscription-widget-subscribe\"><input type=\"email\" class=\"email-input\" name=\"email\" placeholder=\"Type your email\u2026\" tabindex=\"-1\"><input type=\"submit\" class=\"button primary\" value=\"Subscribe\"><div class=\"fake-input-wrapper\"><div class=\"fake-input\"></div><div class=\"fake-button\"></div></div></form></div></div>",
+      "has_dynamic_content": false,
+      "truncated_body_text": "If you write code or analyze data, you are living through the greatest cognitive offloading experiment in human history. But away from the headlines, a much more personal crisis is playing out on our monitors. It\u2019s happening in code reviews, design docs, and troubleshooting sessions:",
+      "wordcount": 1029,
+      "post_preview_limit": null,
+      "language": "en",
+      "postTags": [
+        {
+          "id": "1c4519c4-eca1-48f9-b08e-ce3a550b72d6",
+          "publication_id": 10168527,
+          "name": "AI",
+          "slug": "ai",
+          "hidden": false
+        },
+        {
+          "id": "c5c39101-4835-47c6-8eee-d2caaf8e3216",
+          "publication_id": 10168527,
+          "name": "rolv",
+          "slug": "rolv",
+          "hidden": false
+        },
+        {
+          "id": "cbc17433-f794-4c73-97c9-5c31a6d455d7",
+          "publication_id": 10168527,
+          "name": "data science",
+          "slug": "data-science",
+          "hidden": false
+        }
+      ],
+      "postCountryBlocks": [],
+      "disable_drop_cap": false,
+      "cover_image_crop": null,
+      "headlineTest": null,
+      "coverImagePalette": {
+        "Vibrant": {
+          "rgb": [
+            44,
+            132,
+            172
+          ],
+          "population": 1
+        },
+        "DarkVibrant": {
+          "rgb": [
+            52,
+            140,
+            172
+          ],
+          "population": 1
+        },
+        "LightVibrant": {
+          "rgb": [
+            156,
+            192,
+            212
+          ],
+          "population": 2
+        },
+        "Muted": {
+          "rgb": [
+            180,
+            92,
+            140
+          ],
+          "population": 4
+        },
+        "DarkMuted": {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "population": 1
+        },
+        "LightMuted": {
+          "rgb": [
+            203,
+            169,
+            186
+          ],
+          "population": 40
+        }
+      },
+      "publishedBylines": [
+        {
+          "id": 250611392,
+          "name": "Altuna Akalin",
+          "handle": "al2na",
+          "photo_url": "https://substack-post-media.s3.amazonaws.com/public/images/fecb6223-7917-4173-928d-cc17a9491984_914x914.png",
+          "bio": "Staring at data and slowly losing eyesight... Otherwise, trying to understand biology and medicine through code, statistics, and machine learning. Notes on science, data, AI, and whatever survives contact with reality.",
+          "profile_set_up_at": "2024-07-03T20:41:56.488Z",
+          "reader_installed_at": "2024-08-06T16:07:26.572Z",
+          "publicationUsers": [
+            {
+              "id": 10438901,
+              "user_id": 250611392,
+              "publication_id": 10168527,
+              "role": "admin",
+              "public": true,
+              "is_primary": false,
+              "publication": {
+                "id": 10168527,
+                "name": ">_ Hacks & Recipes",
+                "subdomain": "biodatahacks",
+                "custom_domain": null,
+                "custom_domain_optional": false,
+                "hero_text": "Hacks, recipes, and AI workflows powering biomedical data science and precision medicine ",
+                "logo_url": "https://substack-post-media.s3.amazonaws.com/public/images/4f970eb4-e91a-4835-b915-89f94231caec_268x268.png",
+                "author_id": 250611392,
+                "primary_user_id": null,
+                "theme_var_background_pop": "#FF6719",
+                "created_at": "2026-07-23T18:27:05.395Z",
+                "email_from_name": null,
+                "copyright": "al2na",
+                "founding_plan_name": null,
+                "community_enabled": true,
+                "invite_only": false,
+                "payments_state": "disabled",
+                "language": "en",
+                "explicit": false,
+                "homepage_type": "newspaper",
+                "is_personal_mode": false,
+                "logo_url_wide": null
+              }
+            }
+          ],
+          "is_guest": false,
+          "bestseller_tier": null,
+          "status": {
+            "bestsellerTier": null,
+            "subscriberTier": null,
+            "leaderboard": null,
+            "vip": false,
+            "badge": null,
+            "subscriber": null
+          }
+        }
+      ],
+      "reaction": null,
+      "reaction_count": 0,
+      "comment_count": 1,
+      "child_comment_count": 1,
+      "is_geoblocked": false,
+      "is_editor_preview": false,
+      "hasCashtag": false
+    },
+    {
+      "audience": "everyone",
+      "audience_before_archived": null,
+      "canonical_url": "https://biodatahacks.substack.com/p/towards-deterministic-and-reproducible",
+      "default_comment_sort": null,
+      "editor_v2": false,
+      "exempt_from_archive_paywall": false,
+      "free_unlock_required": false,
+      "id": 211079628,
+      "podcast_art_url": null,
+      "podcast_duration": null,
+      "podcast_preview_upload_id": null,
+      "podcast_upload_id": null,
+      "podcast_url": null,
+      "post_date": "2026-09-08T10:51:48.924Z",
+      "updated_at": "2026-09-08T10:51:48.890Z",
+      "publication_id": 10168527,
+      "search_engine_description": null,
+      "search_engine_title": null,
+      "section_id": 440071,
+      "should_send_free_preview": false,
+      "show_guest_bios": true,
+      "slug": "towards-deterministic-and-reproducible",
+      "social_title": null,
+      "subtitle": "How to make agents learn from each other, not waste tokens and not reinvent the wheel",
+      "teaser_post_eligible": true,
+      "title": "Towards deterministic and reproducible agentic data analysis",
+      "type": "newsletter",
+      "video_upload_id": null,
+      "write_comment_permissions": "everyone",
+      "meter_type": "none",
+      "live_stream_id": null,
+      "is_published": true,
+      "restacks": 1,
+      "reactions": {
+        "\u2764": 0
+      },
+      "top_exclusions": [],
+      "pins": [],
+      "section_pins": [],
+      "has_shareable_clips": false,
+      "previous_post_slug": "why-data-science-needs-more-than",
+      "next_post_slug": null,
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!3rVR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png",
+      "cover_image_is_square": false,
+      "cover_image_is_explicit": false,
+      "videoUpload": null,
+      "podcastFields": {
+        "post_id": 211079628,
+        "podcast_episode_number": null,
+        "podcast_season_number": null,
+        "podcast_episode_type": null,
+        "should_syndicate_to_other_feed": null,
+        "syndicate_to_section_id": null,
+        "hide_from_feed": false,
+        "free_podcast_url": null,
+        "free_podcast_duration": null,
+        "preview_contains_ad": false,
+        "was_imported_self_serve_sync": false,
+        "draft_free_podcast_url": null,
+        "draft_free_podcast_duration": null
+      },
+      "podcastUpload": null,
+      "podcastPreviewUpload": null,
+      "voiceover_upload_id": null,
+      "voiceoverUpload": null,
+      "has_voiceover": false,
+      "description": "How to make agents learn from each other, not waste tokens and not reinvent the wheel",
+      "body_html": "<p>People of all ages and experience levels who know a little bit about LLMs and want to do data analysis without coding are turning to agentic tools. These tools are numerous by now and include tools from model builders such as Anthropic (Claude Code) and OpenAI (GPT Codex), as well as many other open-source alternatives (OpenCode, etc.).</p><p>What is an agent in this context? An agent is usually a language model most of the time with vision capability (can see images and convert them to text). It can inspect data, install libraries, write scripts, troubleshoot failures, and produce an analysis. This can all be done using only the user's instructions. However, every request to the agent will result in a new batch of text generation and potential web searches, and a new batch of code will be created and executed. This new code will not be identical to the previous runs even if you provided the same task. This stochasticity is inherent in large language models, and we have to live with it. But this hurts reproducibility, reusability, and racks up the costs. For example, if you want to perform a routine analysis of transcriptome data, there is not much variation in the code you will use. You or your agent don\u2019t have to reinvent the wheel every time you want to analyze data. [<em><strong>SPOILER</strong></em>: if you don\u2019t want to read further here is how to make agents more reproducible: <a href=\"https://github.com/rolv-io/recipe\">https://github.com/rolv-io/recipe</a>]</p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/p/towards-deterministic-and-reproducible?utm_source=substack&utm_medium=email&utm_content=share&action=share&quot;,&quot;text&quot;:&quot;Share&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/p/towards-deterministic-and-reproducible?utm_source=substack&utm_medium=email&utm_content=share&action=share\"><span>Share</span></a></p><h3>How to deal with stochasticity in agentic coding?</h3><p>Luckily, there are mechanisms to provide pre-determined instructions to the agents so that they don\u2019t have to reinvent things every time we give a task that requires specialized knowledge or skills.</p><p><code>SKILL.md</code> files and their accompanying scripts, references, and other files are the prevailing way to provide these instructions. They allow us to package instructions and working code so that an agent does not need to reinvent an entire workflow every time.</p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe now&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/subscribe?\"><span>Subscribe now</span></a></p><h3>Current problems with agentic coding and skills</h3><p>However, reusable instructions provided with the skills approach are not the same thing as a reproducible and continuously improving workflow.  Here are the current problems with the agentic coding and skills approach.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!3rVR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!3rVR!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 424w, https://substackcdn.com/image/fetch/$s_!3rVR!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 848w, https://substackcdn.com/image/fetch/$s_!3rVR!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 1272w, https://substackcdn.com/image/fetch/$s_!3rVR!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!3rVR!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png\" width=\"1442\" height=\"999\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:999,&quot;width&quot;:1442,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1320727,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/211079628?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" title=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!3rVR!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 424w, https://substackcdn.com/image/fetch/$s_!3rVR!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 848w, https://substackcdn.com/image/fetch/$s_!3rVR!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 1272w, https://substackcdn.com/image/fetch/$s_!3rVR!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbb3187-5e8b-4e16-b0db-ae00014de5fe_1442x999.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>1. Skills reduce repeated reasoning, but agents still make unnecessary decisions</h4><p>A good skill can tell an agent how a task should be performed and provide scripts that implement established parts of the process. This already saves tokens and reduces reinvention.</p><p>However, whenever the skill leaves a decision open, the agent has to reason about it again. It may choose a different order of operations, a different library, a different intermediate representation, or a different response to an error.</p><h4>2. Skills describe the intended workflow, but do not fully define its execution</h4><p>A <code>SKILL.md</code> file can say:</p><blockquote><p>Load the data, validate it, transform it, run the analysis, and generate the output.</p></blockquote><p>It can also provide scripts for doing each of these things.</p><p>But there is still a difference between describing a workflow and explicitly representing its execution graph.</p><h4>3. Troubleshooting can destroy parts of the workflow that were already working</h4><p>This becomes particularly important when something fails. An agent trying to solve a problem may modify several scripts, change a dependency, alter an earlier transformation, or rewrite an important part of the workflow simply because doing so seems plausible. I have experienced this many times, even with frontier models. The agents were trying to fix problems at the wrong steps. </p><h4>4. Dependencies should be mandatory, not optional</h4><p>Skills can specify dependencies and include environment files, but they do not necessarily have to. A skill may work because the required libraries, tools, or system dependencies happen to already be available in the agent\u2019s environment. Dependency management is critical for reproducibility and should not be optional.</p><h4>5. Skills preserve solutions, but troubleshooting knowledge is still easy to lose</h4><p>The initial skill may describe the correct workflow. However, the more interesting knowledge often appears later. Perhaps a particular CSV export occasionally changes its encoding. An API starts returning a slightly different schema. A package version introduces a bug. Packages have different installation procedures in windows vs linux. A model produces malformed output under a particular condition. An apparently harmless transformation turns out to break one class of datasets.</p><p>Agents solve these problems during execution, but those discoveries should not disappear with the session. The problems they encounter are usually not one-off problems.</p><h4>6. A successful skill is still not necessarily a correct skill</h4><p>Repeated successful execution can create false confidence. A workflow might run without errors while quietly producing incorrect results. What is worse, it may be creating imaginary datasets to make certain parts work. An expert who is lazy not to check the details or a novice who has no idea how thigns actually work will miss these problems easily. No mechanism is forcing skill builders to provide tests with their skills. </p><h4>7. Sharing skills is not the same as learning from executions</h4><p>A shared skill lets many agents start from the same knowledge.</p><p>But there is another step: allowing the shared workflow to improve from what those agents discover while using it. This is a completely missed opportunity. Agents are again solving problems over and over while using faulty skills, and their learnings are never transfered to other agents. There is no hive-mind, although maybe there should be. </p><h4>8. Shared skills introduce a new security problem</h4><p>Once a skill  contains scripts, tools, dependencies, instructions, and contributions from many agents or people, it becomes executable infrastructure.</p><p>That creates a supply-chain problem. The skills can include suspicious dependencies, malicious commands, unexpected network access, dangerous tools, credential access, prompt-injection-like instructions, or changes that unexpectedly expand what the skill is allowed to do previously. There is no central check on what security risk each skill can pose. </p><h4>9. Important constraints can lose their context over time</h4><p>As workflows evolve, some steps, dependency pins, or troubleshooting rules may begin to look unnecessary. But they may exist because of failures discovered in previous executions.</p><p>If the reason for a constraint is not preserved, future agents may remove or change it without understanding why it was introduced, causing previously solved problems to reappear.</p><h3>Proposal to remedy these issues: recipe.md </h3><p>The idea is to extend the current skill approach with a more structured artifact: a <code>recipe.md</code> file and accompanying files that define not only how a task should be approached, but how an established workflow should be executed, maintained, tested, and improved over time. In hindsight, we can call this skill files or skill.md as well, but the divergence from a regular skill file set is substantial and we don\u2019t want people to think this is same as the skill files.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!I_lE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!I_lE!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 424w, https://substackcdn.com/image/fetch/$s_!I_lE!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 848w, https://substackcdn.com/image/fetch/$s_!I_lE!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 1272w, https://substackcdn.com/image/fetch/$s_!I_lE!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!I_lE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png\" width=\"1448\" height=\"1086\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/f69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1086,&quot;width&quot;:1448,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1188900,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/211079628?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!I_lE!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 424w, https://substackcdn.com/image/fetch/$s_!I_lE!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 848w, https://substackcdn.com/image/fetch/$s_!I_lE!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 1272w, https://substackcdn.com/image/fetch/$s_!I_lE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff69e8177-e4e8-4e94-a6b0-9da36b7f52a9_1448x1086.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p></p><p>A recipe would add several things that are not mandatory in today\u2019s skill approach.</p><h4>1. A deterministic execution graph</h4><p>The recipe should explicitly define the steps of the workflow, their order, their inputs and outputs, and the conditions under which different branches can be taken.</p><p>Instead of repeatedly asking the agent to decide how to perform an established task, the recipe defines the default execution path:</p><blockquote><p>Step A \u2192 validate \u2192 Step B \u2192 Step C \u2192 validate output</p></blockquote><p>The agent can still reason where judgment is required, but it should not redesign parts of the workflow that have already been established.</p><p>This should reduce unnecessary token use and make repeated executions more consistent. This idea is of course very similar to workflow managers such as snakemake, nextflow, apache airflow etc. The fundamental difference is that AI runs, troubleshoots and intreprent the steps. The artifacts are human readable rather than a programming language. </p><h4>2. Troubleshooting rules for every step</h4><p>When something fails, agents should not have unlimited freedom to modify the entire workflow.</p><p>Each step or component can carry a troubleshooting policy such as:</p><ul><li><p><code>normal</code> : reasonable to modify while troubleshooting;</p></li><li><p><code>core (or touch-last)</code>: known to be stable and should only be changed after more likely causes have been investigated;</p></li><li><p><code>do-not-touch</code>: should not be changed automatically. This should be used sparringly but probably has some use cases.</p></li></ul><p>This allows knowledge from previous executions to constrain future troubleshooting.</p><p>A recipe  also specifies via the workflow graph which upstream and downstream steps depend on the component being modified, so the agent can understand the likely consequences of a change before making it.</p><h5>Preserve why important rules exist</h5><p>Recipes should record not only important constraints but also a short explanation of why they exist. If a step is marked <code>core</code>, the recipe should say why. If a validation step was introduced because of a previous failure, that relationship should remain visible.</p><p>The detailed evidence can remain in the troubleshooting record (which will be explained below), while the current recipe contains a short rationale and a reference to the relevant incident.</p><p>For example:</p><pre><code><code>step: normalize_columns\ntroubleshooting_policy: core\nreason: Previous changes to this step caused downstream schema mismatches.</code></code></pre><p>This prevents future agents from removing safeguards simply because they no longer know why those safeguards were introduced.</p><h4>3. Mandatory dependency declaration</h4><p>Unlike skills, where dependency information may or may not be included, a recipe should not be considered complete unless its dependencies are explicitly declared.</p><p>This can include libraries and versions, command-line tools, external services, APIs, models, system dependencies, and dependencies between individual workflow steps.</p><p>The goal is not only to document what is needed, but to make it possible to reproduce a known-working environment and quickly identify dependency changes when something stops working.</p><h4>4. A persistent troubleshooting record</h4><p>Every execution that encounters a meaningful problem should be able to add structured information to the recipe\u2019s troubleshooting history.</p><p>That record might include:</p><ul><li><p>what failed;</p></li><li><p>the symptoms or error;</p></li><li><p>the likely diagnosis;</p></li><li><p>what the agent tried;</p></li><li><p>which attempts did not work;</p></li><li><p>what eventually fixed the problem;</p></li><li><p>which files or dependencies changed;</p></li><li><p>whether the solution passed the recipe\u2019s tests.</p></li></ul><p>Future agents should consult this record before beginning their own troubleshooting.</p><p>The aim is simple: if one agent has already spent time diagnosing and solving a recurring problem, another agent should not have to rediscover the same solution from scratch.</p><h4>5. Automated tests on known data</h4><p>A recipe that executes successfully is not necessarily producing the correct result.</p><p>Recipes should therefore be able to include automated tests, including small toy datasets for which the expected outputs are already known.</p><p>After an agent changes a script, dependency, or workflow step, the recipe can be run against these examples to verify that previously correct behavior has not been broken.</p><p>This also provides a safer way to incorporate improvements discovered during troubleshooting.</p><h4>6. Learning across recipe executions and changes</h4><p>A shared recipe should improve from the experience of the agents using it.</p><p>After an execution, an agent can submit what it learned: a newly discovered failure mode, a better troubleshooting procedure, an important dependency constraint, or an improvement to an existing step.</p><p>These contributions should not necessarily be incorporated automatically. They can first be tested, compared with the existing recipe, scanned for security issues, and, when necessary, approved by a human.</p><p>Once accepted, however, the improvement becomes available to every subsequent execution of the recipe.</p><p>The important difference is that knowledge flows back into the shared workflow rather than remaining inside an individual agent session.</p><h4>7. Central security scanning</h4><p>Recipes and their accompanying files are executable infrastructure and should be treated accordingly.</p><p>A central repository can scan recipes for malicious or suspicious behavior before they are distributed or updated. This could include unexpected network access, suspicious package dependencies, credential access, dangerous shell commands, malicious tools, prompt-injection-like instructions, or changes that substantially expand the permissions of an existing recipe.</p><p>The same checks can be applied whenever an agent proposes an update to a shared recipe.</p><h4>8. Versioned and human-governed improvement</h4><p>Recipes should be versioned so that changes to workflow logic, dependencies, troubleshooting rules, and tests are visible and reversible.</p><p>The initial recipe should be reviewed by a human, and important changes can go through the same process. The purpose of human oversight is to approve the reusable procedure and significant changes to it, rather than supervise every individual run.</p><p>A version change can then capture both <strong>what changed</strong> and <strong>why</strong>, while the troubleshooting record preserves the detailed history behind that change.</p><h3>The resulting lifecycle</h3><p>The resulting process would look something like this:</p><ol><li><p><strong>execute recipe</strong></p></li><li><p><strong>encounter a problem</strong></p></li><li><p><strong>consult previous troubleshooting</strong></p></li><li><p><strong>troubleshoot within defined boundaries</strong></p></li><li><p><strong>test the solution</strong></p></li><li><p><strong>record what was learned</strong></p></li><li><p><strong>submit the improvement </strong></p></li><li><p><strong>scan and review </strong></p></li><li><p><strong>update the shared recipe</strong></p></li></ol><p>In this model,  <code>recipe.md</code> adds a stricter layer for workflows that are already established and where determinism, reproducibility, testing, and accumulated operational knowledge matter.</p><p>The goal is not to eliminate agent reasoning. It is to avoid spending agent reasoning on decisions that have already been made and problems that have already been solved. Most of these ideas are implemented in our app <a href=\"https://rolv.io\">rolv.io</a> (a local-first agentic data analysis app), and the formal definition is here: <a href=\"https://github.com/rolv-io/recipe\">https://github.com/rolv-io/recipe</a></p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://rolv.io&quot;,&quot;text&quot;:&quot;Try rolv app (it's free)&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://rolv.io\"><span>Try rolv app (it's free)</span></a></p><p></p><p></p><p></p><p></p><p></p>",
+      "has_dynamic_content": false,
+      "truncated_body_text": "People of all ages and experience levels who know a little bit about LLMs and want to do data analysis without coding are turning to agentic tools. These tools are numerous by now and include tools from model builders such as Anthropic (Claude Code) and OpenAI (GPT Codex), as well as many other open-source alternatives (OpenCode, etc.).",
+      "wordcount": 2165,
+      "post_preview_limit": null,
+      "language": "en",
+      "postTags": [
+        {
+          "id": "1c4519c4-eca1-48f9-b08e-ce3a550b72d6",
+          "publication_id": 10168527,
+          "name": "AI",
+          "slug": "ai",
+          "hidden": false
+        },
+        {
+          "id": "c5c39101-4835-47c6-8eee-d2caaf8e3216",
+          "publication_id": 10168527,
+          "name": "rolv",
+          "slug": "rolv",
+          "hidden": false
+        },
+        {
+          "id": "cbc17433-f794-4c73-97c9-5c31a6d455d7",
+          "publication_id": 10168527,
+          "name": "data science",
+          "slug": "data-science",
+          "hidden": false
+        },
+        {
+          "id": "fe35546f-4f29-4560-85c1-0756ad1b890e",
+          "publication_id": 10168527,
+          "name": "LLM",
+          "slug": "llm",
+          "hidden": false
+        }
+      ],
+      "postCountryBlocks": [],
+      "disable_drop_cap": false,
+      "cover_image_crop": null,
+      "headlineTest": null,
+      "coverImagePalette": {
+        "Vibrant": {
+          "rgb": [
+            208,
+            88,
+            86
+          ],
+          "population": 6
+        },
+        "DarkVibrant": {
+          "rgb": [
+            103.74722222222223,
+            30.08055555555554,
+            28.852777777777767
+          ],
+          "population": 0
+        },
+        "LightVibrant": {
+          "rgb": [
+            226,
+            156,
+            156
+          ],
+          "population": 5
+        },
+        "Muted": {
+          "rgb": [
+            108,
+            148,
+            108
+          ],
+          "population": 2
+        },
+        "DarkMuted": {
+          "rgb": [
+            64,
+            64,
+            64
+          ],
+          "population": 2
+        },
+        "LightMuted": {
+          "rgb": [
+            219,
+            192,
+            192
+          ],
+          "population": 16
+        }
+      },
+      "publishedBylines": [
+        {
+          "id": 250611392,
+          "name": "Altuna Akalin",
+          "handle": "al2na",
+          "photo_url": "https://substack-post-media.s3.amazonaws.com/public/images/fecb6223-7917-4173-928d-cc17a9491984_914x914.png",
+          "bio": "Staring at data and slowly losing eyesight... Otherwise, trying to understand biology and medicine through code, statistics, and machine learning. Notes on science, data, AI, and whatever survives contact with reality.",
+          "profile_set_up_at": "2024-07-03T20:41:56.488Z",
+          "reader_installed_at": "2024-08-06T16:07:26.572Z",
+          "publicationUsers": [
+            {
+              "id": 10438901,
+              "user_id": 250611392,
+              "publication_id": 10168527,
+              "role": "admin",
+              "public": true,
+              "is_primary": false,
+              "publication": {
+                "id": 10168527,
+                "name": ">_ Hacks & Recipes",
+                "subdomain": "biodatahacks",
+                "custom_domain": null,
+                "custom_domain_optional": false,
+                "hero_text": "Hacks, recipes, and AI workflows powering biomedical data science and precision medicine ",
+                "logo_url": "https://substack-post-media.s3.amazonaws.com/public/images/4f970eb4-e91a-4835-b915-89f94231caec_268x268.png",
+                "author_id": 250611392,
+                "primary_user_id": null,
+                "theme_var_background_pop": "#FF6719",
+                "created_at": "2026-07-23T18:27:05.395Z",
+                "email_from_name": null,
+                "copyright": "al2na",
+                "founding_plan_name": null,
+                "community_enabled": true,
+                "invite_only": false,
+                "payments_state": "disabled",
+                "language": "en",
+                "explicit": false,
+                "homepage_type": "newspaper",
+                "is_personal_mode": false,
+                "logo_url_wide": null
+              }
+            }
+          ],
+          "is_guest": false,
+          "bestseller_tier": null,
+          "status": {
+            "bestsellerTier": null,
+            "subscriberTier": null,
+            "leaderboard": null,
+            "vip": false,
+            "badge": null,
+            "subscriber": null
+          }
+        }
+      ],
+      "reaction": null,
+      "reaction_count": 0,
+      "comment_count": 0,
+      "child_comment_count": 0,
+      "is_geoblocked": false,
+      "is_editor_preview": false,
+      "hasCashtag": false
+    },
+    {
+      "audience": "everyone",
+      "audience_before_archived": null,
+      "canonical_url": "https://biodatahacks.substack.com/p/why-data-science-needs-more-than",
+      "default_comment_sort": null,
+      "editor_v2": false,
+      "exempt_from_archive_paywall": false,
+      "free_unlock_required": false,
+      "id": 214125689,
+      "podcast_art_url": null,
+      "podcast_duration": null,
+      "podcast_preview_upload_id": null,
+      "podcast_upload_id": null,
+      "podcast_url": null,
+      "post_date": "2026-09-04T11:26:11.390Z",
+      "updated_at": "2026-09-04T11:26:11.550Z",
+      "publication_id": 10168527,
+      "search_engine_description": null,
+      "search_engine_title": null,
+      "section_id": 440071,
+      "should_send_free_preview": false,
+      "show_guest_bios": true,
+      "slug": "why-data-science-needs-more-than",
+      "social_title": null,
+      "subtitle": "Move from messy chat experiments to reproducible, shareable visual pipelines; running locally or on remote servers.",
+      "teaser_post_eligible": true,
+      "title": "Why data science needs more than an agentic terminal",
+      "type": "newsletter",
+      "video_upload_id": null,
+      "write_comment_permissions": "everyone",
+      "meter_type": "none",
+      "live_stream_id": null,
+      "is_published": true,
+      "restacks": 1,
+      "reactions": {
+        "\u2764": 1
+      },
+      "top_exclusions": [],
+      "pins": [],
+      "section_pins": [],
+      "has_shareable_clips": false,
+      "previous_post_slug": null,
+      "next_post_slug": "towards-deterministic-and-reproducible",
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!U2uX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png",
+      "cover_image_is_square": false,
+      "cover_image_is_explicit": false,
+      "videoUpload": null,
+      "podcastFields": {
+        "post_id": 214125689,
+        "podcast_episode_number": null,
+        "podcast_season_number": null,
+        "podcast_episode_type": null,
+        "should_syndicate_to_other_feed": null,
+        "syndicate_to_section_id": null,
+        "hide_from_feed": false,
+        "free_podcast_url": null,
+        "free_podcast_duration": null,
+        "preview_contains_ad": false,
+        "was_imported_self_serve_sync": false,
+        "draft_free_podcast_url": null,
+        "draft_free_podcast_duration": null
+      },
+      "podcastUpload": null,
+      "podcastPreviewUpload": null,
+      "voiceover_upload_id": null,
+      "voiceoverUpload": null,
+      "has_voiceover": false,
+      "description": "Move from messy chat experiments to reproducible, shareable visual pipelines; running locally or on remote servers.",
+      "body_html": "<h3>The problem with general AI coding assistants in science</h3><p>Over the past year, tools like Claude Code, Cursor, and Copilot have transformed software engineering and also data analysis. You can point them at an API backend, and they write boilerplate with incredible speed.</p><p>Yet, when life scientists and computational biologists try using generic coding agents for single-cell RNA-seq, clinical trial analysis, GWAS, or metabolomic<strong>s</strong>, things quickly become complicated for novices and experienced practitioners alike:</p><p>1. <strong>The \u201cspaghetti script\u201d trap</strong>: Terminal agents generate endless chronological code blocks. Soon, nobody knows which variable came from where, which intermediate file is current, or how to reproduce the figure.</p><p>2. <strong>Scientific data and concept blindness</strong>: Generic LLMs know GitHub and they can search the web, but they are blind to  or not directed to NCBI GEO, PubMed literature, ClinicalTrials.gov, or patent databases.</p><p>3. <strong>The compute requirements are different</strong>: Scientific data doesn\u2019t live in a 20-line CSV on your desktop or laptop. It lives on an HPC cluster as 50 GB BAM/RDS files. A local terminal assistant cannot seamlessly orchestrate detached SSH jobs while keeping track of your outputs. Handling this situation needs extra care and provenance</p><p>4. <strong>Re-inventing the wheel</strong>: Every Claude Code or Cursor session starts with a blank slate, hallucinating ad-hoc scripts rather than using verified and trusted protocols. Skill files help, but they are not perfect and far from providing the reproducibility that scientific data analysis requires.</p><blockquote><p>Scientific data analysis doesn\u2019t just need code generation. It needs structured workflow execution, provenance, reproducibility, and deep domain intelligence.</p></blockquote><p>That is why we keep building <strong>rolv</strong>, and happy to introduce v3.</p><h3><em>Rolv</em>: The agentic platform for life sciences</h3><p>Rolv is a local-first desktop application that bridges the gap between exploratory AI chat and visual data analysis workflows. Below, we are introducing some of the key features of this system.</p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://rolv.io&quot;,&quot;text&quot;:&quot;try rolv now, it is free&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://rolv.io\"><span>try rolv now, it is free</span></a></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!U2uX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!U2uX!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 424w, https://substackcdn.com/image/fetch/$s_!U2uX!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 848w, https://substackcdn.com/image/fetch/$s_!U2uX!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 1272w, https://substackcdn.com/image/fetch/$s_!U2uX!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!U2uX!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png\" width=\"1456\" height=\"819\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:819,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:5919180,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/214125689?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!U2uX!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 424w, https://substackcdn.com/image/fetch/$s_!U2uX!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 848w, https://substackcdn.com/image/fetch/$s_!U2uX!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 1272w, https://substackcdn.com/image/fetch/$s_!U2uX!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51458d02-55f8-4ba1-8a64-3caf5eaad07a_8000x4500.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Rolv chat and visual DAG interfaces</figcaption></figure></div><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/p/why-data-science-needs-more-than?utm_source=substack&utm_medium=email&utm_content=share&action=share&quot;,&quot;text&quot;:&quot;Share&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/p/why-data-science-needs-more-than?utm_source=substack&utm_medium=email&utm_content=share&action=share\"><span>Share</span></a></p><h4>1.  From AI chat notebook to visual graph for workflows</h4><p>The data analysis usually starts messy: inspecting columns, trying different normalization methods, filtering outliers. You need a few quick tools to get started, and you want to deal with as few complications as possible in terms of installing packages, reading data, and gathering basics about the content and quality. </p><p>With Rolv, you can explore datasets freely in chat. Once your logic works, click \u201d<strong>Step into Graph</strong>\u201d. Rolv\u2019s Architect agent reads your conversation history and synthesizes a clean, modular<strong> Directed Acyclic Graph (DAG) </strong>where each step (Quality Control, Normalization, Clustering, Differential Expression) becomes an isolated canvas node with defined inputs and outputs. Every node runs in an isolated sandbox with clear input &amp; output contracts. We have smart invalidation and staleness propagation in the workflow graph: Tweak step 2, and Rolv only re-runs downstream dependencies, leaving your upstream compute. You can also pin long-running jobs not to re-run when your workflow changes.</p><p>If you want, you can entirely skip the chat and start building your workflow node by node with AI assistance. You can let the AI code or you do it yourself and ask AI to fix mistakes.</p><h4>2. Built-in biomedical research &amp; multi-modal vision</h4><p>We don\u2019t want <em>rolv</em> just to write code. Ideally, it should reason over the results with scientific context and should have the tools to gather that context. Here are some examples of the tools and sub-agents where the agent use to make sense of the output of data analysis.  </p><p><strong>NCBI GEO &amp; PubMed Native Search</strong>: Ask Rolv to \u201dfind public GEO datasets for KRAS-mutant pancreatic cancer and compare with our cohort\u201d. The agent searches GEO accessions and PubMed literature directly, extracting PMIDs, abstracts, and metadata into downstream compute steps.</p><p><strong>Plot vision</strong>: When generating a volcano or UMAP plot, Rolv converts the output to high-resolution images and visually inspects the graph to catch label overlaps, skewed axes, or outlier artifacts before you even notice them.</p><p><strong>Structured research nodes</strong>: Transform unstructured literature and clinical trial searches into structured JSON tables and synthesis reports that feed directly into analysis code.</p><h4>3. Near-bulletproof reproducibility </h4><p>In standard computational notebooks and AI chat tools, reproducibility can rarely be assumed. Most scientific papers you will encounter will have some code or even python notebooks however, the software environment that produced the plots may not be documented or even reproduced. In addition, you will have a bunch of scripts it won\u2019t be immediately clear how things are run and what output produced which plot. There is usually no provenance. </p><p>Rolv enforces computational reproducibility by design:</p><p>1. Process-level node isolation: Every node runs in a fresh, isolated subprocess. Nodes pass data through explicit disk contracts (`input.json` / `output.json`), never shared in-memory variables.</p><p>2. Automated provenance ledger: Every plot, table, and RDS object is cataloged in `output.json` with the exact producing node ID, parameters, and timestamps.</p><p>3. Environment locks: Workflows auto-generate <code>env/python-requirements.txt</code> and<code> env/r-packages.txt</code>. Rolv provisions isolated Mamba environments on demand so your pipeline runs (almost) identically on a colleague\u2019s machine.</p><p>4. One-click supplementary bundles: Export your entire workflow as a self-contained, versioned  Recipe package** ready for peer-review submission, GitHub release, or institutional sharing.</p><h4>4. Hybrid Compute: Laptop to remote computer </h4><p>Biological datasets quickly exceed local RAM. Rolv features a hybrid execution possibility to deal with out-of-memory data analysis situations:</p><ul><li><p>Right-click any node in your visual workflow to toggle execution between <strong>Local Laptop/Desktop (Apple Silicon / PC)</strong> and <strong>Remote Lab Server / HPC (via SSH)</strong>.</p></li><li><p><strong>Detached background execution</strong>: Heavy compute jobs run autonomously on your remote server. Close your laptop, go home, and open Rolv the next day \u2014 the app seamlessly reconnects to the detached job, streams remaining logs, and downloads the generated figures.</p></li><li><p><strong>Safeguard against  credential leaks</strong>: Passphrases and SSH keys are encrypted directly in your own system.</p></li></ul><h4>5. Recipes &amp; institutional memory: Never start from scratch</h4><p>Why ask an AI to invent a DESeq2 pipeline from scratch when your lab already has a golden standard?</p><p>Rolv introduces the concept of  <strong>recipes</strong>. These are modular, shareable packages that bundle workflow DAGs, documentation, environment locks, and scripts. They are not same as \u201cskills\u201d. The recipes require more structure, clear instructions, and provenance.  Imagine a cook who has the skills to craft a perfect meal but doesn\u2019t write his creations as a recipe. Every time she cooks the same meal, they differ sometimes slightly and sometimes greatly.  This is not what we want in science, and in a good meal we want to enjoy repeatedly. </p><ul><li><p><strong>Local  recipe database</strong>: Rolv indexes your lab\u2019s recipes in an on-device database. When you describe a task, the agent automatically retrieves and adapts verified blueprints.</p></li><li><p><strong>Import existing pipelines</strong>: Have legacy workflows? Rolv automatically imports Snakemake and Nextflow pipelines, translating rule blocks into interactive visual canvas nodes.</p></li><li><p><strong>Collaborative changes to recipes:</strong> You can share recipes to the community, propose updates with automated AI risk assessments, and maintain reproducible institutional standards. This creates a centralized intelligence where one agent\u2019s learnings and skills are propagated to the central repository.</p></li></ul><h4>6. \u201cTouch-last\u201d auto-Healing: Fixing errors without breaking core functionality</h4><p>When an analysis script throws an error, conventional AI agents rewrite everything in sight, often breaking upstream calculations.</p><p>Rolv introduces \u201c<strong>touch-last troubleshooting\u201d </strong>policies:</p><ul><li><p>Mark critical statistical models or normalization algorithms as <strong>touch-last</strong>.</p></li><li><p>When errors occur downstream, Rolv\u2019s auto-healing engine prioritizes patching wrapper code and input formatting rather than touching your core validated math.</p></li><li><p> <strong>Healability Gating</strong>: The agent knows the difference between a real code bug and a system issue (missing package, disk full, network timeout), preventing infinite self-heal loops.</p></li></ul><h4>7. Local-first, privacy-first, zero-cost BYOK</h4><p>The data and discoveries are your most sensitive assets. This is why rolv is built around local and privacy-first scenarios.</p><ul><li><p>Rolv stores your projects, data, and recipes 100% locally.</p></li><li><p>Although the rolv app provides fast online LLM models by default, you can easily bring your own LLM. Connect local Ollama models (e.g. llama3, qwen, embeddinggemma) for 100% free, offline, air-gapped execution, or plug in Groq, OpenRouter, or LLM models provided by your own institute/company. </p></li></ul><h4>See the Difference: rolv vs. traditional coding assistants</h4><p>Here is a feature comparison table for rolv vs other agentic frameworks. </p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!29nJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!29nJ!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 424w, https://substackcdn.com/image/fetch/$s_!29nJ!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 848w, https://substackcdn.com/image/fetch/$s_!29nJ!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 1272w, https://substackcdn.com/image/fetch/$s_!29nJ!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!29nJ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png\" width=\"1456\" height=\"988\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/a8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:988,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:301742,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://aiassisteddata.substack.com/i/214018659?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" title=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!29nJ!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 424w, https://substackcdn.com/image/fetch/$s_!29nJ!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 848w, https://substackcdn.com/image/fetch/$s_!29nJ!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 1272w, https://substackcdn.com/image/fetch/$s_!29nJ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8b1a490-6198-47e9-9431-375360306bc0_1544x1048.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h3>How to get started</h3><p>Science moves too fast to wrestle with fragmented scripts and broken Jupyter notebook states and environments. Try out a workflow platform built specifically for the rigor, scale, and complexity of modern scientific discovery.</p><ul><li><p>\ud83d\ude80 Download Rolv for macOS, Windows, and Linux: <a href=\"https://github.com/rolv-io/rolv-releases\">https://github.com/rolv-io/rolv-releases</a></p></li><li><p> \ud83d\udcd6 Explore the Documentation: All the documentation is within the app. Either ask a direct question about features in the chat or read the in-app documentation.</p></li><li><p> \ud83d\udcac Join the Community &amp; Share Recipes: Make a recipe and submit it for community review</p></li></ul><p></p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe now&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/subscribe?\"><span>Subscribe now</span></a></p><p></p>",
+      "has_dynamic_content": false,
+      "truncated_body_text": "The problem with general AI coding assistants in science",
+      "wordcount": 1453,
+      "post_preview_limit": null,
+      "language": "en",
+      "postTags": [
+        {
+          "id": "c5c39101-4835-47c6-8eee-d2caaf8e3216",
+          "publication_id": 10168527,
+          "name": "rolv",
+          "slug": "rolv",
+          "hidden": false
+        },
+        {
+          "id": "c851998b-b859-4b03-8991-67efc2203f82",
+          "publication_id": 10168527,
+          "name": "research",
+          "slug": "research",
+          "hidden": false
+        },
+        {
+          "id": "cbc17433-f794-4c73-97c9-5c31a6d455d7",
+          "publication_id": 10168527,
+          "name": "data science",
+          "slug": "data-science",
+          "hidden": false
+        },
+        {
+          "id": "fe35546f-4f29-4560-85c1-0756ad1b890e",
+          "publication_id": 10168527,
+          "name": "LLM",
+          "slug": "llm",
+          "hidden": false
+        }
+      ],
+      "postCountryBlocks": [],
+      "disable_drop_cap": false,
+      "cover_image_crop": null,
+      "headlineTest": null,
+      "coverImagePalette": {
+        "Vibrant": {
+          "rgb": [
+            72.57692307692308,
+            129.46153846153848,
+            182.42307692307693
+          ],
+          "population": 0
+        },
+        "DarkVibrant": {
+          "rgb": [
+            37.74,
+            67.32000000000001,
+            94.86
+          ],
+          "population": 0
+        },
+        "LightVibrant": {
+          "rgb": [
+            162,
+            191,
+            218
+          ],
+          "population": 24
+        },
+        "Muted": {
+          "rgb": [
+            164,
+            166,
+            178
+          ],
+          "population": 4
+        },
+        "DarkMuted": {
+          "rgb": [
+            43.546153846153835,
+            77.67692307692305,
+            109.45384615384616
+          ],
+          "population": 0
+        },
+        "LightMuted": {
+          "rgb": [
+            175,
+            205,
+            210
+          ],
+          "population": 5
+        }
+      },
+      "publishedBylines": [
+        {
+          "id": 250611392,
+          "name": "Altuna Akalin",
+          "handle": "al2na",
+          "photo_url": "https://substack-post-media.s3.amazonaws.com/public/images/fecb6223-7917-4173-928d-cc17a9491984_914x914.png",
+          "bio": "Staring at data and slowly losing eyesight... Otherwise, trying to understand biology and medicine through code, statistics, and machine learning. Notes on science, data, AI, and whatever survives contact with reality.",
+          "profile_set_up_at": "2024-07-03T20:41:56.488Z",
+          "reader_installed_at": "2024-08-06T16:07:26.572Z",
+          "publicationUsers": [
+            {
+              "id": 10438901,
+              "user_id": 250611392,
+              "publication_id": 10168527,
+              "role": "admin",
+              "public": true,
+              "is_primary": false,
+              "publication": {
+                "id": 10168527,
+                "name": ">_ Hacks & Recipes",
+                "subdomain": "biodatahacks",
+                "custom_domain": null,
+                "custom_domain_optional": false,
+                "hero_text": "Hacks, recipes, and AI workflows powering biomedical data science and precision medicine ",
+                "logo_url": "https://substack-post-media.s3.amazonaws.com/public/images/4f970eb4-e91a-4835-b915-89f94231caec_268x268.png",
+                "author_id": 250611392,
+                "primary_user_id": null,
+                "theme_var_background_pop": "#FF6719",
+                "created_at": "2026-07-23T18:27:05.395Z",
+                "email_from_name": null,
+                "copyright": "al2na",
+                "founding_plan_name": null,
+                "community_enabled": true,
+                "invite_only": false,
+                "payments_state": "disabled",
+                "language": "en",
+                "explicit": false,
+                "homepage_type": "newspaper",
+                "is_personal_mode": false,
+                "logo_url_wide": null
+              }
+            }
+          ],
+          "is_guest": false,
+          "bestseller_tier": null,
+          "status": {
+            "bestsellerTier": null,
+            "subscriberTier": null,
+            "leaderboard": null,
+            "vip": false,
+            "badge": null,
+            "subscriber": null
+          }
+        }
+      ],
+      "reaction": null,
+      "reaction_count": 1,
+      "comment_count": 0,
+      "child_comment_count": 0,
+      "is_geoblocked": false,
+      "is_editor_preview": false,
+      "hasCashtag": false
+    },
+    {
+      "audience": "everyone",
+      "audience_before_archived": null,
+      "canonical_url": "https://biodatahacks.substack.com/p/create-validated-case-briefs-from",
+      "default_comment_sort": null,
+      "editor_v2": false,
+      "exempt_from_archive_paywall": false,
+      "free_unlock_required": false,
+      "id": 212712370,
+      "podcast_art_url": null,
+      "podcast_duration": null,
+      "podcast_preview_upload_id": null,
+      "podcast_upload_id": null,
+      "podcast_url": null,
+      "post_date": "2026-08-25T16:28:35.357Z",
+      "updated_at": "2026-08-25T16:28:35.994Z",
+      "publication_id": 10168527,
+      "search_engine_description": null,
+      "search_engine_title": null,
+      "section_id": 440072,
+      "should_send_free_preview": false,
+      "show_guest_bios": true,
+      "slug": "create-validated-case-briefs-from",
+      "social_title": null,
+      "subtitle": "Use AI agents to process, validate and create case-briefs for oncology (easily extandable for other specialties)",
+      "teaser_post_eligible": true,
+      "title": "Create validated case-briefs from clinical reports using LLMs",
+      "type": "newsletter",
+      "video_upload_id": null,
+      "write_comment_permissions": "everyone",
+      "meter_type": "none",
+      "live_stream_id": null,
+      "is_published": true,
+      "restacks": 1,
+      "reactions": {
+        "\u2764": 0
+      },
+      "top_exclusions": [],
+      "pins": [],
+      "section_pins": [],
+      "has_shareable_clips": false,
+      "previous_post_slug": "how-to-build-your-own-tumor-board",
+      "next_post_slug": null,
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!CP9J!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png",
+      "cover_image_is_square": false,
+      "cover_image_is_explicit": false,
+      "videoUpload": null,
+      "podcastFields": null,
+      "podcastUpload": null,
+      "podcastPreviewUpload": null,
+      "voiceover_upload_id": null,
+      "voiceoverUpload": null,
+      "has_voiceover": false,
+      "description": "Use AI agents to process, validate and create case-briefs for oncology (easily extandable for other specialties)",
+      "body_html": "<p>Writing a clinical case brief sounds simple until you have to pull the story together from pathology, imaging, clinical notes, surgery reports, and lab results. For complex oncology cases, that preparation can take a significant amount of clinician time.</p><p>AI agents can make this easier. They can extract the relevant information from each report, fact-check it against the original source files, reconstruct the clinical timeline, and produce a case brief in the format you need.</p><p>Before we start the workflow is <a href=\"https://github.com/al2na/oncology_case_brief_generator/\">here</a>, with example input files and output. </p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe now&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/subscribe?\"><span>Subscribe now</span></a></p><p></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!CP9J!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!CP9J!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 424w, https://substackcdn.com/image/fetch/$s_!CP9J!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 848w, https://substackcdn.com/image/fetch/$s_!CP9J!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 1272w, https://substackcdn.com/image/fetch/$s_!CP9J!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!CP9J!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png\" width=\"1448\" height=\"945\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:945,&quot;width&quot;:1448,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1748802,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/212712370?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14364b0a-7617-407f-bad4-77fde927075b_1448x1086.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!CP9J!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 424w, https://substackcdn.com/image/fetch/$s_!CP9J!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 848w, https://substackcdn.com/image/fetch/$s_!CP9J!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 1272w, https://substackcdn.com/image/fetch/$s_!CP9J!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3aefb21a-dd1c-4720-89f1-c9be38aa7017_1448x945.png 1456w\" sizes=\"100vw\" fetchpriority=\"high\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/p/create-validated-case-briefs-from?utm_source=substack&utm_medium=email&utm_content=share&action=share&quot;,&quot;text&quot;:&quot;Share&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/p/create-validated-case-briefs-from?utm_source=substack&utm_medium=email&utm_content=share&action=share\"><span>Share</span></a></p><p></p><p></p><h3>The general idea</h3><p>The idea is simple: instead of asking one model to read a pile of clinical PDFs and produce a summary, the workflow splits the job across specialist agents. Pathology, imaging, clinical notes, surgery, and laboratory reports are extracted separately, verified against the original documents, and then combined into a single physician-readable case brief with a clinical timeline and source references.</p><p>The final output is still just Markdown. The value comes from making the process more consistent, traceable, and easier to audit than a one-shot summary.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!z09d!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!z09d!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 424w, https://substackcdn.com/image/fetch/$s_!z09d!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 848w, https://substackcdn.com/image/fetch/$s_!z09d!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 1272w, https://substackcdn.com/image/fetch/$s_!z09d!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!z09d!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png\" width=\"1456\" height=\"958\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/d3443d80-4213-4a98-b97a-38f150866687_2386x1570.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:958,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:427571,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/212712370?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" title=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!z09d!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 424w, https://substackcdn.com/image/fetch/$s_!z09d!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 848w, https://substackcdn.com/image/fetch/$s_!z09d!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 1272w, https://substackcdn.com/image/fetch/$s_!z09d!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3443d80-4213-4a98-b97a-38f150866687_2386x1570.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Automation workflow view on 2ndOpinion desktop</figcaption></figure></div><h3>Privacy enabling</h3><p>Here are two straightforward ways to make this workflow privacy-friendly.</p><p>The first is to run the entire workflow using <strong>local AI models</strong>, so the clinical documents never need to leave the user\u2019s machine. In 2ndOpinion, this can be selected when configuring the models used by the workflow.</p><p>The second approach is to add a <strong>de-identification step directly after the input nodes</strong>. The local model removes names, dates of birth, addresses, identifiers, and other patient-identifying information before the resulting text is passed to cloud models.</p><div class=\"captioned-image-container\"><figure><div class=\"image-link image2\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!SCZV!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 424w, https://substackcdn.com/image/fetch/$s_!SCZV!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 848w, https://substackcdn.com/image/fetch/$s_!SCZV!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 1272w, https://substackcdn.com/image/fetch/$s_!SCZV!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!SCZV!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png\" width=\"494\" height=\"210\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/a7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:210,&quot;width&quot;:494,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:28256,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/212712370?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!SCZV!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 424w, https://substackcdn.com/image/fetch/$s_!SCZV!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 848w, https://substackcdn.com/image/fetch/$s_!SCZV!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 1272w, https://substackcdn.com/image/fetch/$s_!SCZV!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7a5b6cb-3817-48c8-838a-e9952cca2d47_494x210.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div></div></div></div><figcaption class=\"image-caption\">de-identification step for input files</figcaption></figure></div><h4>Input nodes</h4><p>The workflow starts with PDF input nodes corresponding to common clinical documents:</p><ul><li><p>Pathology report</p></li><li><p>Imaging report</p></li><li><p>Clinical notes</p></li><li><p>Surgery report</p></li><li><p>Laboratory results</p></li></ul><p>The current automation expects PDFs for these document types and routes each one to the corresponding specialist branch. You can change this to text as well if you have text files. The documents do not need to follow an identical layout. The important thing is that the relevant clinical information is present in the report.</p><h4>Specialist agents</h4><p>Each document category is handled by an agent with a narrow clinical abstraction task.</p><p>The pathology agent extracts findings such as diagnosis, histology, grade, margins, lymph nodes, biomarkers, and molecular findings. The imaging agent focuses on lesions, measurements, metastatic disease, interval changes, and radiology conclusions. Clinical-note, surgery, and laboratory agents do the same for their respective domains.</p><p>Instead of immediately generating unstructured text, the agents return structured evidence: facts, dates, timeline events, uncertainty, and source references. This gives the synthesis step cleaner material to work with.</p><h4>Verification agents</h4><p>Each specialist output is checked against the original text before it gets to the synthesis agent.</p><p>The verification agents look for discrepancies, correct unsupported statements, preserve ambiguity, and prevent new facts from being introduced.</p><p>After the specialist outputs are combined into the final case brief, there is another verification pass. This final agent checks the Markdown report against the extracted evidence, correcting or removing claims that are not supported by the source material.</p><h4>How to improve this further</h4><p>There are a few obvious next steps.</p><ul><li><p>If your clinical report is in other languages, you can add steps to translate those. </p></li><li><p>You can add a <strong>missing-information layer</strong> that explicitly tells the user which clinically relevant documents or results appear to be absent from the case packet.</p></li><li><p>Anything else you can think of\u2026</p></li></ul><p>The interesting part is not simply summarizing clinical documents. It is creating a repeatable workflow that turns fragmented reports into a concise case representation with defined structure while keeping the original evidence contained in the output.</p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://2ndopin.io/desktop&quot;,&quot;text&quot;:&quot;Download 2ndOpinion&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://2ndopin.io/desktop\"><span>Download 2ndOpinion</span></a></p><p></p>",
+      "has_dynamic_content": false,
+      "truncated_body_text": "Writing a clinical case brief sounds simple until you have to pull the story together from pathology, imaging, clinical notes, surgery reports, and lab results. For complex oncology cases, that preparation can take a significant amount of clinician time.",
+      "wordcount": 606,
+      "post_preview_limit": null,
+      "language": "en",
+      "postTags": [],
+      "postCountryBlocks": [],
+      "disable_drop_cap": false,
+      "cover_image_crop": null,
+      "headlineTest": null,
+      "coverImagePalette": {
+        "Vibrant": {
+          "rgb": [
+            53.54999999999999,
+            96.89999999999998,
+            201.45000000000002
+          ],
+          "population": 0
+        },
+        "DarkVibrant": {
+          "rgb": [
+            21,
+            38,
+            79
+          ],
+          "population": 96
+        },
+        "LightVibrant": {
+          "rgb": [
+            236,
+            244,
+            252
+          ],
+          "population": 12
+        },
+        "Muted": {
+          "rgb": [
+            100,
+            116,
+            156
+          ],
+          "population": 1
+        },
+        "DarkMuted": {
+          "rgb": [
+            58,
+            71,
+            104
+          ],
+          "population": 16
+        },
+        "LightMuted": {
+          "rgb": [
+            160,
+            172,
+            204
+          ],
+          "population": 2
+        }
+      },
+      "publishedBylines": [
+        {
+          "id": 250611392,
+          "name": "Altuna Akalin",
+          "handle": "al2na",
+          "photo_url": "https://substack-post-media.s3.amazonaws.com/public/images/fecb6223-7917-4173-928d-cc17a9491984_914x914.png",
+          "bio": "Staring at data and slowly losing eyesight... Otherwise, trying to understand biology and medicine through code, statistics, and machine learning. Notes on science, data, AI, and whatever survives contact with reality.",
+          "profile_set_up_at": "2024-07-03T20:41:56.488Z",
+          "reader_installed_at": "2024-08-06T16:07:26.572Z",
+          "publicationUsers": [
+            {
+              "id": 10438901,
+              "user_id": 250611392,
+              "publication_id": 10168527,
+              "role": "admin",
+              "public": true,
+              "is_primary": false,
+              "publication": {
+                "id": 10168527,
+                "name": ">_ Hacks & Recipes",
+                "subdomain": "biodatahacks",
+                "custom_domain": null,
+                "custom_domain_optional": false,
+                "hero_text": "Hacks, recipes, and AI workflows powering biomedical data science and precision medicine ",
+                "logo_url": "https://substack-post-media.s3.amazonaws.com/public/images/4f970eb4-e91a-4835-b915-89f94231caec_268x268.png",
+                "author_id": 250611392,
+                "primary_user_id": null,
+                "theme_var_background_pop": "#FF6719",
+                "created_at": "2026-07-23T18:27:05.395Z",
+                "email_from_name": null,
+                "copyright": "al2na",
+                "founding_plan_name": null,
+                "community_enabled": true,
+                "invite_only": false,
+                "payments_state": "disabled",
+                "language": "en",
+                "explicit": false,
+                "homepage_type": "newspaper",
+                "is_personal_mode": false,
+                "logo_url_wide": null
+              }
+            }
+          ],
+          "is_guest": false,
+          "bestseller_tier": null,
+          "status": {
+            "bestsellerTier": null,
+            "subscriberTier": null,
+            "leaderboard": null,
+            "vip": false,
+            "badge": null,
+            "subscriber": null
+          }
+        }
+      ],
+      "reaction": null,
+      "reaction_count": 0,
+      "comment_count": 0,
+      "child_comment_count": 0,
+      "is_geoblocked": false,
+      "is_editor_preview": false,
+      "hasCashtag": false
+    },
+    {
+      "audience": "everyone",
+      "audience_before_archived": null,
+      "canonical_url": "https://biodatahacks.substack.com/p/how-to-build-your-own-tumor-board",
+      "default_comment_sort": null,
+      "editor_v2": false,
+      "exempt_from_archive_paywall": false,
+      "free_unlock_required": false,
+      "id": 210920526,
+      "podcast_art_url": null,
+      "podcast_duration": null,
+      "podcast_preview_upload_id": null,
+      "podcast_upload_id": null,
+      "podcast_url": null,
+      "post_date": "2026-08-17T16:26:00.664Z",
+      "updated_at": "2026-08-18T07:39:59.029Z",
+      "publication_id": 10168527,
+      "search_engine_description": null,
+      "search_engine_title": null,
+      "section_id": 440072,
+      "should_send_free_preview": false,
+      "show_guest_bios": true,
+      "slug": "how-to-build-your-own-tumor-board",
+      "social_title": null,
+      "subtitle": "Run patient cases, get AI generated recommendations grounded by literature",
+      "teaser_post_eligible": true,
+      "title": "How to build your own tumor board simulation using AI",
+      "type": "newsletter",
+      "video_upload_id": null,
+      "write_comment_permissions": "everyone",
+      "meter_type": "none",
+      "live_stream_id": null,
+      "is_published": true,
+      "restacks": 2,
+      "reactions": {
+        "\u2764": 0
+      },
+      "top_exclusions": [],
+      "pins": [],
+      "section_pins": [],
+      "has_shareable_clips": false,
+      "previous_post_slug": "how-to-build-your-own-ai-peer-review",
+      "next_post_slug": "create-validated-case-briefs-from",
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!Dzj8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png",
+      "cover_image_is_square": false,
+      "cover_image_is_explicit": false,
+      "videoUpload": null,
+      "podcastFields": {
+        "post_id": 210920526,
+        "podcast_episode_number": null,
+        "podcast_season_number": null,
+        "podcast_episode_type": null,
+        "should_syndicate_to_other_feed": null,
+        "syndicate_to_section_id": null,
+        "hide_from_feed": false,
+        "free_podcast_url": null,
+        "free_podcast_duration": null,
+        "preview_contains_ad": false,
+        "was_imported_self_serve_sync": false,
+        "draft_free_podcast_url": null,
+        "draft_free_podcast_duration": null
+      },
+      "podcastUpload": null,
+      "podcastPreviewUpload": null,
+      "voiceover_upload_id": null,
+      "voiceoverUpload": null,
+      "has_voiceover": false,
+      "description": "Run patient cases, get AI generated recommendations grounded by literature",
+      "body_html": "<p>Tumor boards are useful because difficult cancer cases are rarely just pathology problems, radiology problems, or surgical problems. The decision usually comes from putting all of those perspectives together. So, I wanted to see if we can simulate at least part of that process with an AI workflow.</p><p>The idea is not to build an \u201cAI oncologist\u201d that spits out treatment recommendations. Instead, the idea is to build something closer to the structure of an actual multidisciplinary discussion. This process essentially identifies what each specialist needs to clarify, lets those specialists independently address their part of the problem, and only then synthesizes the answers.</p><p>Before we start, <strong>here is <a href=\"https://github.com/al2na/tumor_board_automation\">the final workflow</a>.</strong> You can download and use it already if you don\u2019t have the time to go through the rest of the post. In the link, you can also see the example case we used. </p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!Dzj8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!Dzj8!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 424w, https://substackcdn.com/image/fetch/$s_!Dzj8!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 848w, https://substackcdn.com/image/fetch/$s_!Dzj8!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 1272w, https://substackcdn.com/image/fetch/$s_!Dzj8!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!Dzj8!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png\" width=\"576\" height=\"601.7142857142857\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/a71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1521,&quot;width&quot;:1456,&quot;resizeWidth&quot;:576,&quot;bytes&quot;:298849,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/210920526?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!Dzj8!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 424w, https://substackcdn.com/image/fetch/$s_!Dzj8!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 848w, https://substackcdn.com/image/fetch/$s_!Dzj8!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 1272w, https://substackcdn.com/image/fetch/$s_!Dzj8!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa71045e0-9310-4a89-8184-1cb8db00c045_1616x1688.png 1456w\" sizes=\"100vw\" fetchpriority=\"high\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/p/how-to-build-your-own-tumor-board?utm_source=substack&utm_medium=email&utm_content=share&action=share&quot;,&quot;text&quot;:&quot;Share&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/p/how-to-build-your-own-tumor-board?utm_source=substack&utm_medium=email&utm_content=share&action=share\"><span>Share</span></a></p><p></p><h4>The general idea</h4><p>The workflow starts with the available clinical information generally fed into tumor boards: 1) patient history, 2) pathology report, 3) radiology report, 4) a procedural or surgical report, and 5) the actual question we want the tumor board to answer.</p><p>The first task creates a short structured case summary. That summary and the original tumor-board question are then given to an \u201cOncologist\u201d agent. This agent does not answer the question. Its task is to work out what the pathologist, surgeon, and radiologist should each be asked. Those questions then go to three separate specialist agents. Each specialist has access to the relevant case information and can search PubMed when external evidence is useful.</p><p>Finally, everything goes into a final synthesis node which acts as an oncology integrator. This task has to combine the specialist opinions, explicitly deal with disagreements and missing information, decide whether the case is actually ready for a decision, and only make a recommendation to the extent supported by the available evidence. Each of these tasks is represented as a separate node, so the behaviour of the individual \u201ctumor board members\u201d can be changed independently.</p><p><strong>Important caveat:</strong> This is obviously not an actual tumor board and should not be treated as one.  This workflow is an experiment in structuring AI reasoning around multidisciplinary cases, not replacing clinical decision-making. All the steps rely on generative AI to generate task-specific text. </p><h4>Input nodes</h4><p>There are several inputs. In this case, all the inputs are simple text. The required inputs are:</p><ul><li><p>Patient history</p></li><li><p>Pathology report, including molecular biomarkers or other molecular tests</p></li><li><p>Radiology report</p></li><li><p>Diagnostic surgery/procedural report</p></li><li><p>The question we want the tumor board to answer</p></li></ul><p>The last one is particularly important. Without a focused question, it is very easy for an AI system to produce a giant generic discussion of the case rather than help with the actual clinical uncertainty. For example, the question could concern diagnosis, whether additional tissue is needed, resectability, disease extent, or what needs to happen before a treatment decision can be made.</p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe now&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/subscribe?\"><span>Subscribe now</span></a></p><p></p><div><hr></div><h4>First node: Summarize the case</h4><p>The first agent acts as a clinical case summarizer. It takes the supplied reports and creates a short structured brief covering the clinical context, current problem, chronology, pathology, radiology, procedures, previous cancer treatment and relevant comorbidities or functional limitations.</p><p>There are some important constraints here. It is told not to diagnose, not to recommend treatment and not to resolve disagreements between reports.</p><p>The idea is to reduce a potentially long collection of reports into something the next agents can work with without quietly converting uncertainty into fact.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!_zsg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!_zsg!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 424w, https://substackcdn.com/image/fetch/$s_!_zsg!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 848w, https://substackcdn.com/image/fetch/$s_!_zsg!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 1272w, https://substackcdn.com/image/fetch/$s_!_zsg!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!_zsg!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png\" width=\"1132\" height=\"676\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:676,&quot;width&quot;:1132,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:236069,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/210920526?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!_zsg!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 424w, https://substackcdn.com/image/fetch/$s_!_zsg!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 848w, https://substackcdn.com/image/fetch/$s_!_zsg!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 1272w, https://substackcdn.com/image/fetch/$s_!_zsg!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013fe579-417b-49e6-b1b0-510f64c1724e_1132x676.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p></p><div><hr></div><h4>Oncologist node</h4><p>Next task/node is the Lead Oncologist. This agent is also not allowed to solve the case. Instead, it receives the structured summary and the original tumor-board question and asks one or two focused questions of each specialist: Pathologist, surgeon and the radiologist.</p><p>The questions have to identify a specific uncertainty and ask the specialist for a direct conclusion, supporting case evidence, uncertainty and any additional information required before the conclusion can be relied upon.</p><p>So rather than asking the radiologist \u201cWhat do you think?\u201d, we want something closer to: what can the available imaging establish about disease distribution, and what remains uncertain in a way that could change management? Likewise, the pathologist should get the pathology-specific part of the problem rather than being asked to solve the entire oncology case.</p><div><hr></div><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!4gKT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!4gKT!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 424w, https://substackcdn.com/image/fetch/$s_!4gKT!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 848w, https://substackcdn.com/image/fetch/$s_!4gKT!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 1272w, https://substackcdn.com/image/fetch/$s_!4gKT!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 1456w\" sizes=\"auto, 100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!4gKT!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png\" width=\"1352\" height=\"340\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:340,&quot;width&quot;:1352,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:135846,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/210920526?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!4gKT!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 424w, https://substackcdn.com/image/fetch/$s_!4gKT!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 848w, https://substackcdn.com/image/fetch/$s_!4gKT!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 1272w, https://substackcdn.com/image/fetch/$s_!4gKT!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25157e11-0ee3-498e-a7fe-a8407cbcc70f_1352x340.png 1456w\" sizes=\"auto, 100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button tabindex=\"0\" type=\"button\" class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p></p><p></p><h4>Pathologist node</h4><p>The Pathologist receives the focused pathology question plus the relevant clinical and pathology information.</p><p>The prompt is quite strict about separating four things:</p><ol><li><p>What is actually reported in the patient\u2019s records.</p></li><li><p>The AI pathologist\u2019s interpretation.</p></li><li><p>General knowledge supported by literature.</p></li><li><p>What remains uncertain.</p></li></ol><p>The agent is specifically instructed not to invent morphology, immunohistochemistry, molecular alterations, pathological stage, negative tests or specimen characteristics.</p><p>It can use PubMed when that helps with things such as differential diagnosis, interpretation of unusual immunophenotypes, molecular findings, classification criteria or additional tests that could separate competing diagnoses.</p><p>The output also forces the agent to explain exactly what uncertainty an additional test would resolve and whether resolving it could materially affect treatment.</p><p>That is important because otherwise \u201cdo more stains/molecular testing\u201d can become the AI equivalent of ordering everything.</p><div><hr></div><h4>Surgeon node</h4><p>The Surgeon gets a separate focused question from the oncologist. This agent looks at things like technical feasibility, the potential oncological role of surgery, diagnostic biopsy, possible surgical approaches, morbidity, functional consequences and what still needs to be established before a surgical decision can be made. Again, the scope is deliberately restricted. The surgeon is not allowed to establish pathology, choose systemic treatment, or produce the final multidisciplinary plan.</p><p>The surgeon node can also use PubMed to look at evidence around surgical indications, outcomes, neoadjuvant approaches, organ preservation and similar questions.</p><div><hr></div><h4>Radiologist node</h4><p>The Radiologist performs the same kind of specialist analysis using the imaging report. The agent is explicitly told not to invent lesions, measurements, progression, anatomical relationships or metastatic disease. PubMed search is available for this task as well for questions around imaging modalities, response assessment, occult primary work-up, biopsy targeting and known limitations of different imaging approaches.</p><div><hr></div><h4>Final synthesis node</h4><p>The outputs of specialist agents then go into the final synthesis node. This is the part where the simulated tumor board actually tries to answer the original question. </p><p>But before making a recommendation, it has to classify the case as: <strong>DECISION-READY, CONDITIONALLY DECISION-READY </strong>or <strong>NOT DECISION-READY</strong></p><p>A useful clinical decision-support system should be able to say \u201cwe cannot answer this yet\u201d rather than treating production of a treatment plan as the definition of success.</p><p>The Integrator is also explicitly instructed not to silently resolve disagreements between specialists. If two specialist conclusions conflict, it has to state the conflict, explain why it matters and say what information would resolve it.</p><p>The final answer contains the integrated case formulation, specialist conclusions, reasoning, proposed sequence, conditions that need to be satisfied, alternatives and unresolved uncertainties.</p><div><hr></div><h4>Privacy and clinical data</h4><p>One thing to note before using a workflow like this is patient data. The version of the workflow I am sharing is configured to allow cloud models, and the specialist nodes can send searches to PubMed. You can turn this behaviour off, so that only local models are used. If you want to keep using the cloud models on real patient cases, it would be prudent to de-identify it using the provided de-identification protocol, or you can do de-identification via other established means. </p><div><hr></div><h4>How did the workflow do?</h4><p>We have tested this on a case report involving an <a href=\"https://academic.oup.com/oncolo/article/31/5/oyag132/8614627\">adult neuroblastoma case</a>. The original publication is here.  It classified the case as <strong>NOT DECISION-READY</strong> and asked for further evidence in the form of more molecular tests, including transcriptome or methylation tests. It mainly thinks that this is a neuroendocrine tumor with unknown primary, which is in the ballpark of adult neuroblastoma as it is rare for adults to have neuroblastoma. In the original paper, they confirmed the neuroblastoma after methylation tests; those tests were also not super definitive. <br><br>The problem with testing the workflow with such cases is that the case is either in the training set of large frontier LLMs or models can find it with a quick web search. So synthetic cases or cases that have no publication attached are the way to benchmark these systems. Nevertheless, the workflow described here can be adapted and tested for various cases.  I encourage practitioners to have a go and contact me if they have questions.</p><div><hr></div><h4>How to improve this further</h4><p>One can do a few or all of the following to improve this:</p><ul><li><p>Add a Medical Oncologist and Radiation Oncologist as independent specialist nodes.</p></li><li><p>Run the specialist agents more than once and add a consensus/synthesis step for areas where generative variability matters.</p></li><li><p>Add a dedicated evidence-quality agent that checks whether the cited PubMed papers actually support the propositions.</p></li><li><p>Add a contradiction detector before final synthesis to compare pathology, imaging, surgery and the original reports for disagreements.</p></li><li><p>Give the final Integrator an explicit mechanism for sending a question back to a specialist when something important remains unclear.</p></li><li><p>Add a patient-preferences/performance-status node when those factors are relevant to the clinical decision.</p></li><li><p>Make cancer specific guideline knowledgebases and use them in the evidence search steps. This is quite easy to do with the 2ndOpinion desktop app.</p></li><li><p>Compare it directly against simply giving the entire case to one LLM with one big tumor-board prompt. That is probably the most interesting experiment.</p></li><li><p>Make some nodes look at raw images from radiology or pathology with models like medGemma, 2ndOpinion can use such models in particular nodes.</p></li><li><p>Anything else you can think of, comment below or wherever you see this post.</p></li></ul><p></p><p>See you in the next post!! </p><p></p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/p/how-to-build-your-own-tumor-board?utm_source=substack&utm_medium=email&utm_content=share&action=share&quot;,&quot;text&quot;:&quot;Share&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://biodatahacks.substack.com/p/how-to-build-your-own-tumor-board?utm_source=substack&utm_medium=email&utm_content=share&action=share\"><span>Share</span></a></p><p></p>",
+      "has_dynamic_content": false,
+      "truncated_body_text": "Tumor boards are useful because difficult cancer cases are rarely just pathology problems, radiology problems, or surgical problems. The decision usually comes from putting all of those perspectives together. So, I wanted to see if we can simulate at least part of that process with an AI workflow.",
+      "wordcount": 1617,
+      "post_preview_limit": null,
+      "language": "en",
+      "postTags": [],
+      "postCountryBlocks": [],
+      "disable_drop_cap": false,
+      "cover_image_crop": null,
+      "headlineTest": null,
+      "coverImagePalette": {
+        "Vibrant": {
+          "rgb": [
+            45.2419354838709,
+            45.2419354838709,
+            209.7580645161291
+          ],
+          "population": 0
+        },
+        "DarkVibrant": {
+          "rgb": [
+            23.525806451612866,
+            23.525806451612866,
+            109.07419354838714
+          ],
+          "population": 0
+        },
+        "LightVibrant": {
+          "rgb": [
+            204,
+            204,
+            244
+          ],
+          "population": 3
+        },
+        "Muted": {
+          "rgb": [
+            27.145161290322537,
+            27.145161290322537,
+            125.85483870967745
+          ],
+          "population": 0
+        },
+        "DarkMuted": {
+          "rgb": [
+            27.145161290322537,
+            27.145161290322537,
+            125.85483870967745
+          ],
+          "population": 0
+        },
+        "LightMuted": {
+          "rgb": [
+            183,
+            184,
+            195
+          ],
+          "population": 69
+        }
+      },
+      "publishedBylines": [
+        {
+          "id": 250611392,
+          "name": "Altuna Akalin",
+          "handle": "al2na",
+          "photo_url": "https://substack-post-media.s3.amazonaws.com/public/images/fecb6223-7917-4173-928d-cc17a9491984_914x914.png",
+          "bio": "Staring at data and slowly losing eyesight... Otherwise, trying to understand biology and medicine through code, statistics, and machine learning. Notes on science, data, AI, and whatever survives contact with reality.",
+          "profile_set_up_at": "2024-07-03T20:41:56.488Z",
+          "reader_installed_at": "2024-08-06T16:07:26.572Z",
+          "publicationUsers": [
+            {
+              "id": 10438901,
+              "user_id": 250611392,
+              "publication_id": 10168527,
+              "role": "admin",
+              "public": true,
+              "is_primary": false,
+              "publication": {
+                "id": 10168527,
+                "name": ">_ Hacks & Recipes",
+                "subdomain": "biodatahacks",
+                "custom_domain": null,
+                "custom_domain_optional": false,
+                "hero_text": "Hacks, recipes, and AI workflows powering biomedical data science and precision medicine ",
+                "logo_url": "https://substack-post-media.s3.amazonaws.com/public/images/4f970eb4-e91a-4835-b915-89f94231caec_268x268.png",
+                "author_id": 250611392,
+                "primary_user_id": null,
+                "theme_var_background_pop": "#FF6719",
+                "created_at": "2026-07-23T18:27:05.395Z",
+                "email_from_name": null,
+                "copyright": "al2na",
+                "founding_plan_name": null,
+                "community_enabled": true,
+                "invite_only": false,
+                "payments_state": "disabled",
+                "language": "en",
+                "explicit": false,
+                "homepage_type": "newspaper",
+                "is_personal_mode": false,
+                "logo_url_wide": null
+              }
+            }
+          ],
+          "is_guest": false,
+          "bestseller_tier": null,
+          "status": {
+            "bestsellerTier": null,
+            "subscriberTier": null,
+            "leaderboard": null,
+            "vip": false,
+            "badge": null,
+            "subscriber": null
+          }
+        }
+      ],
+      "reaction": null,
+      "reaction_count": 0,
+      "comment_count": 0,
+      "child_comment_count": 0,
+      "is_geoblocked": false,
+      "is_editor_preview": false,
+      "hasCashtag": false
+    }
+  ],
+  "nextCursor": "eyJwb3N0X2RhdGUiOiIyMDI2LTA4LTE3VDE2OjI2OjAwLjY2NDA1OVoifQ=="
+}

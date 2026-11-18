@@ -75,11 +75,17 @@ function pickPrimary(packages, preferredId) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const downloadBtn = document.getElementById('primary-download-btn');
+  const downloadText = document.getElementById('primary-download-text');
   const osNameSpan = document.getElementById('os-name');
   const alts = document.getElementById('download-alts');
   const allReleases = document.getElementById('all-releases-link');
+  const secLinks = {
+    'mac-intel': document.getElementById('download-intel'),
+    'linux-appimage': document.getElementById('download-appimage'),
+    'linux-deb': document.getElementById('download-deb'),
+    win: document.getElementById('download-win'),
+  };
 
-  if (!downloadBtn || !osNameSpan) return;
   if (allReleases) allReleases.href = RELEASES_PAGE;
 
   fetch(RELEASES_API, { headers: { Accept: 'application/vnd.github+json' } })
@@ -91,35 +97,47 @@ document.addEventListener('DOMContentLoaded', () => {
       const packages = packagesFromAssets(release.assets);
       if (packages.length === 0) return;
 
+      for (const pkg of packages) {
+        if (secLinks[pkg.id]) {
+          secLinks[pkg.id].href = pkg.url;
+        }
+      }
+
+      if (!downloadBtn) return;
       const preferredId = await detectPreferredId();
       const primary = pickPrimary(packages, preferredId);
       if (!primary) return;
 
       downloadBtn.href = primary.url;
-      osNameSpan.textContent = '';
-      downloadBtn.replaceChildren(
-        document.createTextNode(`${primary.primaryLabel} `),
-        (() => {
-          const arrow = document.createElement('span');
-          arrow.setAttribute('aria-hidden', 'true');
-          arrow.textContent = '↓';
-          return arrow;
-        })(),
-      );
-
-      if (!alts) return;
-      const others = packages.filter((pkg) => pkg.id !== primary.id);
-      alts.replaceChildren();
-      for (const pkg of others) {
-        const link = document.createElement('a');
-        link.className = 'download-alt';
-        link.href = pkg.url;
-        link.textContent = pkg.label;
-        alts.appendChild(link);
+      if (downloadText) {
+        downloadText.textContent = primary.primaryLabel;
+      } else if (osNameSpan) {
+        osNameSpan.textContent = '';
+        downloadBtn.replaceChildren(
+          document.createTextNode(`${primary.primaryLabel} `),
+          (() => {
+            const arrow = document.createElement('span');
+            arrow.setAttribute('aria-hidden', 'true');
+            arrow.textContent = '↓';
+            return arrow;
+          })(),
+        );
       }
-      alts.hidden = others.length === 0;
+
+      if (alts) {
+        const others = packages.filter((pkg) => pkg.id !== primary.id);
+        alts.replaceChildren();
+        for (const pkg of others) {
+          const link = document.createElement('a');
+          link.className = 'download-alt';
+          link.href = pkg.url;
+          link.textContent = pkg.label;
+          alts.appendChild(link);
+        }
+        alts.hidden = others.length === 0;
+      }
     })
     .catch(() => {
-      downloadBtn.href = LATEST_PAGE;
+      if (downloadBtn) downloadBtn.href = LATEST_PAGE;
     });
 });

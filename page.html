@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rolv - Legal</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,8 +30,9 @@
                 rolv
             </a>
             <div class="nav-links">
-                <a href="index.html#features">Features</a>
-                <!-- <a href="index.html#pricing">Pricing</a> -->
+                <a href="index.html">Home</a>
+                <a href="docs/index.html">Docs</a>
+                <a href="blog/index.html">Blog</a>
                 <a href="page.html?md=contact">Contact</a>
             </div>
         </nav>
@@ -42,6 +46,9 @@
         <footer>
             <div class="footer-content" style="justify-content: center;">
                 <div class="footer-links" style="gap: 4rem;">
+                    <a href="index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Home</a>
+                    <a href="docs/index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Docs</a>
+                    <a href="blog/index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Blog</a>
                     <a href="page.html?md=contact" style="color: var(--text-secondary); font-size: 0.9rem;">Contact</a>
                     <!-- Restore later:
                     <a href="page.html?md=terms" style="color: var(--text-secondary); font-size: 0.9rem;">Terms of Service</a>
@@ -58,6 +65,13 @@
     </div>
 
     <script>
+        const FALLBACK_PAGES = {
+            contact: `# Contact Us\n\nWe're here to help! Whether you have a question about features, limits, or need technical support, you can reach out to us.\n\n## Support & Inquiries\n\n**Email:** [hello@rolv.io](mailto:hello@rolv.io)\n\n## Community & Feedback\n\nIf you encounter any issues with the application or want to request a feature, you can also open an issue on our [GitHub repository](https://github.com/rolv-io).\n`,
+            terms: `# Terms of Service\n\nLast updated: May 2026\n\nPlease read these Terms of Service carefully before using rolv.\n\n## Acceptance of Terms\n\nBy accessing or using rolv, you agree to be bound by these Terms.\n\n## Local Execution & Privacy\n\nrolv executes recipes and models locally on your computer. You retain full ownership and control of your local data and code.\n\n## Contact\n\nIf you have any questions about these Terms, please contact us at [hello@rolv.io](mailto:hello@rolv.io).\n`,
+            privacy: `# Privacy Policy\n\nLast updated: May 2026\n\nrolv is designed with a privacy-first architecture.\n\n## Local Compute\n\nAll analytical recipes, data processing, and local LLM execution take place on your machine. Your data never leaves your device unless you explicitly configure remote cloud providers.\n\n## Inquiries\n\nFor privacy inquiries, contact [hello@rolv.io](mailto:hello@rolv.io).\n`,
+            refund: `# Refund Policy\n\nLast updated: May 2026\n\nSubscriptions and digital purchases can be managed directly in the application.\n\nFor refund assistance, contact support at [hello@rolv.io](mailto:hello@rolv.io).\n`
+        };
+
         document.addEventListener('DOMContentLoaded', async () => {
             const urlParams = new URLSearchParams(window.location.search);
             let mdFile = urlParams.get('md');
@@ -75,25 +89,33 @@
                 return;
             }
 
+            let markdown = '';
             try {
                 const response = await fetch(`${mdFile}.md`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                const markdown = await response.text();
-                
-                // Parse markdown to HTML
-                contentDiv.innerHTML = marked.parse(markdown);
-                
-                // Update document title based on first h1 if it exists
-                const h1 = contentDiv.querySelector('h1');
-                if (h1) {
-                    document.title = `rolv - ${h1.textContent}`;
-                }
+                markdown = await response.text();
             } catch (error) {
-                contentDiv.innerHTML = `<p style="color: #ef4444;">Error loading content: ${error.message}</p>`;
+                // If running via file:// or fetch fails, fall back to embedded content
+                if (FALLBACK_PAGES[mdFile]) {
+                    markdown = FALLBACK_PAGES[mdFile];
+                } else {
+                    contentDiv.innerHTML = `<p style="color: #ef4444;">Error loading content: ${error.message}</p>`;
+                    return;
+                }
+            }
+
+            // Parse markdown to HTML
+            contentDiv.innerHTML = marked.parse(markdown);
+            
+            // Update document title based on first h1 if it exists
+            const h1 = contentDiv.querySelector('h1');
+            if (h1) {
+                document.title = `rolv - ${h1.textContent}`;
             }
         });
     </script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22956b3c44774125b79b1c456a44252e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

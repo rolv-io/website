@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings & Compute - rolv Documentation</title>
+    <meta name="description" content="Token usage, SSH/SLURM remote compute, custom models.">
+    <link rel="canonical" href="https://rolv.io/docs/settings.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Settings & Compute - rolv Documentation">
+    <meta property="og:description" content="Token usage, SSH/SLURM remote compute, custom models.">
+    <meta property="og:url" content="https://rolv.io/docs/settings.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html" class="logo" style="text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="32" preserveAspectRatio="xMidYMid meet">
+    <g transform="matrix(1.6794,0,0,2.27631,188.384,-1051.21)">
+        <ellipse cx="192.698" cy="686.728" rx="304.871" ry="224.925" fill="none"/>
+    </g>
+    <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
+        <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
+    </g>
+</svg>
+                rolv
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="index.html" style="color: var(--accent);">Docs</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="docs-layout">
+            
+            <aside class="docs-sidebar">
+                <div class="docs-sidebar-title">Documentation</div>
+                <ul class="docs-nav-list">
+                <li><a href="index.html" class="docs-nav-link ">Overview</a></li>
+                <li><a href="getting-started.html" class="docs-nav-link ">Getting Started</a></li>
+                <li><a href="chat-view.html" class="docs-nav-link ">Chat View</a></li>
+                <li><a href="graph-view.html" class="docs-nav-link ">Graph View</a></li>
+                <li><a href="recipes.html" class="docs-nav-link ">Recipes</a></li>
+                <li><a href="reviews.html" class="docs-nav-link ">Reviews</a></li>
+                <li><a href="settings.html" class="docs-nav-link active">Settings</a></li>
+                <li><a href="troubleshooting.html" class="docs-nav-link ">Troubleshooting</a></li>
+                </ul>
+                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                    <a href="https://github.com/rolv-io/rolv-releases/releases/latest" class="btn btn-primary" style="display: block; text-align: center; font-size: 0.85rem; padding: 0.5rem 1rem;">
+                        Download App
+                    </a>
+                </div>
+            </aside>
+
+            <main class="docs-main">
+                <article class="docs-content">
+                    <h1>Settings</h1>
+<p>Open Settings by clicking the <strong>⚙️ Settings</strong> button at the bottom of the sidebar. The preferences panel has three tabs.</p>
+<h2>Token Usage</h2>
+<p><img src="settings-usage.png" alt="Token Usage &amp; Account Limits"></p>
+<p>Monitor your API consumption and account status:</p>
+<ul>
+<li><strong>Account Tier</strong> — Free or Academic (🎓) (also free)</li>
+<li><strong>Compute Credits</strong> — Your current credit balance for AI operations</li>
+<li><strong>Daily Quota</strong> — Token usage today vs. your daily limit (resets at midnight UTC)</li>
+<li><strong>Monthly Quota</strong> — Token usage this month vs. your monthly limit</li>
+<li><strong>Historical Total</strong> — All-time token consumption</li>
+</ul>
+<h3>What Do Credits Get You?</h3>
+<p>With 10,000 credits you can approximately:</p>
+<ul>
+<li><strong>Light Tasks:</strong> Analyze ~25 million input tokens (equivalent to scanning ~1,500 dense PDF papers)</li>
+<li><strong>Medium Tasks:</strong> Generate ~6.6 million tokens of deep reasoning or complex coding</li>
+</ul>
+<h3>Requesting More Credits or Lab Licenses</h3>
+<p>Need additional cloud compute credits or tokens or lab licensing? Contact <a href="mailto:hello@rolv.io">hello@rolv.io</a>. Academic researchers and research groups can request grant-sponsored compute for publishing papers with Rolv.</p>
+<h2>Execution Tools</h2>
+<p>Configure how rolv runs code and manages environments.</p>
+<p><img src="settings-environments.png" alt="Runtime Environment Setup"></p>
+<h3>Python Version</h3>
+<p>Select the Python version (3.10–3.14) used for new sandbox environments. A template kernel is created on first use.</p>
+<h3>R Version</h3>
+<p>Select the R version (4.2.3–4.6.1) for R node environments, managed via Mamba. Default is <strong>4.4.1</strong>. Changing version builds a new template — start a <strong>new</strong> session (or delete <code>~/.rolv/envs/_template_r…</code>) so the pin takes effect.</p>
+<p><img src="settings-ssh-mamba.png" alt="Mamba Path &amp; Remote Compute"></p>
+<h3>Mamba Path</h3>
+<p>If Mamba/Micromamba isn&#39;t on your system PATH, specify the absolute path so the execution engine can install dependencies. Leave empty for auto-detection.</p>
+<h3>Remote Compute</h3>
+<p>Configure remote targets to run compute nodes off your laptop. SSH, OpenStack VMs, and Slurm clusters share <strong>one slot cap</strong> (Free: 1, Academic: 3, Pro+: unlimited). <strong>Only SSH executes today</strong>; OpenStack and Slurm can be saved as slots for later.</p>
+<p>To add an SSH target:</p>
+<ol>
+<li>Click <strong>Add Target</strong> (disabled when you are at the slot cap)</li>
+<li>Fill in: Name, Host, Port, Username</li>
+<li>Choose auth method: <strong>Key Pair</strong> or <strong>Password</strong> (prompted on connect)</li>
+<li>For key auth: specify the private key path (e.g., <code>~/.ssh/id_rsa</code>)</li>
+<li>Set the remote work directory and Python command</li>
+<li>Click <strong>Test</strong> to verify the connection</li>
+</ol>
+<p>Configured SSH targets appear in the graph node inspector&#39;s <strong>Execution Target</strong> dropdown.</p>
+<p><img src="settings-global-instructions.png" alt="Global AI Instructions &amp; Recipe Sharing"></p>
+<h3>Recipe Sharing</h3>
+<p>Control what happens when AI modifies a cloud-origin recipe:</p>
+<ul>
+<li><strong>Ask every time</strong> — Prompts you to share improvements after saving</li>
+<li><strong>Never ask</strong> — Silently skips the sharing prompt</li>
+<li><strong>Auto broadcast</strong> — Automatically submits contributions</li>
+</ul>
+<h3>Global AI Instructions</h3>
+<p>Custom instructions injected into all AI agent calls. Use this for consistent preferences like:</p>
+<ul>
+<li>Language choice (e.g., &quot;Always use Python instead of R&quot;)</li>
+<li>Coding style (e.g., &quot;Set random seeds for reproducibility&quot;)</li>
+<li>Library preferences (e.g., &quot;Use seaborn with darkgrid theme&quot;)</li>
+</ul>
+<h2>API Hub</h2>
+<p>Bring your own API keys to customize or bypass rolv&#39;s cloud services.</p>
+<h3>Custom LLM Provider</h3>
+<p>Use any OpenAI-compatible API. <strong>OpenAI</strong>, <strong>Groq</strong>, <strong>Ollama</strong>, and <strong>OpenRouter</strong> presets fill the URL and a tool-capable model. Groq uses <code>https://api.groq.com/openai/v1</code> (not <code>/v1</code>). Localhost Ollama does <strong>not</strong> need an API key.</p>
+<h4>Free &amp; Local LLM Options:</h4>
+<ul>
+<li><strong>Local Ollama (100% Free &amp; Offline):</strong> Run models locally on your GPU/Mac (e.g. <code>ollama run llama3.2</code> or <code>ollama run qwen2.5-coder</code>). No data leaves your machine, perfect for unpublished research.</li>
+<li><strong>GroqCloud (Free Developer Tier):</strong> High-speed inference for Llama 3.3 models via <a href="https://console.groq.com">console.groq.com</a>.</li>
+<li><strong>OpenRouter (Free Open-Source Models):</strong> Access free model variants (<code>:free</code>) with zero credit card lock-in at <a href="https://openrouter.ai">openrouter.ai</a>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Base URL</strong></td>
+<td>The API endpoint (e.g., <code>https://api.openai.com/v1</code>, <code>http://localhost:11434/v1</code>, or <code>https://openrouter.ai/api/v1</code>)</td>
+</tr>
+<tr>
+<td><strong>Model Name</strong></td>
+<td>The model identifier (e.g., <code>gpt-4o</code>, <code>llama3.2</code>, <code>meta-llama/llama-3.3-70b-instruct:free</code>)</td>
+</tr>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Required for cloud providers. Leave empty for local Ollama / LM Studio on localhost</td>
+</tr>
+<tr>
+<td><strong>Usage Mode</strong></td>
+<td><em>Never Use</em>, <em>Use as Fallback</em> (when rolv quota is exceeded), or <em>Always Use</em></td>
+</tr>
+</tbody></table>
+<h3>Embedding Model</h3>
+<p>Embeddings power semantic search across your local recipes and pipeline node snippets.</p>
+<h4>Modes</h4>
+<ul>
+<li><strong>☁️ Cloud Default</strong> — Google <code>text-embedding-004</code> (768d) via Rolv cloud gateway when you are signed in. If embedding is unavailable (no session token, or the call fails), local search falls back to <strong>LanceDB full-text search</strong> and <strong>SQLite keywords</strong>.</li>
+<li><strong>🖥️ Custom Model</strong> — Connect your own local or remote embedding endpoint (Ollama, LM Studio, vLLM, OpenAI) for the local recipes.</li>
+</ul>
+<h4>Running Local Embedding Models (100% Free &amp; Offline):</h4>
+<p>To maximize local semantic search accuracy without sending any data to the cloud, you can run a local embedding model via <a href="https://ollama.ai">Ollama</a>:</p>
+<ol>
+<li>Run an embedding model in your terminal:<pre><code class="language-bash">ollama pull embeddinggemma:300m
+# or
+ollama pull nomic-embed-text
+</code></pre>
+</li>
+<li>In Rolv Settings $\rightarrow$ <strong>API Hub</strong> $\rightarrow$ <strong>Embedding Model</strong>, select <strong>🖥️ Custom Model</strong>.</li>
+<li>Click the preset <strong>🦙 Ollama (embeddinggemma:300m)</strong> or <strong>🦙 Ollama (nomic-embed-text)</strong> (sets Endpoint URL to <code>http://localhost:11434/v1</code>).</li>
+<li>Click <strong>Test Connection</strong> to verify reachability and dimensions.</li>
+<li>Click <strong>Save Changes</strong> — Rolv will automatically re-index your local recipes into LanceDB using your local model.</li>
+</ol>
+<blockquote>
+<p><strong>Important:</strong> Switching embedding models requires re-indexing all local recipes. Rolv will re-index your catalog automatically in the background after saving.</p>
+</blockquote>
+<hr>
+<p><strong>Next:</strong> <a href="troubleshooting.html">Troubleshooting →</a></p>
+
+                </article>
+
+                <div class="docs-cta-box">
+                    <div>
+                        <h4 style="margin-bottom: 0.25rem;">Try rolv on your desktop</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.9rem;">
+                            Execute these workflows locally or connect to your lab's HPC.
+                        </p>
+                    </div>
+                    <a href="https://github.com/rolv-io/rolv-releases/releases/latest" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">
+                        Download App
+                    </a>
+                </div>
+
+                
+    <nav class="docs-pagination">
+        
+        <a href="reviews.html" class="prev">
+            <span class="label">&larr; Previous</span>
+            <span class="title">Reviews</span>
+        </a>
+        
+        <a href="troubleshooting.html" class="next">
+            <span class="label">Next &rarr;</span>
+            <span class="title">Troubleshooting</span>
+        </a>
+    </nav>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content" style="justify-content: center;">
+                <div class="footer-links" style="gap: 4rem;">
+                    <a href="../index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Home</a>
+                    <a href="index.html" style="color: var(--text-primary); font-size: 0.9rem;">Docs</a>
+                    <a href="../blog/index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Blog</a>
+                    <a href="../contact.html" style="color: var(--text-secondary); font-size: 0.9rem;">Contact</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--text-secondary);">
+                &copy; 2026 rolv
+            </p>
+        </footer>
+    </div>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22956b3c44774125b79b1c456a44252e"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

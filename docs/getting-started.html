@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - rolv Documentation</title>
+    <meta name="description" content="Login, first chat session, and working directories.">
+    <link rel="canonical" href="https://rolv.io/docs/getting-started.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Getting Started - rolv Documentation">
+    <meta property="og:description" content="Login, first chat session, and working directories.">
+    <meta property="og:url" content="https://rolv.io/docs/getting-started.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html" class="logo" style="text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="32" preserveAspectRatio="xMidYMid meet">
+    <g transform="matrix(1.6794,0,0,2.27631,188.384,-1051.21)">
+        <ellipse cx="192.698" cy="686.728" rx="304.871" ry="224.925" fill="none"/>
+    </g>
+    <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
+        <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
+    </g>
+</svg>
+                rolv
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="index.html" style="color: var(--accent);">Docs</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="docs-layout">
+            
+            <aside class="docs-sidebar">
+                <div class="docs-sidebar-title">Documentation</div>
+                <ul class="docs-nav-list">
+                <li><a href="index.html" class="docs-nav-link ">Overview</a></li>
+                <li><a href="getting-started.html" class="docs-nav-link active">Getting Started</a></li>
+                <li><a href="chat-view.html" class="docs-nav-link ">Chat View</a></li>
+                <li><a href="graph-view.html" class="docs-nav-link ">Graph View</a></li>
+                <li><a href="recipes.html" class="docs-nav-link ">Recipes</a></li>
+                <li><a href="reviews.html" class="docs-nav-link ">Reviews</a></li>
+                <li><a href="settings.html" class="docs-nav-link ">Settings</a></li>
+                <li><a href="troubleshooting.html" class="docs-nav-link ">Troubleshooting</a></li>
+                </ul>
+                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                    <a href="https://github.com/rolv-io/rolv-releases/releases/latest" class="btn btn-primary" style="display: block; text-align: center; font-size: 0.85rem; padding: 0.5rem 1rem;">
+                        Download App
+                    </a>
+                </div>
+            </aside>
+
+            <main class="docs-main">
+                <article class="docs-content">
+                    <h1>Getting Started</h1>
+<h2>What Can rolv Do?</h2>
+<p>rolv is an <strong>agentic research platform</strong> — it pairs you with AI agents that can autonomously search scientific literature, analyze your data, execute code, and interpret results. Think of it as a research assistant that can actually <em>run</em> experiments, not just talk about them.</p>
+<h3>Core Capabilities</h3>
+<p><strong>🔬 Scientific Literature &amp; Data Discovery</strong>
+rolv agents can search <strong>PubMed</strong>, <strong>GEO</strong> (Gene Expression Omnibus), and the open web to find relevant papers, datasets, and protocols. Results are summarized and cited, so you always know where information came from.</p>
+<p><strong>📊 Data Analysis &amp; Interpretation</strong>
+Upload your data (CSV, TSV, Parquet, RDS, Excel, images, PDFs) and ask the agent to analyze it. It writes and executes code, produces plots, runs statistical tests, and interprets the results — all in a conversational flow.</p>
+<p><strong>💻 Code Execution</strong>
+rolv runs <strong>Python</strong>, <strong>R</strong>, and <strong>Bash</strong> scripts in isolated sandbox environments. Dependencies are auto-installed. You can execute code locally on your machine or remotely via <strong>SSH</strong> on a powerful server.</p>
+<p><strong>🤖 Two Ways to Work</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Best for</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Chat View</strong></td>
+<td>Quick questions, exploration</td>
+<td>A conversational interface — ask a question, get analysis back. Fast and flexible.</td>
+</tr>
+<tr>
+<td><strong>Graph View</strong></td>
+<td>Reproducible pipelines, complex workflows</td>
+<td>A visual DAG (directed acyclic graph) where each node is a processing step. Gives you granular control over execution order, inputs/outputs, and error handling.</td>
+</tr>
+</tbody></table>
+<p>The Chat View is the fastest way to get started. When your analysis grows complex, you can <strong>convert any chat into a Graph</strong> with one click — preserving all your work while gaining reproducibility and fine-grained control.</p>
+<p><strong>📦 Recipes &amp; Community</strong>
+Workflows can be saved as <strong>Recipes</strong> — reusable pipeline templates that package code, environment specs, and documentation into a shareable bundle. You can:</p>
+<ul>
+<li><strong>Browse and run</strong> recipes built by the community</li>
+<li><strong>Build your own</strong> recipes from any graph pipeline</li>
+<li><strong>Share improvements</strong> back — when you fix an issue in a community recipe, rolv can automatically contribute the fix upstream</li>
+</ul>
+<p>Recipes do not include your data files. To try a pipeline first, open the Data Input node, expand <strong>Test data</strong>, pick <strong>R</strong>, <strong>Python</strong>, or <strong>Bash</strong>, and click <strong>Starter</strong>. Rolv writes a short script. A comment above each sample file says what that file should contain. The script ends by writing <code>test_input.json</code>. Click <strong>Generate Data</strong> to create the files, copy those values onto the input fields, and save <code>input.json</code> for the pipeline. See <a href="graph-view.html#test-data">Graph View — Test data</a>.</p>
+<h3>What Kinds of Tasks?</h3>
+<p>rolv is designed for scientific and data-intensive work. Some examples:</p>
+<ul>
+<li>Differential gene expression analysis (DESeq2, edgeR)</li>
+<li>Single-cell RNA-seq clustering and annotation</li>
+<li>Quality control pipelines for sequencing data</li>
+<li>Literature reviews with automated summarization. For a <strong>list of genes or drugs</strong>, use research nodes with <strong>Batch iteration across items (ForEach)</strong>, or have a compute node collect the papers and a research node interpret them (see <a href="graph-view.html#research-nodes-">Graph View — Research nodes</a>).</li>
+<li>Statistical modeling and visualization</li>
+<li>Bioinformatics pipeline construction (Snakemake import is supported; it uses many tokens and is not failsafe)</li>
+</ul>
+<blockquote>
+<p><strong>Tip:</strong> You don&#39;t need to be a programmer. Describe what you want in plain language, and the agent writes and runs the code for you. But if you <em>are</em> a programmer, you have full access to edit every line.</p>
+</blockquote>
+<hr>
+<h2>Signing In &amp; Tiers</h2>
+<p>When you first open rolv, sign in with Google or email/password.</p>
+<p><strong>Email/password accounts must verify email</strong> before the app opens. After you register, check your inbox (and spam) for a message from <strong><a href="mailto:noreply@rolv.io">noreply@rolv.io</a></strong>. Use <strong>Resend verification email</strong>, then <strong>I’ve verified</strong>. Google sign-in is already verified.</p>
+<p><strong>Forgot password?</strong> On the sign-in screen, that link sends a reset email from the same address (<code>noreply@rolv.io</code>). Check spam if it does not appear within a minute.</p>
+<p>Your account tier determines quotas and feature capabilities:</p>
+<ul>
+<li><strong>Free Tier:</strong> Local execution with custom API keys. You can browse the Cloud Library; downloading recipes requires Academic or Pro.</li>
+<li><strong>Academic Tier (🎓):</strong> Assigned when you sign up with an institutional email that Rolv recognizes as academic (university or research institute). Includes 5 active recipe workspace slots, 200 daily Cloud RAG queries, and access to <strong>Publish-to-Earn</strong> rewards.</li>
+<li><strong>Pro &amp; Pro+ Tiers:</strong> Unlimited recipe workspace slots, unlimited Cloud RAG queries, and monthly compute credit allocations.</li>
+</ul>
+<h2>Your First Chat</h2>
+<p>After logging in, you&#39;ll see the <strong>Welcome Screen</strong> with example prompts like:</p>
+<ul>
+<li><em>Analyze my RNA-seq data</em></li>
+<li><em>Help me cluster single-cell</em></li>
+<li><em>Build a QC pipeline</em></li>
+<li><em>Find differentially expressed genes</em></li>
+</ul>
+<p>Click any prompt or type your own in the input box at the bottom. Press <strong>Enter</strong> to send.</p>
+<h2>Working Directory</h2>
+<p>Rolv does <strong>not</strong> ask for a folder on every message. Literature and web search work without one. When a tool needs disk access (running code, listing or reading workspace files, inspecting plots, or proposing graph changes), you will see <strong>Choose a project folder</strong>:</p>
+<ul>
+<li><strong>Empty Rolv folder</strong> — <code>~/.rolv/sessions/&lt;session-id&gt;</code>. Copy or move your data in after choosing this.</li>
+<li><strong>Folder that already has my data</strong> — Pick the directory where your tables already live. Outputs go there too.</li>
+</ul>
+<p>You can postpone with <strong>Ask later</strong>; Rolv will ask again when a disk tool needs a folder. Change it later with the folder icon in the chat header.</p>
+<h2>The Sidebar</h2>
+<p>The sidebar is your navigation hub:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Chat</strong> button</td>
+<td>Start a new chat conversation</td>
+</tr>
+<tr>
+<td><strong>Graph</strong> button</td>
+<td>Create a new empty graph pipeline</td>
+</tr>
+<tr>
+<td><strong>Recipes</strong> button</td>
+<td>Open the recipe library</td>
+</tr>
+<tr>
+<td><strong>Reviews</strong> button</td>
+<td>View community change requests</td>
+</tr>
+<tr>
+<td><strong>Search bar</strong></td>
+<td>Search across all chats, graphs, and messages</td>
+</tr>
+<tr>
+<td><strong>Pinned</strong> section</td>
+<td>Sessions you&#39;ve pinned for quick access</td>
+</tr>
+<tr>
+<td><strong>Recent</strong> section</td>
+<td>Your latest sessions, newest first</td>
+</tr>
+</tbody></table>
+<h3>Session Actions</h3>
+<p>Hover over any session in the sidebar to reveal:</p>
+<ul>
+<li>📌 <strong>Pin/Unpin</strong> — Keep important sessions at the top</li>
+<li>🗑️ <strong>Delete</strong> — Permanently remove the session</li>
+</ul>
+<p>Click a session title to open it (unnamed sessions get a short auto-title after the first real message or graph content). Rolv restores the last <strong>Chat</strong> or <strong>Graph</strong> view you used for that session. If you have never opened it, graph-only sessions start in Graph View and conversational sessions start in Chat View.</p>
+<h3>Sidebar Controls</h3>
+<ul>
+<li><strong>Collapse</strong> — Click the panel icon (top-right of sidebar) to hide it</li>
+<li><strong>Expand</strong> — Click the floating panel icon (top-left) when sidebar is hidden</li>
+</ul>
+<h2>Dark &amp; Light Mode</h2>
+<p>Click the sun/moon icon at the bottom of the sidebar to toggle between dark and light themes. Your preference is saved automatically.</p>
+<hr>
+<p><strong>Next:</strong> <a href="chat-view.html">Chat View →</a></p>
+
+                </article>
+
+                <div class="docs-cta-box">
+                    <div>
+                        <h4 style="margin-bottom: 0.25rem;">Try rolv on your desktop</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.9rem;">
+                            Execute these workflows locally or connect to your lab's HPC.
+                        </p>
+                    </div>
+                    <a href="https://github.com/rolv-io/rolv-releases/releases/latest" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">
+                        Download App
+                    </a>
+                </div>
+
+                
+    <nav class="docs-pagination">
+        
+        <a href="index.html" class="prev">
+            <span class="label">&larr; Previous</span>
+            <span class="title">Overview</span>
+        </a>
+        
+        <a href="chat-view.html" class="next">
+            <span class="label">Next &rarr;</span>
+            <span class="title">Chat View</span>
+        </a>
+    </nav>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content" style="justify-content: center;">
+                <div class="footer-links" style="gap: 4rem;">
+                    <a href="../index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Home</a>
+                    <a href="index.html" style="color: var(--text-primary); font-size: 0.9rem;">Docs</a>
+                    <a href="../blog/index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Blog</a>
+                    <a href="../contact.html" style="color: var(--text-secondary); font-size: 0.9rem;">Contact</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--text-secondary);">
+                &copy; 2026 rolv
+            </p>
+        </footer>
+    </div>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22956b3c44774125b79b1c456a44252e"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

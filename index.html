@@ -1,166 +1,902 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rolv - AI-assisted data analysis for science</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rolv — Scientific data analysis without the black box</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            navy: {
+              950: '#0B111E',
+              900: '#111827',
+              850: '#162033',
+              800: '#1E293B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0B111E;
+      color: #F8FAFC;
+    }
+
+    /* Subtle glow on primary download button matching rolv.io */
+    .btn-primary-glow {
+      background-color: #3B82F6;
+      box-shadow: 0 0 28px rgba(59, 130, 246, 0.38);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    }
+    .btn-primary-glow:hover {
+      background-color: #2563EB;
+      box-shadow: 0 0 36px rgba(59, 130, 246, 0.55);
+      transform: translateY(-1px);
+    }
+
+    /* Smooth chat message appearance */
+    .chat-bubble {
+      transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Dark-mode node card visual states */
+    .workflow-node {
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .node-idle {
+      background-color: #131622;
+      border-color: #222636;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .node-active {
+      background-color: #16223B;
+      border-color: #3B82F6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.22), 0 10px 24px -4px rgba(59, 130, 246, 0.28);
+      transform: translateY(-2px);
+    }
+
+    .node-done {
+      background-color: #111F1D;
+      border-color: #10B981;
+      box-shadow: 0 4px 14px -2px rgba(16, 185, 129, 0.16);
+    }
+
+    /* Smooth horizontal expansion for dynamically inserted Node 4 */
+    #dynamicNodeSlot {
+      transition: max-width 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+    }
+
+    /* Custom subtle dark scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0E1017;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232738;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #333952;
+    }
+
+    /* Unified Navbar & Footer matching Docs, Blog and Contact */
+    header.site-header,
+    footer.site-footer {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    header.site-header nav {
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header.site-header .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #f8fafc;
+      text-decoration: none;
+    }
+    header.site-header .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    header.site-header .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #94a3b8;
+      transition: color 0.2s ease;
+      text-decoration: none;
+    }
+    header.site-header .nav-links a:hover,
+    header.site-header .nav-links a.active {
+      color: #f8fafc;
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <!-- Navigation -->
-        <nav>
-            <div class="logo">
-                <!-- Using inline SVG for easy color control on dark background -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="32" preserveAspectRatio="xMidYMid meet">
-                    <g transform="matrix(1.6794,0,0,2.27631,188.384,-1051.21)">
-                        <ellipse cx="192.698" cy="686.728" rx="304.871" ry="224.925" fill="none"/>
-                    </g>
-                    <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
-                        <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
-                    </g>
+
+<body class="min-h-screen antialiased bg-[#0B111E] text-[#F8FAFC] selection:bg-blue-500/30 selection:text-blue-200">
+
+  <!-- ===================================================================== -->
+  <!-- 1. TOP NAVIGATION BAR (Preserved rolv navbar & logo)                  -->
+  <!-- ===================================================================== -->
+  <header class="site-header w-full">
+    <nav>
+      <a href="index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="32" preserveAspectRatio="xMidYMid meet">
+          <g transform="matrix(1.6794,0,0,2.27631,188.384,-1051.21)">
+            <ellipse cx="192.698" cy="686.728" rx="304.871" ry="224.925" fill="none"/>
+          </g>
+          <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
+            <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
+          </g>
+        </svg>
+        <span>rolv</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="docs/index.html">Docs</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 2. HERO & INTERACTIVE WORKFLOW DEMO                                  -->
+  <!-- ===================================================================== -->
+<main class="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-20">
+
+    <section class="text-center max-w-3xl mx-auto">
+      <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight text-white max-w-3xl mx-auto leading-[1.1]">
+        Scientific data analysis without the black box.
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mt-5 leading-relaxed">
+        AI agent that runs human-verified data analysis recipes—and adds new steps as you ask follow-up questions. Executed locally on your machine, optionally with your own models or API keys.
+      </p>
+
+      <!-- Primary Pill Download CTA -->
+      <div class="mt-8 flex flex-col items-center">
+        <a href="https://github.com/rolv-io/rolv-releases/releases/latest" id="primary-download-btn" class="btn-primary-glow inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-medium text-white cursor-pointer">
+          <span id="primary-download-text">Download for macOS (Apple Silicon .dmg)</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v14m0 0l-5-5m5 5l5-5" />
+          </svg>
+        </a>
+
+        <!-- 4 Secondary Platform Buttons -->
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-2.5">
+          <a href="https://github.com/rolv-io/rolv-releases/releases/latest" id="download-intel" class="px-4 py-2 rounded-lg bg-[#131B2E] hover:bg-[#18223A] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors">
+            macOS Intel
+          </a>
+          <a href="https://github.com/rolv-io/rolv-releases/releases/latest" id="download-appimage" class="px-4 py-2 rounded-lg bg-[#131B2E] hover:bg-[#18223A] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors">
+            Linux AppImage
+          </a>
+          <a href="https://github.com/rolv-io/rolv-releases/releases/latest" id="download-deb" class="px-4 py-2 rounded-lg bg-[#131B2E] hover:bg-[#18223A] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors">
+            Linux .deb
+          </a>
+          <a href="https://github.com/rolv-io/rolv-releases/releases/latest" id="download-win" class="px-4 py-2 rounded-lg bg-[#131B2E] hover:bg-[#18223A] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors">
+            Windows
+          </a>
+        </div>
+
+        <!-- 4 Trust Pills Row -->
+        <div class="mt-7 flex flex-wrap items-center justify-center gap-2.5">
+          <span class="bg-[#111827]/90 border border-slate-800/90 text-slate-300 text-xs font-medium px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+            <span>🔒</span>
+            <span>100% Local Compute</span>
+          </span>
+          <span class="bg-[#111827]/90 border border-slate-800/90 text-slate-300 text-xs font-medium px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+            <span>🔑</span>
+            <span>Bring Your Own Key (BYOK)</span>
+          </span>
+          <span class="bg-[#111827]/90 border border-slate-800/90 text-slate-300 text-xs font-medium px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+            <span class="text-emerald-400 font-bold">✓</span>
+            <span>Human-Verified Code</span>
+          </span>
+          <span class="bg-[#111827]/90 border border-slate-800/90 text-slate-300 text-xs font-medium px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+            <span>⚡</span>
+            <span>Build &amp; Share Custom Recipes</span>
+          </span>
+        </div>
+
+        <!-- OS Support Micro-copy -->
+        <p class="mt-4 text-xs text-slate-500">
+          Supports macOS 12+ and Windows 10/11.
+          <a href="https://github.com/rolv-io/rolv-releases/releases" id="all-releases-link" class="text-blue-400 hover:underline ml-1 transition-colors">All releases</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Subtle Divider -->
+    <div class="my-14 sm:my-16 h-px w-full bg-gradient-to-r from-transparent via-[#1E293B] to-transparent"></div>
+
+    <!-- =================================================================== -->
+    <!-- 3. SLEEK SECTION HEADER ABOVE THE DEMO                              -->
+    <!-- =================================================================== -->
+    <section id="workflow-demo" class="space-y-7">
+      <div class="text-center max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-[11px] font-semibold text-blue-400 tracking-wider uppercase mb-3.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#3B82F6]"></span>
+          Interactive Workflow Demo
+        </div>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3">
+          Human-maintained recipes, driven by conversation
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          Watch how a natural-language request activates a deterministic R &amp; Python recipe, and extends dynamically when you ask a follow-up question.
+        </p>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- 4. TWO-PART VERTICAL INTERACTIVE DEMO (Exact rolv Chat UI)        -->
+      <!-- ================================================================= -->
+      <div class="space-y-4">
+
+        <!-- TOP CARD: EXACT REPLICA OF REAL rolv CONVERSATIONAL CHAT UI -->
+        <div class="bg-[#0E1017] rounded-2xl border border-slate-800/80 shadow-2xl overflow-hidden">
+
+          <!-- Header Bar -->
+          <div class="px-5 py-3.5 border-b border-slate-800/80 flex flex-wrap items-center justify-between gap-3 bg-[#12151F]">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]"></span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-200 tracking-tight">
+                rolv Chat <span class="text-slate-600 font-normal mx-1">•</span> <span class="font-mono text-xs text-slate-400 font-normal">counts.csv, metadata.tsv</span>
+              </span>
+              <span id="demoStatusPill" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 font-mono text-[11px] text-emerald-400">
+                Complete · v2 Ready
+              </span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button id="skipDemoBtn" onclick="renderCompletedPreview()" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#181C29] hover:bg-[#202536] border border-[#262B3D] text-slate-300 hover:text-white transition-colors cursor-pointer">
+                Skip to End
+              </button>
+              <button id="demoControlBtn" onclick="startFullDemo()" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-semibold bg-[#3B82F6] hover:bg-blue-500 text-white shadow-sm transition-colors cursor-pointer">
+                <span id="demoBtnIcon">▶</span>
+                <span id="demoBtnLabel">Play Full Demo</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Scrollable Chat Area (#0E1017 matching screenshot) -->
+          <div id="chatContainer" class="h-[340px] overflow-y-auto px-4 sm:px-6 py-5 space-y-5 bg-[#0E1017] scroll-smooth">
+
+            <!-- MESSAGE 1 (USER): Right-aligned bubble (#1E2133) + square user icon + 03:01 PM -->
+            <div id="msg1" class="chat-bubble flex items-start justify-end gap-3">
+              <div class="flex flex-col items-end max-w-xl">
+                <div class="rounded-xl bg-[#1E2133] border border-[#2A2E45] px-4 py-2.5 text-[13px] text-slate-100 leading-relaxed shadow-sm">
+                  <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#141724] border border-[#282D42] font-mono text-[11px] text-blue-400">
+                      counts.csv
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#141724] border border-[#282D42] font-mono text-[11px] text-blue-400">
+                      metadata.tsv
+                    </span>
+                  </div>
+                  <p>can you run differential expression on counts.csv with metadata.tsv?</p>
+                </div>
+                <span class="mt-1.5 text-[11px] text-[#646A82] font-mono">03:01 PM</span>
+              </div>
+              <!-- Square User Avatar Icon -->
+              <div class="w-8 h-8 rounded-lg bg-[#1B1D29] border border-[#272A3B] flex items-center justify-center shrink-0 text-indigo-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                 </svg>
-                rolv
+              </div>
             </div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <!-- <a href="#pricing">Pricing</a> -->
-                <a href="page.html?md=contact">Contact</a>
-            </div>
-        </nav>
 
-        <!-- Hero -->
-        <section class="hero">
-            <h1>Data insights at<br>your command</h1>
-            <p class="subtitle">Elevate your data analysis with our AI-assistant for science. Execute data analysis workflows right on your own computer.</p>
-            <a class="btn btn-primary" id="primary-download-btn" href="https://github.com/rolv-io/rolv-releases/releases/latest">
-                Download App<span id="os-name"></span>
-            </a>
-            <div class="download-alts" id="download-alts" hidden></div>
-            <p class="download-note">
-                Supports macOS 12+ and Windows 10/11.
-                <a href="https://github.com/rolv-io/rolv-releases/releases" id="all-releases-link">All releases</a>
-            </p>
-        </section>
-
-        <!-- Features -->
-        <section id="features" class="grid">
-            <div class="card">
-                <div class="card-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-                    </svg>                      
-                </div>
-                <h3>Local Models Compatible</h3>
-                <p>Compatible with local AI models for privacy-first analysis. Use your own models and keep your data on your machine.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
-                    </svg>                      
-                </div>
-                <h3>Data Graph & Recipes</h3>
-                <p>Build complex analytical workflows. Use our models to get data analysis workflows for your specific scientific problems.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                    </svg>                      
-                </div>
-                <h3>Data & Web Search</h3>
-                <p>Execute AI-assisted data, literature, and patent research seamlessly within the unified agentic interface.</p>
-            </div>
-        </section>
-
-        <!-- Pricing -->
-        <section id="pricing" style="margin-top: 8rem; text-align: center; display: none;">
-            <h2>Simple, transparent pricing</h2>
-            <p>Start for free, upgrade when you need cloud compute and advanced recipes.</p>
-            
-            <div class="pricing-grid">
-                <!-- Free Tier -->
-                <div class="card" style="text-align: left;">
-                    <h3>Free</h3>
-                    <div class="price">$0<span> / month</span></div>
-                    <ul class="pricing-features">
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Local LLM models</li>
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Base recipes</li>
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Complete privacy</li>
-                    </ul>
-                    <button class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Download App</button>
-                </div>
-                
-                <!-- Pro Tier -->
-                <div class="card" style="text-align: left; border-color: var(--accent); position: relative;">
-                    <div style="position: absolute; top: -12px; right: 24px; background: var(--accent); color: white; padding: 2px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Most Popular</div>
-                    <h3>Pro</h3>
-                    <div class="price">$10<span> / month</span></div>
-                    <ul class="pricing-features">
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> 10,000 cloud credits</li>
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Premium recipe DB</li>
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Optimized cloud LLM models</li>
-                    </ul>
-                    <a href="page.html?md=contact" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Subscribe in App</a>
+            <!-- MESSAGE 2 (ASSISTANT): Robot icon + Completed · 3 steps bar + bubble (#171923) -->
+            <div id="msg2" class="chat-bubble flex items-start justify-start gap-3">
+              <!-- Square Robot Avatar Icon -->
+              <div class="w-8 h-8 rounded-lg bg-[#1B1D29] border border-[#272A3B] flex items-center justify-center shrink-0 text-slate-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <rect x="4" y="7" width="16" height="12" rx="3" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v4M9 12h.01M15 12h.01M9.5 15.5h5" />
+                </svg>
+              </div>
+              <div class="flex flex-col items-start max-w-2xl w-full">
+                <!-- Sleek Step Status Pill Bar -->
+                <div id="stepBar2" class="w-full max-w-xl mb-2 px-3.5 py-2 rounded-lg bg-[#13151E] border border-[#222534] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <span id="stepIcon2" class="text-emerald-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span id="stepText2" class="font-mono text-[12px] text-slate-300">Completed <span class="text-slate-600 mx-1">·</span> 3 steps</span>
+                  </div>
+                  <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
 
-                <!-- Pro+ Tier -->
-                <div class="card" style="text-align: left;">
-                    <h3>Pro+</h3>
-                    <div class="price">$20<span> / month</span></div>
-                    <ul class="pricing-features">
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> 25,000 cloud credits</li>
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Premium recipe DB</li>
-                        <li><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Optimized cloud LLM models</li>
-                    </ul>
-                    <a href="page.html?md=contact" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Subscribe in App</a>
+                <!-- Assistant Message Bubble -->
+                <div class="w-full max-w-xl rounded-xl bg-[#171923] border border-[#242838] px-4 py-3 text-[13px] text-slate-200 leading-relaxed shadow-sm">
+                  <p>
+                    There's a library recipe that matches this task: “Bulk RNA-Seq Differential Expression”. Click Use Recipe in the steps above, say “run it”, or ask what it does.
+                  </p>
                 </div>
+                <span class="mt-1.5 text-[11px] text-[#646A82] font-mono">03:01 PM</span>
+              </div>
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="24" preserveAspectRatio="xMidYMid meet">
-                        <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
-                            <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
-                        </g>
-                    </svg>
-                    rolv
+            <!-- MESSAGE 3 (USER): "run it" -->
+            <div id="msg3" class="chat-bubble flex items-start justify-end gap-3">
+              <div class="flex flex-col items-end max-w-xl">
+                <div class="rounded-xl bg-[#1E2133] border border-[#2A2E45] px-4 py-2.5 text-[13px] text-slate-100 leading-relaxed shadow-sm">
+                  <p>run it</p>
                 </div>
-                
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Contact</h4>
-                        <a href="page.html?md=contact">Contact Us</a>
-                        <span style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 1rem;">
-                            <!-- rolv technologies LLC<br> -->
-                            hello@rolv.io
-                        </span>
+                <span class="mt-1.5 text-[11px] text-[#646A82] font-mono">03:01 PM</span>
+              </div>
+              <div class="w-8 h-8 rounded-lg bg-[#1B1D29] border border-[#272A3B] flex items-center justify-center shrink-0 text-indigo-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- MESSAGE 4 (ASSISTANT): Completed · 14 steps + RNA-Seq DE Results Summary -->
+            <div id="msg4" class="chat-bubble flex items-start justify-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-[#1B1D29] border border-[#272A3B] flex items-center justify-center shrink-0 text-slate-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <rect x="4" y="7" width="16" height="12" rx="3" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v4M9 12h.01M15 12h.01M9.5 15.5h5" />
+                </svg>
+              </div>
+              <div class="flex flex-col items-start max-w-2xl w-full">
+                <!-- Sleek Step Status Pill Bar -->
+                <div id="stepBar4" class="w-full max-w-xl mb-2 px-3.5 py-2 rounded-lg bg-[#13151E] border border-[#222534] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <span id="stepIcon4" class="text-emerald-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span id="stepText4" class="font-mono text-[12px] text-slate-300">Completed <span class="text-slate-600 mx-1">·</span> 14 steps</span>
+                  </div>
+                  <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+
+                <!-- Assistant Message Bubble -->
+                <div class="w-full max-w-xl rounded-xl bg-[#171923] border border-[#242838] px-4 py-3 text-[13px] text-slate-200 leading-relaxed shadow-sm space-y-2.5">
+                  <p>
+                    I ran the Bulk RNA-Seq Differential Expression recipe on <span class="font-mono text-xs text-blue-300">counts.csv</span> (18,420 genes across 24 samples: 12 Treated vs. 12 Control).
+                  </p>
+                  <p class="font-medium text-slate-100">Key QC &amp; DE results:</p>
+                  <ul class="list-disc list-inside space-y-1 text-slate-300 pl-0.5">
+                    <li>Genes retained after low-count filtering: 14,890</li>
+                    <li>Significant DEGs (FDR &lt; 0.05): 412 (248 up, 164 down)</li>
+                    <li>Top hits: CXCL10, ISG15, IFIT1, MX1 (interferon signaling)</li>
+                  </ul>
+                </div>
+                <span class="mt-1.5 text-[11px] text-[#646A82] font-mono">03:02 PM</span>
+              </div>
+            </div>
+
+            <!-- MESSAGE 5 (USER FOLLOW-UP): Cross-reference top 4 interferon genes with PubMed & drug target patents -->
+            <div id="msg5" class="chat-bubble flex items-start justify-end gap-3">
+              <div class="flex flex-col items-end max-w-xl">
+                <div class="rounded-xl bg-[#1E2133] border border-[#2A2E45] px-4 py-2.5 text-[13px] text-slate-100 leading-relaxed shadow-sm">
+                  <p>check PubMed and drug target patents for these top 4 interferon genes</p>
+                </div>
+                <span class="mt-1.5 text-[11px] text-[#646A82] font-mono">03:03 PM</span>
+              </div>
+              <div class="w-8 h-8 rounded-lg bg-[#1B1D29] border border-[#272A3B] flex items-center justify-center shrink-0 text-indigo-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- MESSAGE 6 (ASSISTANT): Completed · 18 steps + Dynamic Node Result -->
+            <div id="msg6" class="chat-bubble flex items-start justify-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-[#1B1D29] border border-[#272A3B] flex items-center justify-center shrink-0 text-slate-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <rect x="4" y="7" width="16" height="12" rx="3" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v4M9 12h.01M15 12h.01M9.5 15.5h5" />
+                </svg>
+              </div>
+              <div class="flex flex-col items-start max-w-2xl w-full">
+                <!-- Sleek Step Status Pill Bar -->
+                <div id="stepBar6" class="w-full max-w-xl mb-2 px-3.5 py-2 rounded-lg bg-[#13151E] border border-[#222534] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <span id="stepIcon6" class="text-emerald-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span id="stepText6" class="font-mono text-[12px] text-slate-300">Completed <span class="text-slate-600 mx-1">·</span> 18 steps</span>
+                  </div>
+                  <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+
+                <!-- Assistant Message Bubble -->
+                <div class="w-full max-w-xl rounded-xl bg-[#171923] border border-[#242838] px-4 py-3 text-[13px] text-slate-200 leading-relaxed shadow-sm">
+                  <p>
+                    Appended <span class="font-mono text-xs text-blue-300">03_lit_patent_agent</span> to the recipe graph and re-collated the report. Found 19 matching clinical/preclinical PubMed studies and 6 active patent filings targeting CXCL10, ISG15, IFIT1, and MX1 pathways.
+                  </p>
+                </div>
+                <span class="mt-1.5 text-[11px] text-[#646A82] font-mono">03:03 PM</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- BOTTOM CARD: HORIZONTAL WORKFLOW GRAPH STRIP -->
+        <div class="bg-[#0E1017] rounded-2xl border border-[#1E2230] p-4 sm:p-5 shadow-2xl">
+
+          <!-- Subtle Graph Label Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 px-0.5">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/25 text-[10px] font-mono font-semibold text-blue-400 uppercase tracking-wider">
+                Human-Made &amp; Maintained Recipe
+              </span>
+              <span class="text-xs font-medium text-slate-300">
+                Bulk RNA-Seq DE v2.4
+              </span>
+            </div>
+            <span class="text-[11px] font-mono text-slate-500">
+              Directed Acyclic Graph · Local Execution
+            </span>
+          </div>
+
+          <!-- Horizontal Scrollable Node Row -->
+          <div class="w-full overflow-x-auto pb-1">
+            <div class="min-w-[850px] flex items-stretch justify-between gap-2">
+
+              <!-- NODE 1: DATA INPUT -->
+              <div id="node1" class="workflow-node node-done flex-1 rounded-xl border p-3.5 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-800 text-slate-300 border border-slate-700/70">DATA</span>
+                    <span id="status1" class="text-[10px] font-mono font-semibold text-emerald-400">✓ Done</span>
+                  </div>
+                  <h3 class="text-xs font-bold text-slate-100 mb-1">1. Data Input</h3>
+                  <p class="text-[11px] text-slate-400 leading-snug">counts.csv + metadata.tsv · Raw Count Matrix · 18,420 × 24</p>
+                </div>
+              </div>
+
+              <!-- ARROW 1 -> 2 -->
+              <div class="flex items-center justify-center shrink-0 text-emerald-400">
+                <svg id="arrow1" class="w-4 h-4 transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" />
+                </svg>
+              </div>
+
+              <!-- NODE 2: 01_qc_norm.py -->
+              <div id="node2" class="workflow-node node-done flex-1 rounded-xl border p-3.5 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-sky-500/15 text-sky-400 border border-sky-500/25">PYTHON</span>
+                    <span id="status2" class="text-[10px] font-mono font-semibold text-emerald-400">✓ Done</span>
+                  </div>
+                  <h3 class="text-xs font-mono font-bold text-slate-100 mb-1">2. 01_qc_norm.py</h3>
+                  <p class="text-[11px] text-slate-400 leading-snug">Python · Low-count filter &amp; TMM/VST normalization</p>
+                </div>
+              </div>
+
+              <!-- ARROW 2 -> 3 -->
+              <div class="flex items-center justify-center shrink-0 text-emerald-400">
+                <svg id="arrow2" class="w-4 h-4 transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" />
+                </svg>
+              </div>
+
+              <!-- NODE 3: 02_deseq2.R -->
+              <div id="node3" class="workflow-node node-done flex-1 rounded-xl border p-3.5 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">R SCRIPT</span>
+                    <span id="status3" class="text-[10px] font-mono font-semibold text-emerald-400">✓ Done</span>
+                  </div>
+                  <h3 class="text-xs font-mono font-bold text-slate-100 mb-1">3. 02_deseq2.R</h3>
+                  <p class="text-[11px] text-slate-400 leading-snug">R · Wald test, apeglm shrinkage &amp; volcano plot</p>
+                </div>
+              </div>
+
+              <!-- NODE 4 (DYNAMICALLY EXPANDS ON FOLLOW-UP QUESTION) -->
+              <div id="dynamicNodeSlot" class="max-w-[255px] opacity-100 overflow-hidden flex items-stretch gap-2 shrink-0">
+                <!-- ARROW 3 -> 4 -->
+                <div class="flex items-center justify-center shrink-0 text-emerald-400">
+                  <svg id="arrow3b" class="w-4 h-4 transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" />
+                  </svg>
+                </div>
+
+                <!-- NODE 4 CARD -->
+                <div id="node4" class="workflow-node node-done w-[220px] rounded-xl border p-3.5 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between gap-1 mb-2">
+                      <span class="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-[#3B82F6] text-white">NEW NODE ADDED</span>
+                      <span id="status4" class="text-[10px] font-mono font-semibold text-emerald-400">✓ Done</span>
                     </div>
-                    <!-- Restore later:
-                    <div class="footer-col">
-                        <h4>Legal</h4>
-                        <a href="page.html?md=terms">Terms of Service</a>
-                        <a href="page.html?md=privacy">Privacy Policy</a>
-                        <a href="page.html?md=refund">Refund Policy</a>
-                    </div>
-                    -->
+                    <h3 class="text-xs font-mono font-bold text-slate-100 mb-1">4. 03_lit_patent_agent</h3>
+                    <p class="text-[11px] text-slate-400 leading-snug">AI Agent + Tools · PubMed, Patent, Dataset &amp; Web Search</p>
+                  </div>
                 </div>
+              </div>
+
+              <!-- ARROW 3/4 -> 5 -->
+              <div class="flex items-center justify-center shrink-0 text-emerald-400">
+                <svg id="arrow4" class="w-4 h-4 transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" />
+                </svg>
+              </div>
+
+              <!-- NODE 5: COLLATED OUTPUT -->
+              <div id="node5" class="workflow-node node-done flex-1 rounded-xl border p-3.5 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/25">OUTPUT</span>
+                    <span id="status5" class="text-[10px] font-mono font-semibold text-emerald-400">✓ v2 Ready</span>
+                  </div>
+                  <h3 class="text-xs font-bold text-slate-100 mb-1">5. Collated Output</h3>
+                  <p class="text-[11px] text-slate-400 leading-snug">volcano_plot.svg, deg_table.csv, rna_seq_report.pdf</p>
+                </div>
+              </div>
+
             </div>
-            <p style="text-align: center; margin-top: 4rem; font-size: 0.85rem; color: var(--text-secondary);">
-                Documentation is built into the app — access it from the sidebar after installing.<br>
-                &copy; 2026 rolv
-                <!-- &copy; 2026 rolv technologies LLC. All rights reserved. -->
-            </p>
-        </footer>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 3. FOOTER (Preserved rolv footer)                                     -->
+  <!-- ===================================================================== -->
+  <footer class="site-footer w-full border-t border-slate-800/80 mt-16 sm:mt-24 pt-12 pb-16">
+    <div class="footer-content flex flex-col sm:flex-row justify-between items-start gap-8">
+      <div class="logo flex items-center gap-3 text-xl font-bold tracking-tight text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="24" preserveAspectRatio="xMidYMid meet">
+          <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
+            <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
+          </g>
+        </svg>
+        <span>rolv</span>
+      </div>
+      
+      <div class="footer-links flex gap-12 sm:gap-16">
+        <div class="footer-col flex flex-col gap-2.5">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1">Resources</h4>
+          <a href="docs/index.html" class="text-sm text-slate-400 hover:text-white transition-colors">Docs</a>
+          <a href="blog/index.html" class="text-sm text-slate-400 hover:text-white transition-colors">Blog</a>
+          <a href="contact.html" class="text-sm text-slate-400 hover:text-white transition-colors">Contact Us</a>
+          <span class="text-xs text-slate-500 mt-2">hello@rolv.io</span>
+        </div>
+      </div>
     </div>
+    <p class="text-center mt-12 text-xs text-slate-500">
+      &copy; 2026 rolv
+    </p>
+  </footer>
 
-    <script src="script.js"></script>
+  <!-- Dynamic download detection -->
+  <script src="script.js"></script>
+
+  <!-- Interactive Workflow Demo Controller -->
+  <script>
+
+    let scheduledTimers = [];
+
+    const CHECK_ICON_SVG = `
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+      </svg>
+    `;
+
+    const SPINNER_ICON_SVG = `
+      <svg class="w-4 h-4 animate-spin text-[#3B82F6]" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v3a5 5 0 00-5 5H4z"></path>
+      </svg>
+    `;
+
+    function clearTimers() {
+      scheduledTimers.forEach(id => clearTimeout(id));
+      scheduledTimers = [];
+    }
+
+    function after(ms, fn) {
+      const id = setTimeout(fn, ms);
+      scheduledTimers.push(id);
+    }
+
+    // Update the sleek step bar above assistant messages ('running' | 'completed')
+    function setStepBarState(barNum, state, stepCount) {
+      const iconEl = document.getElementById('stepIcon' + barNum);
+      const textEl = document.getElementById('stepText' + barNum);
+      if (!iconEl || !textEl) return;
+
+      if (state === 'running') {
+        iconEl.className = 'text-[#3B82F6]';
+        iconEl.innerHTML = SPINNER_ICON_SVG;
+        textEl.innerHTML = `Running <span class="text-slate-600 mx-1">·</span> ${stepCount} steps...`;
+      } else {
+        iconEl.className = 'text-emerald-400';
+        iconEl.innerHTML = CHECK_ICON_SVG;
+        textEl.innerHTML = `Completed <span class="text-slate-600 mx-1">·</span> ${stepCount} steps`;
+      }
+    }
+
+    // Reveal a chat message and auto-scroll smoothly
+    function showMessage(msgId) {
+      const el = document.getElementById(msgId);
+      if (!el) return;
+      el.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        el.classList.remove('opacity-0', 'translate-y-2');
+        el.classList.add('opacity-100', 'translate-y-0');
+      });
+
+      const container = document.getElementById('chatContainer');
+      container.scrollTop = container.scrollHeight;
+    }
+
+    // Set visual state for a workflow node ('idle' | 'active' | 'done')
+    function setNodeState(nodeId, statusId, state, customLabel) {
+      const node = document.getElementById(nodeId);
+      const badge = document.getElementById(statusId);
+      if (!node || !badge) return;
+
+      node.classList.remove('node-idle', 'node-active', 'node-done');
+
+      if (state === 'idle') {
+        node.classList.add('node-idle');
+        badge.className = 'text-[10px] font-mono text-slate-500';
+        badge.textContent = customLabel || 'Ready';
+      } else if (state === 'active') {
+        node.classList.add('node-active');
+        badge.className = 'inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#3B82F6] text-white text-[10px] font-mono font-medium animate-pulse';
+        badge.textContent = customLabel || 'Running...';
+      } else if (state === 'done') {
+        node.classList.add('node-done');
+        badge.className = 'text-[10px] font-mono font-semibold text-emerald-400';
+        badge.textContent = customLabel || '✓ Done';
+      }
+    }
+
+    // Set arrow visual state
+    function setArrowState(arrowId, state) {
+      const el = document.getElementById(arrowId);
+      if (!el) return;
+      const parent = el.parentElement;
+      if (state === 'idle') {
+        if (parent) parent.className = 'flex items-center justify-center shrink-0 text-slate-700';
+        el.className = 'w-4 h-4 transition-colors duration-300 text-slate-700';
+      } else if (state === 'active') {
+        if (parent) parent.className = 'flex items-center justify-center shrink-0 text-blue-400 animate-pulse';
+        el.className = 'w-4 h-4 transition-colors duration-300 text-blue-400';
+      } else if (state === 'done') {
+        if (parent) parent.className = 'flex items-center justify-center shrink-0 text-emerald-400';
+        el.className = 'w-4 h-4 transition-colors duration-300 text-emerald-400';
+      }
+    }
+
+    // Update live status pill in chat header
+    function setDemoStatus(text, tone) {
+      const pill = document.getElementById('demoStatusPill');
+      if (!pill) return;
+      pill.textContent = text;
+      pill.className = 'hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono text-[11px] border ';
+      if (tone === 'running') {
+        pill.className += 'bg-blue-500/10 border-blue-500/30 text-blue-400';
+      } else if (tone === 'done') {
+        pill.className += 'bg-emerald-500/10 border-emerald-500/25 text-emerald-400';
+      } else {
+        pill.className += 'bg-slate-800/80 border-slate-700 text-slate-400';
+      }
+    }
+
+    // Reset all UI elements to clean initial state before running animation
+    function resetState() {
+      clearTimers();
+      setDemoStatus('Starting demo...', 'running');
+
+      ['msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6'].forEach(id => {
+        const el = document.getElementById(id);
+        el.classList.add('hidden', 'opacity-0', 'translate-y-2');
+        el.classList.remove('opacity-100', 'translate-y-0');
+      });
+
+      setStepBarState(2, 'running', 3);
+      setStepBarState(4, 'running', 14);
+      setStepBarState(6, 'running', 18);
+
+      setNodeState('node1', 'status1', 'idle');
+      setNodeState('node2', 'status2', 'idle');
+      setNodeState('node3', 'status3', 'idle');
+      setNodeState('node4', 'status4', 'idle');
+      setNodeState('node5', 'status5', 'idle');
+
+      ['arrow1', 'arrow2', 'arrow3b', 'arrow4'].forEach(id => setArrowState(id, 'idle'));
+
+      // Collapse dynamic Node 4
+      const slot = document.getElementById('dynamicNodeSlot');
+      slot.classList.add('max-w-0', 'opacity-0');
+      slot.classList.remove('max-w-[255px]', 'opacity-100');
+    }
+
+    // Immediately show the complete, populated end state (used on page load & "Skip to End")
+    function renderCompletedPreview() {
+      clearTimers();
+      setDemoStatus('Complete · v2 Ready', 'done');
+
+      ['msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6'].forEach(id => {
+        const el = document.getElementById(id);
+        el.classList.remove('hidden', 'opacity-0', 'translate-y-2');
+        el.classList.add('opacity-100', 'translate-y-0');
+      });
+
+      setStepBarState(2, 'completed', 3);
+      setStepBarState(4, 'completed', 14);
+      setStepBarState(6, 'completed', 18);
+
+      setNodeState('node1', 'status1', 'done', '✓ Done');
+      setNodeState('node2', 'status2', 'done', '✓ Done');
+      setNodeState('node3', 'status3', 'done', '✓ Done');
+      setNodeState('node4', 'status4', 'done', '✓ Done');
+      setNodeState('node5', 'status5', 'done', '✓ v2 Ready');
+
+      ['arrow1', 'arrow2', 'arrow3b', 'arrow4'].forEach(id => setArrowState(id, 'done'));
+
+      const slot = document.getElementById('dynamicNodeSlot');
+      slot.classList.remove('max-w-0', 'opacity-0');
+      slot.classList.add('max-w-[255px]', 'opacity-100');
+
+      const container = document.getElementById('chatContainer');
+      if (container) container.scrollTop = container.scrollHeight;
+    }
+
+    function startFullDemo() {
+      resetState();
+      const container = document.getElementById('chatContainer');
+      if (container) container.scrollTop = 0;
+      // 1. User sends "can you run differential expression on counts.csv with metadata.tsv?"
+      showMessage('msg1');
+      setDemoStatus('Inspecting counts.csv...', 'running');
+      setNodeState('node1', 'status1', 'active', 'Inspecting...');
+
+      // 2. Assistant matches "Bulk RNA-Seq Differential Expression" (3 steps completed)
+      after(850, () => {
+        setNodeState('node1', 'status1', 'done');
+        setStepBarState(2, 'completed', 3);
+        setDemoStatus('Recipe matched', 'running');
+        showMessage('msg2');
+      });
+
+      // 3. User replies "run it"
+      after(2200, () => {
+        showMessage('msg3');
+      });
+
+      // 4. Assistant starts running 14-step recipe; Node 2 (01_qc_norm.py) highlights active
+      after(2900, () => {
+        setStepBarState(4, 'running', 14);
+        setDemoStatus('Running 01_qc_norm.py...', 'running');
+        showMessage('msg4');
+        setArrowState('arrow1', 'active');
+        setNodeState('node2', 'status2', 'active');
+      });
+
+      // 5. Node 2 Done -> Node 3 (02_deseq2.R) highlights active
+      after(4000, () => {
+        setArrowState('arrow1', 'done');
+        setNodeState('node2', 'status2', 'done');
+        setDemoStatus('Running 02_deseq2.R...', 'running');
+        setArrowState('arrow2', 'active');
+        setNodeState('node3', 'status3', 'active');
+      });
+
+      // 6. Node 3 Done -> Node 5 (Collated Output) builds v1
+      after(5150, () => {
+        setArrowState('arrow2', 'done');
+        setNodeState('node3', 'status3', 'done');
+        setDemoStatus('Collating report v1...', 'running');
+        setArrowState('arrow4', 'active');
+        setNodeState('node5', 'status5', 'active', 'Building v1...');
+      });
+
+      // 7. Phase 1 complete: 14 steps completed + Node 5 v1 Ready
+      after(6100, () => {
+        setArrowState('arrow4', 'done');
+        setNodeState('node5', 'status5', 'done', '✓ v1 Ready');
+        setStepBarState(4, 'completed', 14);
+        setDemoStatus('v1 Ready · Awaiting follow-up', 'done');
+      });
+
+      // 8. User asks follow-up question on top 4 interferon genes, PubMed & drug target patents
+      after(7500, () => {
+        showMessage('msg5');
+      });
+
+      // 9. Assistant dynamically expands Node 4 (03_lit_patent_agent) into workflow and runs it
+      after(8400, () => {
+        setStepBarState(6, 'running', 18);
+        setDemoStatus('Appending 03_lit_patent_agent...', 'running');
+        showMessage('msg6');
+
+        const slot = document.getElementById('dynamicNodeSlot');
+        slot.classList.remove('max-w-0', 'opacity-0');
+        slot.classList.add('max-w-[255px]', 'opacity-100');
+
+        setArrowState('arrow3b', 'active');
+        setNodeState('node4', 'status4', 'active');
+      });
+
+      // 10. Node 4 Done -> Node 5 updates Collated Output to v2
+      after(9800, () => {
+        setArrowState('arrow3b', 'done');
+        setNodeState('node4', 'status4', 'done');
+        setDemoStatus('Updating report to v2...', 'running');
+        setArrowState('arrow4', 'active');
+        setNodeState('node5', 'status5', 'active', 'Updating v2...');
+      });
+
+      // 11. Final completion: 18 steps completed + Node 5 v2 Ready
+      after(10800, () => {
+        setArrowState('arrow4', 'done');
+        setNodeState('node5', 'status5', 'done', '✓ v2 Ready');
+        setStepBarState(6, 'completed', 18);
+        setDemoStatus('Complete · v2 Ready', 'done');
+      });
+    }
+
+    // Initialize with the realistic populated preview on load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCompletedPreview();
+    });
+  
+  </script>
+
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22956b3c44774125b79b1c456a44252e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

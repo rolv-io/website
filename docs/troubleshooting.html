@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting & Diagnostics - rolv Documentation</title>
+    <meta name="description" content="Common issues, diagnostics, and recovery.">
+    <link rel="canonical" href="https://rolv.io/docs/troubleshooting.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Troubleshooting & Diagnostics - rolv Documentation">
+    <meta property="og:description" content="Common issues, diagnostics, and recovery.">
+    <meta property="og:url" content="https://rolv.io/docs/troubleshooting.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html" class="logo" style="text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" height="32" preserveAspectRatio="xMidYMid meet">
+    <g transform="matrix(1.6794,0,0,2.27631,188.384,-1051.21)">
+        <ellipse cx="192.698" cy="686.728" rx="304.871" ry="224.925" fill="none"/>
+    </g>
+    <g transform="matrix(7.99889,0,0,7.99889,112,64.3929)">
+        <path d="M99.7,76.4L59.9,7.5C59.5,6.8 58.7,6.4 57.9,6.4L42,6.4C41.2,6.4 40.4,6.8 40,7.5L0.3,76.4C-0.1,77.1 -0.1,78 0.3,78.7L8.3,92.5C8.7,93.2 9.5,93.6 10.3,93.6L89.8,93.6C90.6,93.6 91.4,93.2 91.8,92.5L99.8,78.7C100.1,78 100.1,77.1 99.7,76.4ZM43.4,11L54,11L24.2,62.6C23.8,63.3 23.8,64.2 24.2,64.9C24.6,65.6 25.4,66 26.2,66L56.7,66L62,75.2L6.3,75.2L43.4,11ZM50,54.6L54,61.5L46,61.5L50,54.6ZM6.3,79.8L65.9,79.8C66.7,79.8 67.5,79.4 67.9,78.7C68.3,78 68.3,77.1 67.9,76.4L52.7,50L58,40.8L85.8,89L11.6,89L6.3,79.8ZM89.8,86.7L59.9,35.1C59.5,34.4 58.7,34 57.9,34C57.1,34 56.3,34.4 55.9,35.1L40.7,61.5L30.1,61.5L58,13.3L95.1,77.6L89.8,86.7Z" fill="#f8fafc" fill-rule="nonzero"/>
+    </g>
+</svg>
+                rolv
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="index.html" style="color: var(--accent);">Docs</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="docs-layout">
+            
+            <aside class="docs-sidebar">
+                <div class="docs-sidebar-title">Documentation</div>
+                <ul class="docs-nav-list">
+                <li><a href="index.html" class="docs-nav-link ">Overview</a></li>
+                <li><a href="getting-started.html" class="docs-nav-link ">Getting Started</a></li>
+                <li><a href="chat-view.html" class="docs-nav-link ">Chat View</a></li>
+                <li><a href="graph-view.html" class="docs-nav-link ">Graph View</a></li>
+                <li><a href="recipes.html" class="docs-nav-link ">Recipes</a></li>
+                <li><a href="reviews.html" class="docs-nav-link ">Reviews</a></li>
+                <li><a href="settings.html" class="docs-nav-link ">Settings</a></li>
+                <li><a href="troubleshooting.html" class="docs-nav-link active">Troubleshooting</a></li>
+                </ul>
+                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                    <a href="https://github.com/rolv-io/rolv-releases/releases/latest" class="btn btn-primary" style="display: block; text-align: center; font-size: 0.85rem; padding: 0.5rem 1rem;">
+                        Download App
+                    </a>
+                </div>
+            </aside>
+
+            <main class="docs-main">
+                <article class="docs-content">
+                    <h1>Troubleshooting</h1>
+<h2>Sign-in &amp; Email</h2>
+<h3>Verification or password-reset email never arrives</h3>
+<p>Rolv sends verification and password-reset mail from <strong><a href="mailto:noreply@rolv.io">noreply@rolv.io</a></strong> (not Firebase’s default <code>noreply@…firebaseapp.com</code>).</p>
+<ol>
+<li>Check spam / junk, and wait a minute — rate limits apply</li>
+<li>On the verification screen, click <strong>Resend verification email</strong>, then <strong>I’ve verified</strong> after you open the link</li>
+<li>On sign-in, use <strong>Forgot password?</strong> again with the same address you registered</li>
+<li>Confirm the address is spelled correctly; the reset form always says “sent” so it does not reveal whether an account exists</li>
+</ol>
+<p>Google sign-in does not need this flow.</p>
+<h2>Environment Setup</h2>
+<h3>Mamba/Micromamba Not Found</h3>
+<p>If rolv can&#39;t create sandbox environments:</p>
+<ol>
+<li>Open <strong>Settings → Execution Tools</strong></li>
+<li>Set the <strong>Mamba Executable Path</strong> to the full path (e.g., <code>/opt/homebrew/bin/micromamba</code>)</li>
+<li>Save settings</li>
+</ol>
+<p>If you don&#39;t have Mamba installed, install Micromamba:</p>
+<pre><code class="language-bash">&quot;${SHELL}&quot; &lt;(curl -L micro.mamba.pm/install.sh)
+</code></pre>
+<h3>Python/R Version Issues</h3>
+<p>If a specific Python or R version fails to create an environment:</p>
+<ul>
+<li>Ensure the version is available in your Mamba channels</li>
+<li>Try switching to a different version in <strong>Settings → Execution Tools</strong></li>
+<li>After changing <strong>R version</strong>, start a <strong>new</strong> session so Mamba can build a new template (<code>_template_r461</code> for 4.6.1, and so on)</li>
+<li>Check that your internet connection is available (Mamba downloads packages on first use)</li>
+</ul>
+<h3>Environment Spec Errors (<code>_template_py...</code>)</h3>
+<p>If you see <code>libmamba Could not solve for environment specs</code> mentioning <code>_template_</code>:</p>
+<ol>
+<li>Open Terminal and delete cached template environments:<pre><code class="language-bash">rm -rf ~/.rolv/envs/_template_*
+</code></pre>
+</li>
+<li>Re-run your recipe. Rolv will automatically generate a fresh, clean environment.</li>
+</ol>
+<h2>Code Execution</h2>
+<h3>Code Won&#39;t Run</h3>
+<ul>
+<li>Chat only asks for a <strong>working directory</strong> when a disk tool needs one (not on every message). Use the folder icon in the header if none is set.</li>
+<li>Verify <strong>Auto-Run</strong> is enabled if you expect automatic execution. If it is off, the agent stops after suggesting code — run the block yourself or turn Auto-run back on.</li>
+<li>Look at the <strong>Logs</strong> tab in the node inspector for error details</li>
+<li>Use <strong>Stop</strong> in chat or <strong>Stop</strong> on the graph toolbar to cancel a stuck local script</li>
+</ul>
+<h3>Generate Data failed, or the inputs stayed empty</h3>
+<p>Open the Data Input node and expand <strong>Test data</strong>. The full steps are in <a href="graph-view.html#test-data">Graph View — Test data</a>.</p>
+<ul>
+<li><strong>The editor is empty.</strong> Sign in, choose <strong>R</strong>, <strong>Python</strong>, or <strong>Bash</strong>, and click <strong>Starter</strong>. Starter needs a signed-in account so it can read the pipeline. If it cannot reach the model and the editor is still empty, Rolv inserts a short outline you can edit.</li>
+<li><strong>Generate Data says generation failed.</strong> Read the message in the alert. Set the language picker to the language the script is written in, fix the script, and click <strong>Generate Data</strong> again. Generate Data installs libraries the script imports before it runs.</li>
+<li><strong>Generate Data finishes and the input fields stay empty.</strong> The script has to write <code>test_input.json</code> in the session folder at the end of that run. The names in that file are the names on the Data Input card. A file input’s value is the sample filename the script just created. A column name or a number is written there too. A <code>test_input.json</code> left from an earlier run is ignored. After a successful copy, the same values are saved as <code>input.json</code>, which the pipeline reads.</li>
+<li><strong>Run with Test Data says there is no test script.</strong> Click <strong>Starter</strong> on the Data Input node first.</li>
+</ul>
+<h3>Recipe Data Input Became a Compute Node</h3>
+<p>Older <strong>Save as Recipe</strong> exports stored I/O as script nodes. Re-open the original graph and <strong>Save as Recipe</strong> again so Data Input/Output round-trip as I/O. Names, descriptions, and defaults are kept. Local file paths are cleared.</p>
+<h3>Use Recipe opened a different session</h3>
+<p>Clicking <strong>Use Recipe</strong> on a card (or <strong>Run Recipe</strong> in the library) always starts a <strong>new graph session</strong>. To load the recipe into the chat you are already in, type the recipe name or <strong>run it</strong> / <strong>yes</strong> instead. See <a href="chat-view.html#use-recipe-vs-saying-run-it">Chat View — Use Recipe vs saying “run it”</a>.</p>
+<h3>Sidebar opened Graph when I left Chat</h3>
+<p>Rolv now restores the last Chat or Graph view per session. If you still land in Graph, click <strong>← Back to Chat</strong> once; the next sidebar click should return to Chat.</p>
+<h3>Missing Dependencies</h3>
+<p>When Python or R code fails with a missing package error:</p>
+<ul>
+<li>Rolv automatically normalizes package names (such as <code>cv2</code> to <code>opencv-python</code> or <code>sklearn</code> to <code>scikit-learn</code>) and falls back to <code>pip</code> if Conda lacks the package.</li>
+<li>If a package still fails to import, the Node Inspector immediately flags the node and displays the installation logs.</li>
+<li>You can ask the agent in chat to install or adapt the package: <em>&quot;Install scikit-learn&quot;</em> or <em>&quot;Use another library&quot;</em>.</li>
+<li>For community recipes, add the package name to the recipe&#39;s <code>env/</code> files (<code>python-requirements.txt</code> or <code>r-packages.txt</code>).</li>
+</ul>
+<h3>SSH Execution Failures</h3>
+<p>If remote execution fails:</p>
+<ol>
+<li>Open <strong>Settings → Execution Tools → Remote Compute</strong></li>
+<li>Confirm the target type is <strong>SSH</strong> (OpenStack and Slurm can be saved but do not run yet)</li>
+<li>Click <strong>Test</strong> on the connection</li>
+<li>Verify: host reachable, username correct, key/password valid</li>
+<li>Check that the remote Python command works (e.g., <code>python3</code> or <code>conda run -n myenv python</code>)</li>
+<li>Ensure the remote work directory exists and is writable</li>
+</ol>
+<p>If <strong>Add Target</strong> is disabled, you are at your remote-compute slot cap. SSH, OpenStack, and Slurm share that cap.</p>
+<h2>Search &amp; Embeddings</h2>
+<h3>Recipe Search Not Working</h3>
+<p>If semantic search returns poor results:</p>
+<ul>
+<li>Open <strong>Settings → API Hub → Embedding Model</strong></li>
+<li>Click <strong>Test Connection</strong> to verify the model is reachable</li>
+<li>If you recently changed embedding models, click <strong>Re-index</strong> in the prompt that appears after saving</li>
+</ul>
+<h3>Re-indexing Takes Too Long</h3>
+<p>Re-indexing processes all local recipes sequentially. Progress is shown in the Settings panel. For large libraries, this may take a few minutes.</p>
+<h2>Cloud Sync</h2>
+<h3>Merge Conflicts</h3>
+<p>When a Smart Merge produces conflicts:</p>
+<ul>
+<li>Open the recipe in the Designer</li>
+<li>Check the <strong>Changes</strong> tab for a diff view</li>
+<li>Manually resolve conflicting sections</li>
+<li>Save when satisfied</li>
+</ul>
+<h3>&quot;Recipe No Longer on Cloud&quot;</h3>
+<p>If a cloud recipe was removed by its maintainer, you&#39;ll see a <strong>&quot;No Longer on Cloud&quot;</strong> badge. Your local copy still works — it just won&#39;t receive future updates.</p>
+<h2>Token Limits</h2>
+<h3>Quota Exceeded</h3>
+<p>When you hit your daily or monthly token limit:</p>
+<ul>
+<li>Wait for the daily reset (midnight UTC)</li>
+<li>Or configure a <strong>Custom LLM</strong> in <strong>Settings → API Hub</strong> (OpenAI / Groq / Ollama / OpenRouter presets). Localhost Ollama can leave the API key empty.</li>
+<li>Set the usage mode to <strong>&quot;Always Use&quot;</strong> or <strong>&quot;Use as Fallback&quot;</strong></li>
+</ul>
+<h3>Credits Running Low</h3>
+<p>Monitor your credit balance in <strong>Settings → Token Usage</strong>. Heavy local simulations skip cloud credit costs. Credits purchase is coming soon.</p>
+<h2>Research nodes</h2>
+<h3>The report stops in the middle of a table</h3>
+<p>The assistant often writes a long essay about the <strong>first</strong> gene or topic and runs out of room before the rest. Searches in the <strong>Logs</strong> tab can still show every gene. The markdown is still saved as <code>{label}_report.md</code>. For a table you will reuse, tick <strong>Structured output</strong> and list field names, or retrieve with a compute node first. Details: <a href="graph-view.html#research-nodes-">Graph View — Research nodes</a>.</p>
+<h3>Structured output only searched one gene</h3>
+<p>By default, structured output gathers evidence in a single pass. If you want the node to iterate across every row, gene, or biomarker in your table, check <strong>Batch iteration across items (ForEach)</strong> in the node settings. Rolv will then run parallel queries across each item in your dataset (up to 100 items) and compile the results into both structured JSON and an aggregated report table.</p>
+<h3>Inspector asks “This will not search every item”</h3>
+<p>When <strong>Batch iteration across items (ForEach)</strong> is disabled and instructions ask to process a list of items, the inspector displays a reminder dialog. Enable <strong>Batch iteration across items (ForEach)</strong> to perform the full multi-item search, or click <strong>Run anyway</strong> for a single-pass summary.</p>
+<h3>Research failed with <code>fetch failed</code></h3>
+<p>Unpackaged <code>npm run dev</code> talks to <code>http://localhost:8080</code>. Start the local gateway, or run <code>ROLV_GATEWAY_URL=https://gateway.rolv.io npm run dev</code>. Packaged builds use production.</p>
+<h3>I connected two nodes but the second cannot see the file</h3>
+<p>Arrows do not auto-pass spreadsheets. The first node must write a named file; the second must open that same name (in code, or in the research Instructions). See <a href="graph-view.html#what-the-arrows-between-nodes-mean">What the arrows between nodes mean</a>.</p>
+<h2>App Updates</h2>
+<p>When a new version of rolv is available, it downloads in the background and a toast appears at the bottom of the screen:</p>
+<p><strong>macOS</strong> (unsigned builds):</p>
+<ul>
+<li>Click <strong>Show in Finder</strong> to open the downloaded update file, then install it manually (right-click → Open if Gatekeeper blocks it)</li>
+<li>Or click <strong>Download from Releases</strong> for the <code>.dmg</code> on GitHub</li>
+</ul>
+<p><strong>Windows / Linux</strong>:</p>
+<ul>
+<li>Click <strong>Restart Now</strong> to install the downloaded update immediately</li>
+<li>Or click <strong>Download manually</strong> to get the installer from GitHub Releases</li>
+<li>Click <strong>✕</strong> to dismiss; a downloaded update still applies on the next restart</li>
+</ul>
+<hr>
+<p><strong>← Back to:</strong> <a href="index.html">Index</a></p>
+
+                </article>
+
+                <div class="docs-cta-box">
+                    <div>
+                        <h4 style="margin-bottom: 0.25rem;">Try rolv on your desktop</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.9rem;">
+                            Execute these workflows locally or connect to your lab's HPC.
+                        </p>
+                    </div>
+                    <a href="https://github.com/rolv-io/rolv-releases/releases/latest" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">
+                        Download App
+                    </a>
+                </div>
+
+                
+    <nav class="docs-pagination">
+        
+        <a href="settings.html" class="prev">
+            <span class="label">&larr; Previous</span>
+            <span class="title">Settings</span>
+        </a>
+        <div></div>
+    </nav>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content" style="justify-content: center;">
+                <div class="footer-links" style="gap: 4rem;">
+                    <a href="../index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Home</a>
+                    <a href="index.html" style="color: var(--text-primary); font-size: 0.9rem;">Docs</a>
+                    <a href="../blog/index.html" style="color: var(--text-secondary); font-size: 0.9rem;">Blog</a>
+                    <a href="../contact.html" style="color: var(--text-secondary); font-size: 0.9rem;">Contact</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--text-secondary);">
+                &copy; 2026 rolv
+            </p>
+        </footer>
+    </div>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22956b3c44774125b79b1c456a44252e"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
