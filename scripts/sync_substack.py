@@ -144,15 +144,15 @@ def generate_index_html(posts):
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="stylesheet" href="../styles.css?v=3">
+    <link rel="stylesheet" href="../styles.css?v=4">
 </head>
 <body>
     <div class="container">
         <!-- Navigation -->
         <nav>
-            <a href="../index.html" class="logo" style="text-decoration: none;">
+            <a href="../index.html" class="logo">
                 {LOGO_SVG}
-                rolv
+                <span>rolv</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html">Home</a>
@@ -252,15 +252,15 @@ def generate_post_html(post):
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="stylesheet" href="../styles.css?v=3">
+    <link rel="stylesheet" href="../styles.css?v=4">
 </head>
 <body>
     <div class="container">
         <!-- Navigation -->
         <nav>
-            <a href="../index.html" class="logo" style="text-decoration: none;">
+            <a href="../index.html" class="logo">
                 {LOGO_SVG}
-                rolv
+                <span>rolv</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html">Home</a>

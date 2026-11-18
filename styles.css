@@ -17,13 +17,33 @@
   padding: 0;
 }
 
+/* Subtle custom scrollbar matching across all pages */
+html {
+  scrollbar-color: #232738 #0E1017;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1017;
+}
+::-webkit-scrollbar-thumb {
+  background: #232738;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333952;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--bg-gradient);
   background-color: var(--bg-color);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -75,10 +95,21 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.025em;
+  line-height: 1.5;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.logo svg {
+  display: block;
+  flex-shrink: 0;
+  height: 32px;
+  width: auto;
 }
 
 .logo img {
   height: 32px;
+  display: block;
 }
 
 .nav-links {
