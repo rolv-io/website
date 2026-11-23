@@ -88,6 +88,15 @@
 <li><strong>Drag from a handle to another node:</strong> Connect nodes with an edge.</li>
 <li><strong>Scroll and drag background:</strong> Zoom and pan the canvas.</li>
 </ul>
+<h2>Runtime Settings</h2>
+<p><img src="runtime-menu.png" alt="Runtime Settings Menu"></p>
+<p>Click <strong>Runtime</strong> in the graph header to set runtime versions and the session execution target:</p>
+<ul>
+<li><strong>Python Version:</strong> Use the global default or pin a project Python version (<code>3.10</code>–<code>3.14</code>) in <code>env/python-requirements.txt</code>.</li>
+<li><strong>R Version:</strong> Use the global default or pin a project R version (<code>4.2.3</code>, <code>4.3.3</code>, or <code>4.4.1</code>) in <code>env/r-packages.txt</code>.</li>
+<li><strong>Execution Target:</strong> Choose <strong>Target: Local Device</strong> or a saved remote target from <a href="settings.html#remote-compute">Settings</a> for all compute nodes in the session.</li>
+</ul>
+<p>A colored dot appears on the <strong>Runtime</strong> button when a custom version pin or remote target is active. To override the target for one compute node only, set <strong>Execution Target</strong> in the <a href="#node-settings-and-tabs">Node Inspector</a>.</p>
 <h2>Node Types</h2>
 <h3>Compute Nodes (💻)</h3>
 <p>Compute nodes run <strong>Python</strong>, <strong>R</strong>, or <strong>Bash</strong> scripts. Use compute nodes for calculations, statistical tests, plotting, file processing, and loops over many items. Compute scripts read and write files inside the session working directory.</p>
@@ -239,10 +248,11 @@
 <p>When <strong>Talk to Node</strong> proposes a code change, it appears as a pending diff. Click <strong>Apply</strong> or <strong>Discard</strong> before running the node.</p>
 <h2>Running the Pipeline</h2>
 <h3>Run Workflow and Run with Test Data</h3>
+<p><img src="graph-run-menu.png" alt="Run Workflow and Run with Test Data Menu"></p>
 <p>Click <strong>▶ Run Workflow</strong> in the header to run the DAG in topological order:</p>
 <ul>
 <li><strong>Run Workflow:</strong> Runs pending or stale nodes. Writes <code>input.json</code> from Data Input bindings.</li>
-<li><strong>Run with Test Data:</strong> Appears in the Run dropdown when a Data Input node has a test script. Generates sample data, updates <code>input.json</code>, and runs the workflow.</li>
+<li><strong>Run with Test Data:</strong> Appears in the Run dropdown when a Data Input node has a test script. Generates sample data, updates <code>input.json</code>, and runs the workflow (see <a href="#test-data">Test data</a> for how to create a test-data generator script).</li>
 </ul>
 <p>While running, click <strong>Stop</strong> to cancel the active local execution.</p>
 <h3>Smart Skip and Staleness</h3>

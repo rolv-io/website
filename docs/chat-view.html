@@ -158,9 +158,20 @@
 <ul>
 <li><strong>Title:</strong> Click to rename the session.</li>
 <li><strong>Working Directory (📁):</strong> Set or change the session folder. Click the external link icon to open the folder in your file manager.</li>
+<li><strong>Runtime:</strong> Set the project <strong>Python Version</strong>, <strong>R Version</strong>, and <strong>Execution Target</strong>.</li>
 <li><strong>Auto-Run:</strong> Toggle automatic code execution.</li>
 <li><strong>Step into Graph →:</strong> Convert chat scripts into a visual pipeline, or switch to the session&#39;s existing graph.</li>
 </ul>
+<h2>Runtime Settings</h2>
+<p><img src="runtime-menu.png" alt="Runtime Settings Menu"></p>
+<p>Click <strong>Runtime</strong> in the chat header to set runtime versions and the execution target for the current project:</p>
+<ul>
+<li><strong>Python Version:</strong> Choose <strong>Py: Default</strong> (uses your global version from <a href="settings.html#python-version">Settings</a>) or pin a specific version (<code>3.10</code>–<code>3.14</code>). rolv writes the pin to <code>env/python-requirements.txt</code>.</li>
+<li><strong>R Version:</strong> Choose <strong>R: Default</strong> (uses your global version from <a href="settings.html#r-version">Settings</a>) or pin a specific version (<code>4.2.3</code>, <code>4.3.3</code>, or <code>4.4.1</code>). rolv writes the pin to <code>env/r-packages.txt</code>.</li>
+<li><strong>Execution Target:</strong> Choose <strong>Target: Local Device</strong> or a saved remote target from <a href="settings.html#remote-compute">Settings</a>.</li>
+</ul>
+<p>A colored dot appears on the <strong>Runtime</strong> button when a project version pin or a remote target is active.</p>
+<p>When you change a pinned Python or R version, rolv recreates the session environment if the installed version does not match. If you select a version before you assign a working directory, rolv applies the pin after you choose a folder. When you save a recipe, rolv copies the project version pins into the recipe files.</p>
 <h2>Moving Between Chat and Graph</h2>
 <p>A session can contain both a chat thread and a graph:</p>
 <ul>
