@@ -68,119 +68,84 @@
             <main class="docs-main">
                 <article class="docs-content">
                     <h1>Settings</h1>
-<p>Open Settings by clicking the <strong>⚙️ Settings</strong> button at the bottom of the sidebar. The preferences panel has three tabs.</p>
+<p>Click <strong>⚙️ Settings</strong> at the bottom of the sidebar to open Preferences. The window contains four tabs: <strong>Token Usage</strong>, <strong>Walkthroughs</strong>, <strong>Execution Tools</strong>, and <strong>API Hub</strong>.</p>
 <h2>Token Usage</h2>
-<p><img src="settings-usage.png" alt="Token Usage &amp; Account Limits"></p>
-<p>Monitor your API consumption and account status:</p>
+<p>View your account status, credit balance, and quota consumption:</p>
 <ul>
-<li><strong>Account Tier</strong> — Free or Academic (🎓) (also free)</li>
-<li><strong>Compute Credits</strong> — Your current credit balance for AI operations</li>
-<li><strong>Daily Quota</strong> — Token usage today vs. your daily limit (resets at midnight UTC)</li>
-<li><strong>Monthly Quota</strong> — Token usage this month vs. your monthly limit</li>
-<li><strong>Historical Total</strong> — All-time token consumption</li>
+<li><strong>Account Tier:</strong> Displays whether you are on a <strong>Free</strong> or <strong>Academic (🎓)</strong> account.</li>
+<li><strong>Compute Credits:</strong> Shows your remaining cloud credit balance.</li>
+<li><strong>Daily Quota:</strong> Displays token usage today against your daily limit (resets at midnight UTC).</li>
+<li><strong>Monthly Quota:</strong> Displays token usage this month against your monthly limit.</li>
+<li><strong>Historical Total:</strong> Shows all-time token consumption.</li>
 </ul>
-<h3>What Do Credits Get You?</h3>
-<p>With 10,000 credits you can approximately:</p>
+<h3>Credit Estimates</h3>
+<p>With 10,000 credits, you can run approximately:</p>
 <ul>
-<li><strong>Light Tasks:</strong> Analyze ~25 million input tokens (equivalent to scanning ~1,500 dense PDF papers)</li>
-<li><strong>Medium Tasks:</strong> Generate ~6.6 million tokens of deep reasoning or complex coding</li>
+<li><strong>Light Tasks:</strong> ~25 million input tokens (over 1,500 dense PDF papers).</li>
+<li><strong>Medium Tasks:</strong> ~6.6 million tokens of complex coding or multi-step reasoning.</li>
 </ul>
-<h3>Requesting More Credits or Lab Licenses</h3>
-<p>Need additional cloud compute credits or tokens or lab licensing? Contact <a href="mailto:hello@rolv.io">hello@rolv.io</a>. Academic researchers and research groups can request grant-sponsored compute for publishing papers with Rolv.</p>
+<p>For additional compute credits or lab licensing, contact <a href="mailto:hello@rolv.io">hello@rolv.io</a>.</p>
+<h2>Walkthroughs</h2>
+<p>Manage built-in interactive product tours:</p>
+<ul>
+<li><strong>Enable Guided Tours:</strong> Turn onboarding hints on or off.</li>
+<li><strong>Welcome &amp; Chat Tour / Graph Builder Tour:</strong> Replay either guided tour at any time.</li>
+<li><strong>Reset All Tours:</strong> Clear tour history so tours start again on your next visit.</li>
+</ul>
 <h2>Execution Tools</h2>
-<p>Configure how rolv runs code and manages environments.</p>
+<p>Configure Python/R runtimes, Mamba, remote compute targets, sharing, and AI instructions.</p>
 <p><img src="settings-environments.png" alt="Runtime Environment Setup"></p>
 <h3>Python Version</h3>
-<p>Select the Python version (3.10–3.14) used for new sandbox environments. A template kernel is created on first use.</p>
+<p>Select the default Python version (<code>3.10</code>–<code>3.14</code>) for new compute sandboxes when a project does not set its own override. rolv creates a template kernel on first use.</p>
 <h3>R Version</h3>
-<p>Select the R version (4.2.3–4.6.1) for R node environments, managed via Mamba. Default is <strong>4.4.1</strong>. Changing version builds a new template — start a <strong>new</strong> session (or delete <code>~/.rolv/envs/_template_r…</code>) so the pin takes effect.</p>
-<p><img src="settings-ssh-mamba.png" alt="Mamba Path &amp; Remote Compute"></p>
+<p>Select the default R version (<code>4.2.3</code>–<code>4.6.1</code>, default <code>4.4.1</code>) managed via Mamba. After changing the R version, start a new session or remove old <code>~/.rolv/envs/_template_r*</code> caches so new environments use the selected version.</p>
 <h3>Mamba Path</h3>
-<p>If Mamba/Micromamba isn&#39;t on your system PATH, specify the absolute path so the execution engine can install dependencies. Leave empty for auto-detection.</p>
+<p>If <code>mamba</code> or <code>micromamba</code> is not on your system <code>PATH</code>, enter the full path to the executable. Leave this field empty for automatic detection.</p>
 <h3>Remote Compute</h3>
-<p>Configure remote targets to run compute nodes off your laptop. SSH, OpenStack VMs, and Slurm clusters share <strong>one slot cap</strong> (Free: 1, Academic: 3, Pro+: unlimited). <strong>Only SSH executes today</strong>; OpenStack and Slurm can be saved as slots for later.</p>
+<p>Add SSH targets to run compute nodes on remote servers. Your account includes a remote compute slot cap (<strong>Free: 1</strong>, <strong>Academic: 3</strong>).</p>
 <p>To add an SSH target:</p>
 <ol>
-<li>Click <strong>Add Target</strong> (disabled when you are at the slot cap)</li>
-<li>Fill in: Name, Host, Port, Username</li>
-<li>Choose auth method: <strong>Key Pair</strong> or <strong>Password</strong> (prompted on connect)</li>
-<li>For key auth: specify the private key path (e.g., <code>~/.ssh/id_rsa</code>)</li>
-<li>Set the remote work directory and Python command</li>
-<li>Click <strong>Test</strong> to verify the connection</li>
+<li>Click <strong>Add Target</strong> (disabled when your slot cap is full).</li>
+<li>Select <strong>SSH</strong> and enter <strong>Name</strong>, <strong>Host</strong>, <strong>Port</strong>, and <strong>Username</strong>.</li>
+<li>Choose <strong>Key Pair</strong> (provide private key path, such as <code>~/.ssh/id_rsa</code>) or <strong>Password</strong> (entered when connecting).</li>
+<li>Set the remote work directory and remote Python command.</li>
+<li>Click <strong>Test</strong> to verify the connection, then click <strong>Save Changes</strong>.</li>
 </ol>
-<p>Configured SSH targets appear in the graph node inspector&#39;s <strong>Execution Target</strong> dropdown.</p>
+<p>Saved SSH targets appear in each compute node&#39;s <strong>Execution Target</strong> menu in Graph View.</p>
 <p><img src="settings-global-instructions.png" alt="Global AI Instructions &amp; Recipe Sharing"></p>
 <h3>Recipe Sharing</h3>
-<p>Control what happens when AI modifies a cloud-origin recipe:</p>
+<p>Control whether rolv shares fixes when AI updates a cloud-origin recipe:</p>
 <ul>
-<li><strong>Ask every time</strong> — Prompts you to share improvements after saving</li>
-<li><strong>Never ask</strong> — Silently skips the sharing prompt</li>
-<li><strong>Auto broadcast</strong> — Automatically submits contributions</li>
+<li><strong>Ask every time:</strong> Show a sharing prompt after saving.</li>
+<li><strong>Never ask:</strong> Do not prompt to share recipe fixes.</li>
+<li><strong>Auto broadcast:</strong> Submit recipe fixes automatically.</li>
 </ul>
+<h3>rolv Improvement Reports</h3>
+<p>When rolv observes repeated workflow failures, environment setup errors, or loop retries (at least 5 weighted points stored locally), it can prepare an anonymized diagnostic report to help evolve the agent for more efficient token usage and fewer failed tasks.</p>
+<p>Select how rolv handles these reports:</p>
+<ul>
+<li><strong>Ask when threshold is reached</strong> <em>(default)</em>: Shows a banner in Chat View (or a floating toast outside Chat View) so you can review, edit, add notes, or cancel before sending.</li>
+<li><strong>Turn off (never ask):</strong> Stops collecting prompt triggers.</li>
+<li><strong>Auto-send in the background:</strong> Submits redacted batch reports automatically without prompting.</li>
+</ul>
+<p>File paths, email addresses, and tokens are removed automatically. Private or local recipes never include recipe names, identifiers, or code diffs.</p>
 <h3>Global AI Instructions</h3>
-<p>Custom instructions injected into all AI agent calls. Use this for consistent preferences like:</p>
-<ul>
-<li>Language choice (e.g., &quot;Always use Python instead of R&quot;)</li>
-<li>Coding style (e.g., &quot;Set random seeds for reproducibility&quot;)</li>
-<li>Library preferences (e.g., &quot;Use seaborn with darkgrid theme&quot;)</li>
-</ul>
+<p>Enter directives appended to every AI request (for example, <code>Always use Python instead of R</code> or <code>Set random seeds for reproducibility</code>).</p>
 <h2>API Hub</h2>
-<p>Bring your own API keys to customize or bypass rolv&#39;s cloud services.</p>
+<p>Use <strong>API Hub</strong> to connect your own LLM or local embedding model.</p>
 <h3>Custom LLM Provider</h3>
-<p>Use any OpenAI-compatible API. <strong>OpenAI</strong>, <strong>Groq</strong>, <strong>Ollama</strong>, and <strong>OpenRouter</strong> presets fill the URL and a tool-capable model. Groq uses <code>https://api.groq.com/openai/v1</code> (not <code>/v1</code>). Localhost Ollama does <strong>not</strong> need an API key.</p>
-<h4>Free &amp; Local LLM Options:</h4>
+<p>Configure any OpenAI-compatible API endpoint:</p>
 <ul>
-<li><strong>Local Ollama (100% Free &amp; Offline):</strong> Run models locally on your GPU/Mac (e.g. <code>ollama run llama3.2</code> or <code>ollama run qwen2.5-coder</code>). No data leaves your machine, perfect for unpublished research.</li>
-<li><strong>GroqCloud (Free Developer Tier):</strong> High-speed inference for Llama 3.3 models via <a href="https://console.groq.com">console.groq.com</a>.</li>
-<li><strong>OpenRouter (Free Open-Source Models):</strong> Access free model variants (<code>:free</code>) with zero credit card lock-in at <a href="https://openrouter.ai">openrouter.ai</a>.</li>
+<li>Built-in presets fill the base URL and model name for <strong>OpenAI</strong>, <strong>Groq</strong> (<code>https://api.groq.com/openai/v1</code>), <strong>Ollama</strong> (<code>http://localhost:11434/v1</code>, no API key needed), and <strong>OpenRouter</strong> (including <code>:free</code> models).</li>
+<li>Set <strong>Usage Mode</strong> to <strong>Never Use</strong>, <strong>Use as Fallback</strong> (used after reaching rolv quotas), or <strong>Always Use</strong>.</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Base URL</strong></td>
-<td>The API endpoint (e.g., <code>https://api.openai.com/v1</code>, <code>http://localhost:11434/v1</code>, or <code>https://openrouter.ai/api/v1</code>)</td>
-</tr>
-<tr>
-<td><strong>Model Name</strong></td>
-<td>The model identifier (e.g., <code>gpt-4o</code>, <code>llama3.2</code>, <code>meta-llama/llama-3.3-70b-instruct:free</code>)</td>
-</tr>
-<tr>
-<td><strong>API Key</strong></td>
-<td>Required for cloud providers. Leave empty for local Ollama / LM Studio on localhost</td>
-</tr>
-<tr>
-<td><strong>Usage Mode</strong></td>
-<td><em>Never Use</em>, <em>Use as Fallback</em> (when rolv quota is exceeded), or <em>Always Use</em></td>
-</tr>
-</tbody></table>
 <h3>Embedding Model</h3>
-<p>Embeddings power semantic search across your local recipes and pipeline node snippets.</p>
-<h4>Modes</h4>
+<p>Semantic search indexes your local recipes and node snippets:</p>
 <ul>
-<li><strong>☁️ Cloud Default</strong> — Google <code>text-embedding-004</code> (768d) via Rolv cloud gateway when you are signed in. If embedding is unavailable (no session token, or the call fails), local search falls back to <strong>LanceDB full-text search</strong> and <strong>SQLite keywords</strong>.</li>
-<li><strong>🖥️ Custom Model</strong> — Connect your own local or remote embedding endpoint (Ollama, LM Studio, vLLM, OpenAI) for the local recipes.</li>
+<li><strong>Cloud Default:</strong> Uses Google <code>text-embedding-004</code> while signed in. If unavailable, local search falls back to text and keyword search.</li>
+<li><strong>Custom Model:</strong> Connect local Ollama (<code>embeddinggemma:300m</code> or <code>nomic-embed-text</code>), LM Studio, vLLM, or OpenAI endpoints so all indexing stays local.</li>
 </ul>
-<h4>Running Local Embedding Models (100% Free &amp; Offline):</h4>
-<p>To maximize local semantic search accuracy without sending any data to the cloud, you can run a local embedding model via <a href="https://ollama.ai">Ollama</a>:</p>
-<ol>
-<li>Run an embedding model in your terminal:<pre><code class="language-bash">ollama pull embeddinggemma:300m
-# or
-ollama pull nomic-embed-text
-</code></pre>
-</li>
-<li>In Rolv Settings $\rightarrow$ <strong>API Hub</strong> $\rightarrow$ <strong>Embedding Model</strong>, select <strong>🖥️ Custom Model</strong>.</li>
-<li>Click the preset <strong>🦙 Ollama (embeddinggemma:300m)</strong> or <strong>🦙 Ollama (nomic-embed-text)</strong> (sets Endpoint URL to <code>http://localhost:11434/v1</code>).</li>
-<li>Click <strong>Test Connection</strong> to verify reachability and dimensions.</li>
-<li>Click <strong>Save Changes</strong> — Rolv will automatically re-index your local recipes into LanceDB using your local model.</li>
-</ol>
-<blockquote>
-<p><strong>Important:</strong> Switching embedding models requires re-indexing all local recipes. Rolv will re-index your catalog automatically in the background after saving.</p>
-</blockquote>
+<p>Click <strong>Test Connection</strong>, then click <strong>Save Changes</strong>. When you change embedding modes or models, rolv re-indexes your local recipe catalog automatically.</p>
 <hr>
 <p><strong>Next:</strong> <a href="troubleshooting.html">Troubleshooting →</a></p>
 

@@ -67,44 +67,25 @@
 
             <main class="docs-main">
                 <article class="docs-content">
-                    <h2>The Recommended Recipe Creation Workflow</h2>
-<p>The ideal, best-practice way to build robust recipes in rolv follows a two-stage workflow:</p>
-<p><img src="graph-workflow-actions.png" alt="Workflow Actions &amp; Save as Recipe"></p>
+                    <h1>Recipes</h1>
+<h2>Recommended Recipe Workflow</h2>
+<p>Use two stages to build reliable recipes in rolv:</p>
 <ol>
-<li><strong>Build &amp; Validate in Graph View:</strong><ul>
-<li>Create a visual pipeline in <strong>Graph View</strong>. Add nodes, write/generate code, set up inputs/outputs, and execute the nodes.</li>
-<li>Test execution locally or over SSH. Enable <strong>Auto-Correct Failures</strong> and <strong>Strict Fact-Checking</strong> in Graph Actions to verify your pipeline runs end-to-end without errors.</li>
-</ul>
-</li>
-<li><strong>Export as Recipe:</strong><ul>
-<li>Open <strong>Graph Actions</strong> (top-right slider icon) and click <strong>Save as Recipe</strong>.</li>
-<li>This packages your graph structure, scripts, environment specs, and parameters into a clean recipe bundle.</li>
-</ul>
-</li>
-<li><strong>Refine in Recipe Designer:</strong><ul>
-<li>Open your new recipe in the <strong>Recipe Designer</strong> (<code>Recipes → Open Designer</code>).</li>
-<li>Polish <code>recipe.md</code> documentation, click <strong>Enhance</strong> on node descriptions for vector RAG search, configure <code>env/</code> files, and add troubleshooting hints.</li>
-</ul>
-</li>
-<li><strong>Submit to Cloud Library:</strong><ul>
-<li>Click <strong>Submit</strong> in the designer header to publish your recipe for peer review.</li>
-</ul>
-</li>
+<li><strong>Build and test in Graph View:</strong> Create a DAG pipeline, set inputs and outputs, and verify execution locally or over SSH. Enable <strong>Auto-Correct Failures</strong> and <strong>Strict Fact-Checking</strong> in Graph Actions while testing.</li>
+<li><strong>Export as a Recipe:</strong> Open <strong>Graph Actions</strong> (sliders icon) and click <strong>Save as Recipe</strong>. rolv packages your graph structure, scripts, environment specs, and non-path input parameters into a bundle.</li>
 </ol>
-<h2>Recipe Library &amp; Cloud Library</h2>
-<p><img src="recipes-header.png" alt="Recipes Navigation &amp; Cloud Library"></p>
-<p>Click <strong>Recipes</strong> in the sidebar to open the Recipe Library. Local recipes load instantly from your machine, while any available cloud updates or new versions check silently in the background. Use the tab toggle at the top:</p>
+<p><img src="graph-workflow-actions.png" alt="Workflow Actions &amp; Save as Recipe"></p>
+<ol start="3">
+<li><strong>Refine in Recipe Designer:</strong> Click <strong>Open Designer</strong> to edit <code>recipe.md</code>, add troubleshooting notes, configure <code>env/</code> files, and enhance node descriptions for search.</li>
+<li><strong>Submit to Cloud Library:</strong> Click <strong>Submit</strong> in the designer header to publish your recipe for review.</li>
+</ol>
+<h2>Recipe Library and Cloud Library</h2>
+<p>Click <strong>Recipes</strong> in the sidebar to open the Recipe Library:</p>
 <ul>
-<li><strong>Local Library:</strong> Browse, run, edit, duplicate, export, or delete recipes saved on your local machine.</li>
-<li><strong>Cloud Library:</strong> Search the online community repository for verified pipelines and sub-node blueprints. Signed-in Free users can browse names; downloading requires Academic or Pro. A Cloud Library hit that is not on disk yet is downloaded on first use (chat <strong>Use Recipe</strong>, library <strong>Run Recipe</strong>, or saying “run it” in chat).</li>
+<li><strong>Local Library:</strong> Browse, run, edit, duplicate, export, or delete recipes saved on your computer.</li>
+<li><strong>Cloud Library:</strong> Search verified pipelines and node blueprints. Free accounts can browse recipes. Academic accounts can download recipes using 5 active local recipe slots.</li>
 </ul>
-<h3>Recipe Download Slot Limits</h3>
-<ul>
-<li><strong>Free Tier:</strong> Browse the Cloud Library. Downloading recipes is not included.</li>
-<li><strong>Academic Tier (🎓):</strong> Includes <strong>5 active local recipe slots</strong>. Downloading a recipe from the Cloud Library consumes 1 slot.</li>
-<li><strong>Publish-to-Earn Rewards (Academic):</strong> When your submitted community recipe is approved by maintainers/admins, you earn <strong>+5,000 Compute Credits</strong>, <strong>+2 Permanent Recipe Workspace Slots</strong>, and <strong>Maintainer Status</strong> to review and approve community updates!</li>
-<li><strong>Pro &amp; Team Tiers:</strong> Unlimited recipe workspace slots.</li>
-</ul>
+<p>When you use a Cloud Library recipe that is not yet on disk, rolv downloads it automatically.</p>
 <h2>Recipe Properties</h2>
 <h3>Types</h3>
 <table>
@@ -116,15 +97,15 @@
 </thead>
 <tbody><tr>
 <td><strong>User</strong></td>
-<td>Created by you</td>
+<td>Created on your account.</td>
 </tr>
 <tr>
 <td><strong>Team</strong></td>
-<td>Shared within your organization</td>
+<td>Shared inside an organization.</td>
 </tr>
 <tr>
 <td><strong>Validated</strong></td>
-<td>Reviewed and approved</td>
+<td>Reviewed and approved for the Cloud Library.</td>
 </tr>
 </tbody></table>
 <h3>Statuses</h3>
@@ -137,22 +118,26 @@
 </thead>
 <tbody><tr>
 <td><strong>Draft</strong></td>
-<td>Work in progress</td>
+<td>Work in progress.</td>
 </tr>
 <tr>
 <td><strong>Saved</strong></td>
-<td>Saved locally</td>
+<td>Saved locally.</td>
 </tr>
 <tr>
 <td><strong>Submitted</strong></td>
-<td>Submitted to the cloud for review</td>
+<td>Uploaded for Cloud Library review.</td>
 </tr>
 <tr>
 <td><strong>Approved</strong></td>
-<td>Accepted by a reviewer</td>
+<td>Published in the Cloud Library.</td>
+</tr>
+<tr>
+<td><strong>Quarantined</strong></td>
+<td>Hidden from search after security flags or repeated user reports.</td>
 </tr>
 </tbody></table>
-<h3>Categories (Cloud)</h3>
+<h3>Categories (Cloud Library)</h3>
 <table>
 <thead>
 <tr>
@@ -162,178 +147,128 @@
 </thead>
 <tbody><tr>
 <td><strong>Core</strong></td>
-<td>Maintained by the rolv core team</td>
+<td>Maintained by the rolv team.</td>
 </tr>
 <tr>
 <td><strong>Community</strong></td>
-<td>Contributed by other users — use at your own discretion</td>
+<td>Contributed by community users.</td>
 </tr>
 </tbody></table>
 <h2>Running a Recipe</h2>
-<p><strong>From the library</strong></p>
+<p><strong>From the Recipe Library:</strong></p>
 <ol>
-<li>Select a recipe in the library</li>
-<li>Click <strong>Run Recipe</strong></li>
-<li>Choose a working directory</li>
-<li>The recipe is instantiated as a <strong>new graph session</strong> with all nodes and code pre-loaded. Data Input/Output come back as I/O nodes (not compute) when the recipe was saved with <code>node_type</code>. Fill input variable paths on the Data Input node, then run.</li>
+<li>Select a recipe and click <strong>Run Recipe</strong>.</li>
+<li>Choose a working directory.</li>
+<li>Enter your input files or parameters on the <strong>Data Input</strong> node, then click <strong>Run Workflow</strong>.</li>
 </ol>
-<p><strong>From chat</strong></p>
-<table>
-<thead>
-<tr>
-<th>You do this</th>
-<th>What happens</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Click <strong>Use Recipe</strong> on a card the agent showed</td>
-<td>Same as <strong>Run Recipe</strong>: a <strong>new graph session</strong></td>
-</tr>
-<tr>
-<td>Type the recipe name, “run it”, “yes”, or “do 2”</td>
-<td>Loads the recipe into the <strong>current</strong> session (replaces the current graph)</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>Recipes saved from Graph <strong>before</strong> I/O round-trip may still show Data Input as a compute node. Re-open the original graph and <strong>Save as Recipe</strong> again.</p>
-</blockquote>
-<p>Linked cloud recipes show a <strong>Cloud vN</strong> badge. Local-only recipes show <strong>Local only</strong>. Unsaved edits on a cloud-linked recipe show <strong>Local changes not submitted</strong>.</p>
-<h2>Importing Pipelines</h2>
-<p>The recipe browser can import a local folder, a Snakemake pipeline, or a GitHub repository.</p>
-<table>
-<thead>
-<tr>
-<th>Source</th>
-<th>How it works</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Folder</strong></td>
-<td>Accepts a Rolv recipe folder, a Snakemake pipeline, or a folder of scripts. A Rolv recipe imports as-is. A folder of scripts is compiled into a pipeline.</td>
-</tr>
-<tr>
-<td><strong>Snakemake</strong></td>
-<td>Select a Snakefile or pipeline folder. This rewrite uses many tokens and is not failsafe: a pipeline that cannot be adapted is rejected.</td>
-</tr>
-<tr>
-<td><strong>GitHub</strong></td>
-<td>Paste a public repository URL. Accepted repositories are a Rolv recipe, a folder of scripts, or a Snakemake pipeline. A Snakemake repository uses the same rewrite as the Snakemake button, so it spends many tokens and is not failsafe.</td>
-</tr>
-</tbody></table>
-<p>During import, a live status chip in the interface tracks scanning, script extraction, DAG construction, and validation in real time.</p>
-<h2>Recipe Designer</h2>
-<p>Click <strong>Open Designer</strong> on any recipe to enter the full editor. It has four tabs:</p>
-<h3>Recipe Tab</h3>
-<p>Edit the <code>recipe.md</code> file — the human-readable documentation for your pipeline. Toggle between <strong>Edit</strong> and <strong>Preview</strong> modes.</p>
-<h4>Syncing Documentation with Your Pipeline</h4>
-<p>As your pipeline evolves—when you add nodes, change parameters, or rewrite scripts—your documentation can quickly become outdated. The <strong>Sync docs with pipeline</strong> button uses AI to read your entire workflow graph, scripts, inputs, and outputs, then proposes updated documentation.</p>
-<ol>
-<li><strong>Open the Sync Modal:</strong> Click <strong>Sync docs with pipeline</strong> in the <code>recipe.md</code> editor header.</li>
-<li><strong>Provide Optional Instructions:</strong> You can add specific focus areas, such as <em>&quot;Focus on explaining input parameters&quot;</em> or <em>&quot;Add notes on expected runtimes&quot;</em>, or leave it blank for a complete overview.</li>
-</ol>
-<p><img src="recipes-sync-docs-prompt.png" alt="Sync Documentation with Pipeline"></p>
-<ol start="3">
-<li><strong>Review Changes Section by Section:</strong> Rolv compares your current documentation with the generated draft and displays an interactive diff:<ul>
-<li><strong>Section Checklist:</strong> Browse detected sections (such as <em>Title &amp; Overview</em>, <em>What this recipe does</em>, <em>Steps</em>, <em>Inputs &amp; Parameters</em>). Check the boxes for updates you want to apply, and uncheck any you prefer to keep unchanged.</li>
-<li><strong>Visual Diff:</strong> The right pane highlights additions in green and removals in red so you know exactly what is changing.</li>
-<li><strong>Safe Metadata:</strong> Your existing YAML frontmatter header (name, id, version, type) and custom sections (like <em>References</em>) are guaranteed preserved.</li>
-</ul>
-</li>
-<li><strong>Apply Selected Changes:</strong> Click <strong>Apply Selected</strong> to update your <code>recipe.md</code> draft. You can continue editing manually before saving.</li>
-</ol>
-<p><img src="recipes-sync-docs-diff.png" alt="Review &amp; Select Documentation Changes"></p>
-<h3>Workflow Tab</h3>
-<p>Visual graph editor showing nodes and edges. Click a node to see and edit:</p>
-<p><strong>Compute / research nodes</strong></p>
-<ul>
-<li><strong>Label</strong> and <strong>Kind</strong> (<code>script</code> = compute, <code>agent</code> = research, <code>manual</code> = reserved)</li>
-<li><strong>Touch-last / protected</strong> — AI auto-heal prefers other nodes first. Optional reason is stored and sent to the model.</li>
-<li><strong>Research mode</strong> (research / <code>agent</code> only) — <strong>Interpret / simple agent</strong> (files and figures, no web search), <strong>Literature review</strong> (search only), or <strong>Full</strong> (both)</li>
-<li><strong>Structured output</strong> (research / <code>agent</code> only) — optional. Tick this when the next compute node must read a table. Enter comma-separated <strong>field names</strong> or leave blank for automatic schema inference.</li>
-<li><strong>Batch iteration across items (ForEach)</strong> (research / <code>agent</code> only) — optional. Automatically loops across up to 100 items/rows in parallel with live progress and produces aggregated Markdown and JSON results (<code>&lt;slug&gt;-results.json</code>, <code>&lt;slug&gt;-report.md</code>).</li>
-<li><strong>Expects</strong> and <strong>Produces</strong> (input/output data contracts)</li>
-<li><strong>Description</strong> — Used for semantic search; click <strong>Enhance</strong> to auto-generate a dense description using AI</li>
-<li><strong>Code file</strong> — The template code associated with this node</li>
-</ul>
-<p><strong>Data Input / Data Output</strong></p>
-<ul>
-<li>Canvas uses the same purple/green I/O chrome as Graph View</li>
-<li>Right pane is an I/O panel (no Kind, Core, or code editor)</li>
-<li>Data Input: <strong>names, descriptions, and defaults</strong> of inputs. A local file path is cleared. Plus an optional test-data script. The script creates sample files and a <code>test_input.json</code>. Generating test data copies those values into <code>input.json</code>. See <a href="graph-view.html#test-data">Test data</a> in Graph View.</li>
-<li>Data Output: ledger only; artifacts come from <code>output.json</code> after a run</li>
-</ul>
-<h3>Environment Tab</h3>
-<p>Edit environment files under <code>env/</code> and <code>troubleshooting.md</code>. Typical files:</p>
-<table>
-<thead>
-<tr>
-<th>File</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>python-requirements.txt</code></td>
-<td>Python packages (conda-forge / pip-style names)</td>
-</tr>
-<tr>
-<td><code>r-packages.txt</code></td>
-<td>R / Bioconda packages</td>
-</tr>
-<tr>
-<td><code>system-tools.txt</code></td>
-<td>CLI tools installed via Mamba</td>
-</tr>
-</tbody></table>
-<h4>Automatic Python Package Resolution</h4>
-<p>When running or saving pipelines, Rolv automatically maps Python import statements to their real package names (such as mapping <code>cv2</code> to <code>opencv-python</code> and <code>sklearn</code> to <code>scikit-learn</code>). If a package is not found in Conda or Bioconda, Rolv automatically attempts to install it via <code>pip</code>, both for local runs and across remote SSH servers.</p>
-<p>The troubleshooting file can be auto-refreshed from the source session&#39;s execution history. <strong>Save as Recipe</strong> from Graph fills the env files with versions where known, automatically resolves Bioconductor and CRAN packages with canonical version constraints, and omits Python stdlib / R base packages.</p>
-<h3>Changes Tab</h3>
-<p>A diff viewer showing what&#39;s changed since the last save.</p>
-<h2>Publishing to Cloud</h2>
-<ol>
-<li>Click <strong>Submit</strong> in the designer header</li>
-<li>Your recipe is uploaded for review</li>
-<li>Once approved, it becomes available to other users</li>
-<li><strong>Submit</strong> again on a recipe that is already on the Cloud Library <strong>updates that listing</strong> (it does not create a duplicate). If the cloud copy is gone, Rolv creates a new listing.</li>
-</ol>
-<h2>Cloud Sync &amp; Updates</h2>
-<p>When a cloud recipe has a newer version available, you&#39;ll see an <strong>&quot;Update Available&quot;</strong> badge:</p>
+<p><strong>From Chat View:</strong></p>
 <table>
 <thead>
 <tr>
 <th>Action</th>
-<th>What it does</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Click <strong>Use Recipe</strong> on a recipe card</td>
+<td>Starts a <strong>new graph session</strong> with that recipe.</td>
+</tr>
+<tr>
+<td>Type the recipe name, <code>run it</code>, <code>yes</code>, or <code>do 2</code> in chat</td>
+<td>Loads the recipe into the <strong>current session</strong> and replaces its graph.</td>
+</tr>
+</tbody></table>
+<p>Cloud-linked recipes display a <strong>Cloud vN</strong> badge. Local-only recipes display <strong>Local only</strong>. Edited cloud forks display <strong>Local changes not submitted</strong>.</p>
+<h2>Importing Pipelines</h2>
+<p>Import external workflows from the Recipe Library toolbar:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Folder</strong></td>
+<td>Imports a rolv recipe folder as-is, or compiles a folder of scripts or a Snakemake pipeline into graph nodes.</td>
+</tr>
+<tr>
+<td><strong>Snakemake</strong></td>
+<td>Converts a <code>Snakefile</code> or Snakemake folder into graph nodes. Large rewrites spend many tokens and reject pipelines that cannot be converted safely.</td>
+</tr>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>Clones a public repository containing a rolv recipe, a folder of scripts, or a Snakemake pipeline.</td>
+</tr>
+</tbody></table>
+<p>A progress chip shows scanning, code extraction, DAG construction, and validation steps in real time.</p>
+<h2>Recipe Designer</h2>
+<p>Click <strong>Open Designer</strong> on any recipe to edit it across four tabs.</p>
+<h3>Recipe Tab</h3>
+<p>Edit <code>recipe.md</code>, the human-readable guide for your pipeline. Switch between <strong>Edit</strong> and <strong>Preview</strong> modes.</p>
+<h4>Syncing Documentation with Your Pipeline</h4>
+<p>Click <strong>Sync docs with pipeline</strong> to update <code>recipe.md</code> from your current nodes, scripts, and inputs:</p>
+<ol>
+<li>Click <strong>Sync docs with pipeline</strong> in the <code>recipe.md</code> header.</li>
+<li>Add optional instructions (for example, <code>Focus on explaining input parameters</code>), then click <strong>Generate Suggestions</strong>.</li>
+</ol>
+<p><img src="recipes-sync-docs-prompt.png" alt="Sync Documentation with Pipeline"></p>
+<ol start="3">
+<li>Select which updated sections to apply using the checklist and side-by-side diff preview. Existing YAML frontmatter metadata and custom sections (such as <em>References</em>) stay preserved.</li>
+<li>Click <strong>Apply Selected</strong> to update your draft before saving.</li>
+</ol>
+<p><img src="recipes-sync-docs-diff.png" alt="Review &amp; Select Documentation Changes"></p>
+<h3>Workflow Tab</h3>
+<p>Inspect and edit each node in the recipe graph:</p>
+<ul>
+<li><strong>Compute / Research nodes:</strong> Edit label, kind (<code>script</code> for a compute node or <code>agent</code> for a research node), <strong>Touch-last / protected</strong> state, research mode (<code>Interpret / simple agent</code>, <code>Literature review</code>, <code>Full</code>), structured output fields, ForEach batch iteration (default 20, max 100 items), <strong>Expects</strong> / <strong>Produces</strong> contracts, and template code.</li>
+<li><strong>Enhance description:</strong> Generate a dense summary on a node to improve semantic search matching.</li>
+<li><strong>Data Input / Data Output nodes:</strong> Store input variable names, descriptions, safe defaults (local paths cleared), optional test-data generator scripts, and output ledger entries.</li>
+</ul>
+<h3>Environment Tab</h3>
+<p>Edit package dependencies under <code>env/</code> (<code>python-requirements.txt</code>, <code>r-packages.txt</code>, <code>system-tools.txt</code>) and <code>troubleshooting.md</code>.</p>
+<ul>
+<li><strong>Automatic Python package mapping:</strong> rolv maps imports such as <code>cv2</code> (<code>opencv-python</code>) and <code>sklearn</code> (<code>scikit-learn</code>), resolves Bioconductor/CRAN packages for R, and falls back to <code>pip</code> when Conda lacks a Python package.</li>
+<li><strong>Save as Recipe</strong> fills known package versions automatically while skipping Python standard library and R base packages.</li>
+</ul>
+<h3>Changes Tab</h3>
+<p>Review line-by-line differences since the last saved version.</p>
+<h2>Publishing, Security Checks, and Quarantine</h2>
+<ol>
+<li>Click <strong>Submit</strong> in the Recipe Designer header to upload your recipe to the Cloud Library.</li>
+<li>Submitting updates to an existing cloud listing updates that listing rather than creating a duplicate. If the original cloud listing no longer exists, rolv creates a new listing.</li>
+<li>Cloud submissions and non-admin content updates run through an automated <strong>Security Risk Scanner</strong>. Recipes flagged as high risk (for example, destructive shell commands or unsafe remote downloads) are set to <strong>Quarantined</strong> and removed from search results until reviewed.</li>
+<li>For cloud-sourced recipes, click <strong>⋮ → Report this recipe</strong> to flag harmful or broken recipes. Repeated reports also quarantine a recipe automatically.</li>
+</ol>
+<h2>Cloud Updates</h2>
+<p>When a newer version of a cloud-linked recipe exists, rolv shows an <strong>Update Available</strong> badge:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Behavior</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>Keep My Version</strong></td>
-<td>Accept the new version number without changing your local files</td>
+<td>Keeps local files and updates the tracked version number.</td>
 </tr>
 <tr>
 <td><strong>Snooze 7 days</strong></td>
-<td>Hide the update reminder for a week</td>
-</tr>
-<tr>
-<td><strong>Smart Merge</strong></td>
-<td>AI merges the cloud changes with your local edits (creates a restore point first)</td>
+<td>Hides update prompts for 7 days.</td>
 </tr>
 <tr>
 <td><strong>Clean Overwrite</strong></td>
-<td>Replaces your local recipe entirely with the cloud version (creates a restore point first)</td>
+<td>Replaces local files with the latest cloud version (creates a restore point first; Academic accounts).</td>
 </tr>
 </tbody></table>
-<blockquote>
-<p><strong>Note:</strong> Clean Overwrite requires Academic or Pro. Smart Merge requires a Pro subscription.</p>
-</blockquote>
 <h2>Recipe Sharing</h2>
-<p>When AI modifies a cloud-origin recipe locally, rolv can share improvements back. Configure this in <a href="settings.html">Settings</a>:</p>
+<p>When AI improves a cloud-origin recipe locally, rolv can submit those changes upstream. Set this behavior in <a href="settings.html">Settings</a>:</p>
 <ul>
-<li><strong>Ask every time</strong> — Prompts you after each save</li>
-<li><strong>Never ask</strong> — Silently skips sharing</li>
-<li><strong>Auto broadcast</strong> — Automatically submits contributions</li>
+<li><strong>Ask every time:</strong> Ask before submitting changes.</li>
+<li><strong>Never ask:</strong> Skip sharing prompts.</li>
+<li><strong>Auto broadcast:</strong> Submit recipe improvements automatically.</li>
 </ul>
-<h2>Reporting a Recipe</h2>
-<p>For cloud-sourced recipes, click <strong>⋮ → Report this recipe</strong> to flag content that&#39;s harmful, misleading, or violates guidelines.</p>
 <hr>
 <p><strong>Next:</strong> <a href="reviews.html">Reviews →</a></p>
 

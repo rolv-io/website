@@ -68,141 +68,171 @@
             <main class="docs-main">
                 <article class="docs-content">
                     <h1>Troubleshooting</h1>
-<h2>Sign-in &amp; Email</h2>
-<h3>Verification or password-reset email never arrives</h3>
-<p>Rolv sends verification and password-reset mail from <strong><a href="mailto:noreply@rolv.io">noreply@rolv.io</a></strong> (not Firebase’s default <code>noreply@…firebaseapp.com</code>).</p>
+<h2>Sign-In and Email</h2>
+<h3>Verification or password-reset email does not arrive</h3>
+<p>rolv sends verification and password-reset messages from <strong><a href="mailto:noreply@rolv.io">noreply@rolv.io</a></strong>.</p>
 <ol>
-<li>Check spam / junk, and wait a minute — rate limits apply</li>
-<li>On the verification screen, click <strong>Resend verification email</strong>, then <strong>I’ve verified</strong> after you open the link</li>
-<li>On sign-in, use <strong>Forgot password?</strong> again with the same address you registered</li>
-<li>Confirm the address is spelled correctly; the reset form always says “sent” so it does not reveal whether an account exists</li>
+<li>Wait 1–2 minutes and check your spam or junk folder.</li>
+<li>On the verification screen, click <strong>Resend verification email</strong>, open the link, then click <strong>I’ve verified</strong>.</li>
+<li>On the sign-in screen, click <strong>Forgot password?</strong> and confirm the exact registered email address.</li>
 </ol>
-<p>Google sign-in does not need this flow.</p>
+<p>Google sign-in does not require email verification.</p>
 <h2>Environment Setup</h2>
 <h3>Mamba/Micromamba Not Found</h3>
-<p>If rolv can&#39;t create sandbox environments:</p>
+<p>rolv downloads Micromamba automatically to <code>~/.rolv/bin/micromamba</code> (<code>%USERPROFILE%\.rolv\bin\micromamba.exe</code> on Windows) if no Mamba binary exists on your computer.</p>
+<p>This error appears only if the automatic download fails (for example, no internet access or a firewall blocks <code>micro.mamba.pm</code>) or if a custom <strong>Mamba Path</strong> points to a missing file.</p>
+<p>To fix this error:</p>
 <ol>
-<li>Open <strong>Settings → Execution Tools</strong></li>
-<li>Set the <strong>Mamba Executable Path</strong> to the full path (e.g., <code>/opt/homebrew/bin/micromamba</code>)</li>
-<li>Save settings</li>
+<li>Open <strong>Settings → Execution Tools</strong>.</li>
+<li>Clear <strong>Mamba Path</strong> so rolv detects or downloads Micromamba automatically, or enter the full path to an existing <code>mamba</code> or <code>micromamba</code> executable (for example, <code>/opt/homebrew/bin/micromamba</code>).</li>
+<li>Click <strong>Save Changes</strong>.</li>
 </ol>
-<p>If you don&#39;t have Mamba installed, install Micromamba:</p>
-<pre><code class="language-bash">&quot;${SHELL}&quot; &lt;(curl -L micro.mamba.pm/install.sh)
-</code></pre>
-<h3>Python/R Version Issues</h3>
-<p>If a specific Python or R version fails to create an environment:</p>
+<p>If the automatic download still fails, install Micromamba manually:</p>
 <ul>
-<li>Ensure the version is available in your Mamba channels</li>
-<li>Try switching to a different version in <strong>Settings → Execution Tools</strong></li>
-<li>After changing <strong>R version</strong>, start a <strong>new</strong> session so Mamba can build a new template (<code>_template_r461</code> for 4.6.1, and so on)</li>
-<li>Check that your internet connection is available (Mamba downloads packages on first use)</li>
-</ul>
-<h3>Environment Spec Errors (<code>_template_py...</code>)</h3>
-<p>If you see <code>libmamba Could not solve for environment specs</code> mentioning <code>_template_</code>:</p>
-<ol>
-<li>Open Terminal and delete cached template environments:<pre><code class="language-bash">rm -rf ~/.rolv/envs/_template_*
+<li><strong>macOS / Linux (Terminal):</strong><pre><code class="language-bash">&quot;${SHELL}&quot; &lt;(curl -L micro.mamba.pm/install.sh)
 </code></pre>
 </li>
-<li>Re-run your recipe. Rolv will automatically generate a fresh, clean environment.</li>
+<li><strong>Windows (PowerShell):</strong><pre><code class="language-powershell">Invoke-Expression ((Invoke-WebRequest -Uri https://micro.mamba.pm/install.ps1).Content)
+</code></pre>
+</li>
+</ul>
+<h3>Python or R Environment Creation Fails</h3>
+<ul>
+<li>Verify internet access so Mamba can download packages on first run.</li>
+<li>Select another Python or R version in <strong>Settings → Execution Tools</strong>.</li>
+<li>After changing the <strong>R Version</strong>, start a <strong>new</strong> session or clear old <code>_template_r*</code> folders so Mamba builds a fresh template.</li>
+</ul>
+<h3>Cached Environment Spec Errors (<code>_template_</code>)</h3>
+<p>If you see <code>libmamba Could not solve for environment specs</code> referencing <code>_template_</code>:</p>
+<ol>
+<li>Close active runs and remove cached templates in Terminal:<pre><code class="language-bash">rm -rf ~/.rolv/envs/_template_*
+</code></pre>
+</li>
+<li>Re-run the node or workflow so rolv creates a clean environment.</li>
+</ol>
+<h3>Reset or Create a Fresh Environment</h3>
+<p>rolv stores Python and R runtime files in three locations under your home folder:</p>
+<ul>
+<li><strong>Template (<code>~/.rolv/envs/_template_*</code>):</strong> A reusable base environment and its <code>.spec.txt</code> package list. rolv builds one template for each Python or R version and copies it to make new session environments quickly.</li>
+<li><strong>Session environment (<code>~/.rolv/envs/&lt;hash&gt;_python</code> and <code>&lt;hash&gt;_r</code>):</strong> An isolated Python or R environment for one working directory. rolv installs project-specific packages into this folder.</li>
+<li><strong>Package cache (<code>~/.rolv/mamba</code>):</strong> Downloaded Micromamba package archives. Micromamba reuses these files to install packages faster.</li>
+</ul>
+<p><strong>Note:</strong> You can safely delete these folders. This action does not delete your working directory files, recipes, sessions, or settings (<code>executor-config.json</code>).</p>
+<h4>Reset templates only</h4>
+<p>Use this procedure if template creation fails or you want fresh base templates for new workspaces. This procedure does not change existing session environments.</p>
+<ol>
+<li>Stop all active runs in rolv.</li>
+<li>Delete the template folders and <code>.spec.txt</code> files:<ul>
+<li><strong>macOS / Linux (Terminal):</strong><pre><code class="language-bash">rm -rf ~/.rolv/envs/_template_*
+</code></pre>
+</li>
+<li><strong>Windows (PowerShell):</strong><pre><code class="language-powershell">Remove-Item -Recurse -Force &quot;$env:USERPROFILE\.rolv\envs\_template_*&quot;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Run a script or workflow in rolv. rolv builds new templates automatically.</li>
+</ol>
+<h4>Reset all environments</h4>
+<p>Use this procedure if a session environment fails or you want a clean environment for every project.</p>
+<ol>
+<li>Stop all active runs in rolv.</li>
+<li>Delete the <code>envs</code> folder:<ul>
+<li><strong>macOS / Linux (Terminal):</strong><pre><code class="language-bash">rm -rf ~/.rolv/envs
+</code></pre>
+</li>
+<li><strong>Windows (PowerShell):</strong><pre><code class="language-powershell">Remove-Item -Recurse -Force &quot;$env:USERPROFILE\.rolv\envs&quot;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Run your script or workflow again. rolv builds a new template and a new session environment automatically.</li>
+</ol>
+<h4>Clear the package cache</h4>
+<p>Use this procedure if Micromamba reports file-lock, extraction, or corrupted archive errors.</p>
+<ol>
+<li>Stop all active runs in rolv.</li>
+<li>Delete the <code>envs</code> folder and the <code>mamba</code> package cache:<ul>
+<li><strong>macOS / Linux (Terminal):</strong><pre><code class="language-bash">rm -rf ~/.rolv/envs ~/.rolv/mamba
+</code></pre>
+</li>
+<li><strong>Windows (PowerShell):</strong><pre><code class="language-powershell">Remove-Item -Recurse -Force &quot;$env:USERPROFILE\.rolv\envs&quot;, &quot;$env:USERPROFILE\.rolv\mamba&quot;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Run your script or workflow again. Micromamba downloads fresh packages and builds a clean environment.</li>
 </ol>
 <h2>Code Execution</h2>
-<h3>Code Won&#39;t Run</h3>
+<h3>Scripts Do Not Run</h3>
 <ul>
-<li>Chat only asks for a <strong>working directory</strong> when a disk tool needs one (not on every message). Use the folder icon in the header if none is set.</li>
-<li>Verify <strong>Auto-Run</strong> is enabled if you expect automatic execution. If it is off, the agent stops after suggesting code — run the block yourself or turn Auto-run back on.</li>
-<li>Look at the <strong>Logs</strong> tab in the node inspector for error details</li>
-<li>Use <strong>Stop</strong> in chat or <strong>Stop</strong> on the graph toolbar to cancel a stuck local script</li>
+<li>Ensure a working directory is selected (click the folder icon in the chat or graph header).</li>
+<li>Check that <strong>Auto-Run</strong> is enabled in Chat View if you expect automatic execution.</li>
+<li>Inspect the <strong>Logs</strong> tab in the Node Inspector for runtime errors.</li>
+<li>Click <strong>Stop</strong> to cancel a running script.</li>
 </ul>
-<h3>Generate Data failed, or the inputs stayed empty</h3>
-<p>Open the Data Input node and expand <strong>Test data</strong>. The full steps are in <a href="graph-view.html#test-data">Graph View — Test data</a>.</p>
+<h3>Generate Data Fails or Leaves Inputs Empty</h3>
+<p>Open the <strong>Data Input</strong> node and expand <strong>Test data</strong>:</p>
 <ul>
-<li><strong>The editor is empty.</strong> Sign in, choose <strong>R</strong>, <strong>Python</strong>, or <strong>Bash</strong>, and click <strong>Starter</strong>. Starter needs a signed-in account so it can read the pipeline. If it cannot reach the model and the editor is still empty, Rolv inserts a short outline you can edit.</li>
-<li><strong>Generate Data says generation failed.</strong> Read the message in the alert. Set the language picker to the language the script is written in, fix the script, and click <strong>Generate Data</strong> again. Generate Data installs libraries the script imports before it runs.</li>
-<li><strong>Generate Data finishes and the input fields stay empty.</strong> The script has to write <code>test_input.json</code> in the session folder at the end of that run. The names in that file are the names on the Data Input card. A file input’s value is the sample filename the script just created. A column name or a number is written there too. A <code>test_input.json</code> left from an earlier run is ignored. After a successful copy, the same values are saved as <code>input.json</code>, which the pipeline reads.</li>
-<li><strong>Run with Test Data says there is no test script.</strong> Click <strong>Starter</strong> on the Data Input node first.</li>
+<li><strong>Editor is empty:</strong> Sign in, choose <strong>R</strong>, <strong>Python</strong>, or <strong>Bash</strong>, and click <strong>Starter</strong>.</li>
+<li><strong>Generation failed:</strong> Confirm the language selector matches the script language, fix errors shown in the alert, and click <strong>Generate Data</strong> again.</li>
+<li><strong>Inputs stay empty:</strong> Confirm the script finishes by writing <code>test_input.json</code> in the working directory with keys matching your Data Input fields.</li>
+<li><strong>Run with Test Data reports missing script:</strong> Click <strong>Starter</strong> on the Data Input node first.</li>
 </ul>
-<h3>Recipe Data Input Became a Compute Node</h3>
-<p>Older <strong>Save as Recipe</strong> exports stored I/O as script nodes. Re-open the original graph and <strong>Save as Recipe</strong> again so Data Input/Output round-trip as I/O. Names, descriptions, and defaults are kept. Local file paths are cleared.</p>
-<h3>Use Recipe opened a different session</h3>
-<p>Clicking <strong>Use Recipe</strong> on a card (or <strong>Run Recipe</strong> in the library) always starts a <strong>new graph session</strong>. To load the recipe into the chat you are already in, type the recipe name or <strong>run it</strong> / <strong>yes</strong> instead. See <a href="chat-view.html#use-recipe-vs-saying-run-it">Chat View — Use Recipe vs saying “run it”</a>.</p>
-<h3>Sidebar opened Graph when I left Chat</h3>
-<p>Rolv now restores the last Chat or Graph view per session. If you still land in Graph, click <strong>← Back to Chat</strong> once; the next sidebar click should return to Chat.</p>
-<h3>Missing Dependencies</h3>
-<p>When Python or R code fails with a missing package error:</p>
+<h3>Old Recipe Data Input Appears as a Compute Node</h3>
+<p>Re-open the source graph and click <strong>Save as Recipe</strong> again so Data Input and Data Output save as I/O nodes instead of compute nodes.</p>
+<h3>Use Recipe Started a Different Session</h3>
+<p>Clicking <strong>Use Recipe</strong> on a card or <strong>Run Recipe</strong> in the library always creates a <strong>new graph session</strong>. Type the recipe name or <code>run it</code> inside an existing chat to replace that chat&#39;s graph instead.</p>
+<h3>Missing Python or R Packages</h3>
 <ul>
-<li>Rolv automatically normalizes package names (such as <code>cv2</code> to <code>opencv-python</code> or <code>sklearn</code> to <code>scikit-learn</code>) and falls back to <code>pip</code> if Conda lacks the package.</li>
-<li>If a package still fails to import, the Node Inspector immediately flags the node and displays the installation logs.</li>
-<li>You can ask the agent in chat to install or adapt the package: <em>&quot;Install scikit-learn&quot;</em> or <em>&quot;Use another library&quot;</em>.</li>
-<li>For community recipes, add the package name to the recipe&#39;s <code>env/</code> files (<code>python-requirements.txt</code> or <code>r-packages.txt</code>).</li>
+<li>rolv maps common Python imports (for example, <code>cv2</code> to <code>opencv-python</code>, <code>sklearn</code> to <code>scikit-learn</code>) and tries <code>pip</code> if Conda cannot find a package.</li>
+<li>Add missing packages to <code>python-requirements.txt</code> or <code>r-packages.txt</code> in the recipe&#39;s <strong>Environment</strong> tab so future runs install them automatically.</li>
 </ul>
-<h3>SSH Execution Failures</h3>
-<p>If remote execution fails:</p>
+<h3>SSH Execution Fails</h3>
 <ol>
-<li>Open <strong>Settings → Execution Tools → Remote Compute</strong></li>
-<li>Confirm the target type is <strong>SSH</strong> (OpenStack and Slurm can be saved but do not run yet)</li>
-<li>Click <strong>Test</strong> on the connection</li>
-<li>Verify: host reachable, username correct, key/password valid</li>
-<li>Check that the remote Python command works (e.g., <code>python3</code> or <code>conda run -n myenv python</code>)</li>
-<li>Ensure the remote work directory exists and is writable</li>
+<li>Open <strong>Settings → Execution Tools → Remote Compute</strong>.</li>
+<li>Click <strong>Test</strong> to verify host, port, username, and key or password authentication.</li>
+<li>Confirm the remote work directory exists and your remote Python command works.</li>
 </ol>
-<p>If <strong>Add Target</strong> is disabled, you are at your remote-compute slot cap. SSH, OpenStack, and Slurm share that cap.</p>
-<h2>Search &amp; Embeddings</h2>
-<h3>Recipe Search Not Working</h3>
-<p>If semantic search returns poor results:</p>
+<p>If <strong>Add Target</strong> is disabled, you reached your account&#39;s remote compute slot cap (<strong>Free: 1</strong>, <strong>Academic: 3</strong>).</p>
+<h2>Search and Embeddings</h2>
+<h3>Poor Semantic Search Results</h3>
 <ul>
-<li>Open <strong>Settings → API Hub → Embedding Model</strong></li>
-<li>Click <strong>Test Connection</strong> to verify the model is reachable</li>
-<li>If you recently changed embedding models, click <strong>Re-index</strong> in the prompt that appears after saving</li>
+<li>Open <strong>Settings → API Hub → Embedding Model</strong> and click <strong>Test Connection</strong>.</li>
+<li>Save changes and allow local recipe re-indexing to finish. Re-indexing large libraries takes a few minutes.</li>
 </ul>
-<h3>Re-indexing Takes Too Long</h3>
-<p>Re-indexing processes all local recipes sequentially. Progress is shown in the Settings panel. For large libraries, this may take a few minutes.</p>
-<h2>Cloud Sync</h2>
-<h3>Merge Conflicts</h3>
-<p>When a Smart Merge produces conflicts:</p>
+<h2>Cloud Sync and Updates</h2>
+<h3>Recipe &quot;No Longer on Cloud&quot;</h3>
+<p>If an author removes a cloud recipe, your local copy continues to work with a <strong>No Longer on Cloud</strong> badge, without future cloud updates.</p>
+<h3>Improvement Report Prompts</h3>
 <ul>
-<li>Open the recipe in the Designer</li>
-<li>Check the <strong>Changes</strong> tab for a diff view</li>
-<li>Manually resolve conflicting sections</li>
-<li>Save when satisfied</li>
+<li>To hide prompts temporarily, click <strong>Snooze 14d</strong>.</li>
+<li>To disable prompts permanently, click <strong>Turn off</strong> or set <strong>rolv Improvement Reports</strong> to <strong>Turn off (never ask)</strong> in <strong>Settings → Execution Tools</strong>.</li>
+<li>If you dismiss the floating toast outside Chat View, the report prompt stays available in Chat View until sent, snoozed, or turned off.</li>
 </ul>
-<h3>&quot;Recipe No Longer on Cloud&quot;</h3>
-<p>If a cloud recipe was removed by its maintainer, you&#39;ll see a <strong>&quot;No Longer on Cloud&quot;</strong> badge. Your local copy still works — it just won&#39;t receive future updates.</p>
-<h2>Token Limits</h2>
-<h3>Quota Exceeded</h3>
-<p>When you hit your daily or monthly token limit:</p>
+<h2>Token Quotas</h2>
+<p>When you reach your daily or monthly token limit:</p>
 <ul>
-<li>Wait for the daily reset (midnight UTC)</li>
-<li>Or configure a <strong>Custom LLM</strong> in <strong>Settings → API Hub</strong> (OpenAI / Groq / Ollama / OpenRouter presets). Localhost Ollama can leave the API key empty.</li>
-<li>Set the usage mode to <strong>&quot;Always Use&quot;</strong> or <strong>&quot;Use as Fallback&quot;</strong></li>
+<li>Wait for the daily reset at midnight UTC, or</li>
+<li>Configure a custom LLM (OpenAI, Groq, OpenRouter, or local Ollama) in <strong>Settings → API Hub</strong> and set <strong>Usage Mode</strong> to <strong>Use as Fallback</strong> or <strong>Always Use</strong>.</li>
 </ul>
-<h3>Credits Running Low</h3>
-<p>Monitor your credit balance in <strong>Settings → Token Usage</strong>. Heavy local simulations skip cloud credit costs. Credits purchase is coming soon.</p>
-<h2>Research nodes</h2>
-<h3>The report stops in the middle of a table</h3>
-<p>The assistant often writes a long essay about the <strong>first</strong> gene or topic and runs out of room before the rest. Searches in the <strong>Logs</strong> tab can still show every gene. The markdown is still saved as <code>{label}_report.md</code>. For a table you will reuse, tick <strong>Structured output</strong> and list field names, or retrieve with a compute node first. Details: <a href="graph-view.html#research-nodes-">Graph View — Research nodes</a>.</p>
-<h3>Structured output only searched one gene</h3>
-<p>By default, structured output gathers evidence in a single pass. If you want the node to iterate across every row, gene, or biomarker in your table, check <strong>Batch iteration across items (ForEach)</strong> in the node settings. Rolv will then run parallel queries across each item in your dataset (up to 100 items) and compile the results into both structured JSON and an aggregated report table.</p>
-<h3>Inspector asks “This will not search every item”</h3>
-<p>When <strong>Batch iteration across items (ForEach)</strong> is disabled and instructions ask to process a list of items, the inspector displays a reminder dialog. Enable <strong>Batch iteration across items (ForEach)</strong> to perform the full multi-item search, or click <strong>Run anyway</strong> for a single-pass summary.</p>
-<h3>Research failed with <code>fetch failed</code></h3>
-<p>Unpackaged <code>npm run dev</code> talks to <code>http://localhost:8080</code>. Start the local gateway, or run <code>ROLV_GATEWAY_URL=https://gateway.rolv.io npm run dev</code>. Packaged builds use production.</p>
-<h3>I connected two nodes but the second cannot see the file</h3>
-<p>Arrows do not auto-pass spreadsheets. The first node must write a named file; the second must open that same name (in code, or in the research Instructions). See <a href="graph-view.html#what-the-arrows-between-nodes-mean">What the arrows between nodes mean</a>.</p>
+<h2>Research Nodes</h2>
+<h3>Research Report Cuts Off Mid-Table</h3>
+<p>Use <strong>Structured output</strong> with explicit column names so rolv writes <code>{label}_node_output.json</code> instead of a long prose essay.</p>
+<h3>Structured Output Summarized Only One Item</h3>
+<p>Enable <strong>Batch iteration across items (ForEach)</strong> on the research node to process rows across a table in parallel (up to 100 items).</p>
+<h3>Research Failed with <code>fetch failed</code></h3>
+<p>Verify your internet connection, VPN or proxy settings, and confirm you are signed in to rolv.</p>
+<h3>Connected Node Cannot Read Upstream File</h3>
+<p>Arrows enforce execution order only. Compute node A must write a named file in the working directory, and node B must open that exact filename.</p>
 <h2>App Updates</h2>
-<p>When a new version of rolv is available, it downloads in the background and a toast appears at the bottom of the screen:</p>
-<p><strong>macOS</strong> (unsigned builds):</p>
+<p>When a new version downloads in the background, an update bar appears at the bottom of the window:</p>
 <ul>
-<li>Click <strong>Show in Finder</strong> to open the downloaded update file, then install it manually (right-click → Open if Gatekeeper blocks it)</li>
-<li>Or click <strong>Download from Releases</strong> for the <code>.dmg</code> on GitHub</li>
-</ul>
-<p><strong>Windows / Linux</strong>:</p>
-<ul>
-<li>Click <strong>Restart Now</strong> to install the downloaded update immediately</li>
-<li>Or click <strong>Download manually</strong> to get the installer from GitHub Releases</li>
-<li>Click <strong>✕</strong> to dismiss; a downloaded update still applies on the next restart</li>
+<li><strong>macOS (unsigned builds):</strong> Click <strong>Show in Finder</strong> to install manually, or click <strong>Download from Releases</strong>.</li>
+<li><strong>Windows and Linux:</strong> Click <strong>Restart Now</strong> to apply the update immediately, or click <strong>Download manually</strong>.</li>
 </ul>
 <hr>
-<p><strong>← Back to:</strong> <a href="index.html">Index</a></p>
+<p><strong>← Back to:</strong> <a href="index.html">Welcome to rolv</a></p>
 
                 </article>
 

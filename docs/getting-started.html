@@ -68,136 +68,103 @@
             <main class="docs-main">
                 <article class="docs-content">
                     <h1>Getting Started</h1>
-<h2>What Can rolv Do?</h2>
-<p>rolv is an <strong>agentic research platform</strong> — it pairs you with AI agents that can autonomously search scientific literature, analyze your data, execute code, and interpret results. Think of it as a research assistant that can actually <em>run</em> experiments, not just talk about them.</p>
-<h3>Core Capabilities</h3>
-<p><strong>🔬 Scientific Literature &amp; Data Discovery</strong>
-rolv agents can search <strong>PubMed</strong>, <strong>GEO</strong> (Gene Expression Omnibus), and the open web to find relevant papers, datasets, and protocols. Results are summarized and cited, so you always know where information came from.</p>
-<p><strong>📊 Data Analysis &amp; Interpretation</strong>
-Upload your data (CSV, TSV, Parquet, RDS, Excel, images, PDFs) and ask the agent to analyze it. It writes and executes code, produces plots, runs statistical tests, and interprets the results — all in a conversational flow.</p>
-<p><strong>💻 Code Execution</strong>
-rolv runs <strong>Python</strong>, <strong>R</strong>, and <strong>Bash</strong> scripts in isolated sandbox environments. Dependencies are auto-installed. You can execute code locally on your machine or remotely via <strong>SSH</strong> on a powerful server.</p>
-<p><strong>🤖 Two Ways to Work</strong></p>
-<table>
-<thead>
-<tr>
-<th>Mode</th>
-<th>Best for</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Chat View</strong></td>
-<td>Quick questions, exploration</td>
-<td>A conversational interface — ask a question, get analysis back. Fast and flexible.</td>
-</tr>
-<tr>
-<td><strong>Graph View</strong></td>
-<td>Reproducible pipelines, complex workflows</td>
-<td>A visual DAG (directed acyclic graph) where each node is a processing step. Gives you granular control over execution order, inputs/outputs, and error handling.</td>
-</tr>
-</tbody></table>
-<p>The Chat View is the fastest way to get started. When your analysis grows complex, you can <strong>convert any chat into a Graph</strong> with one click — preserving all your work while gaining reproducibility and fine-grained control.</p>
-<p><strong>📦 Recipes &amp; Community</strong>
-Workflows can be saved as <strong>Recipes</strong> — reusable pipeline templates that package code, environment specs, and documentation into a shareable bundle. You can:</p>
+<h2>What rolv Does</h2>
+<p>rolv pairs AI agents with local and remote execution tools for scientific research. You can ask questions in plain language or edit code directly.</p>
+<h3>Main Capabilities</h3>
 <ul>
-<li><strong>Browse and run</strong> recipes built by the community</li>
-<li><strong>Build your own</strong> recipes from any graph pipeline</li>
-<li><strong>Share improvements</strong> back — when you fix an issue in a community recipe, rolv can automatically contribute the fix upstream</li>
+<li><strong>Literature and Data Search:</strong> Search PubMed, GEO, ClinicalTrials.gov, patents, and the web with direct source links.</li>
+<li><strong>Data Analysis:</strong> Attach CSV, TSV, Parquet, RDS, Excel, PDF, and image files. The agent writes scripts, runs analyses, and builds figures.</li>
+<li><strong>Code Execution:</strong> Run Python, R, and Bash code in isolated environments on your computer or over SSH.</li>
+<li><strong>Chat and Graph Workflows:</strong> Start in Chat View for fast exploration. Convert working analyses into visual pipelines in Graph View.</li>
+<li><strong>Recipes:</strong> Save pipelines as reusable templates, import existing pipelines, and use recipes from the Cloud Library.</li>
 </ul>
-<p>Recipes do not include your data files. To try a pipeline first, open the Data Input node, expand <strong>Test data</strong>, pick <strong>R</strong>, <strong>Python</strong>, or <strong>Bash</strong>, and click <strong>Starter</strong>. Rolv writes a short script. A comment above each sample file says what that file should contain. The script ends by writing <code>test_input.json</code>. Click <strong>Generate Data</strong> to create the files, copy those values onto the input fields, and save <code>input.json</code> for the pipeline. See <a href="graph-view.html#test-data">Graph View — Test data</a>.</p>
-<h3>What Kinds of Tasks?</h3>
-<p>rolv is designed for scientific and data-intensive work. Some examples:</p>
+<h3>Typical Tasks</h3>
 <ul>
 <li>Differential gene expression analysis (DESeq2, edgeR)</li>
-<li>Single-cell RNA-seq clustering and annotation</li>
-<li>Quality control pipelines for sequencing data</li>
-<li>Literature reviews with automated summarization. For a <strong>list of genes or drugs</strong>, use research nodes with <strong>Batch iteration across items (ForEach)</strong>, or have a compute node collect the papers and a research node interpret them (see <a href="graph-view.html#research-nodes-">Graph View — Research nodes</a>).</li>
-<li>Statistical modeling and visualization</li>
-<li>Bioinformatics pipeline construction (Snakemake import is supported; it uses many tokens and is not failsafe)</li>
+<li>Single-cell RNA-seq clustering and cell annotation</li>
+<li>Sequencing quality control (QC) pipelines</li>
+<li>Literature synthesis with parallel batch research across gene or drug lists (see <a href="graph-view.html#research-nodes-">Graph View — Research Nodes</a>)</li>
+<li>Snakemake and script-folder pipeline imports</li>
 </ul>
-<blockquote>
-<p><strong>Tip:</strong> You don&#39;t need to be a programmer. Describe what you want in plain language, and the agent writes and runs the code for you. But if you <em>are</em> a programmer, you have full access to edit every line.</p>
-</blockquote>
 <hr>
-<h2>Signing In &amp; Tiers</h2>
-<p>When you first open rolv, sign in with Google or email/password.</p>
-<p><strong>Email/password accounts must verify email</strong> before the app opens. After you register, check your inbox (and spam) for a message from <strong><a href="mailto:noreply@rolv.io">noreply@rolv.io</a></strong>. Use <strong>Resend verification email</strong>, then <strong>I’ve verified</strong>. Google sign-in is already verified.</p>
-<p><strong>Forgot password?</strong> On the sign-in screen, that link sends a reset email from the same address (<code>noreply@rolv.io</code>). Check spam if it does not appear within a minute.</p>
-<p>Your account tier determines quotas and feature capabilities:</p>
+<h2>Signing In and Accounts</h2>
+<p>Sign in with Google or an email and password.</p>
+<p>If you register with email and password, you must verify your email address before the app opens:</p>
+<ol>
+<li>Check your inbox and spam folder for an email from <strong><a href="mailto:noreply@rolv.io">noreply@rolv.io</a></strong>.</li>
+<li>Open the verification link in that email.</li>
+<li>Click <strong>I’ve verified</strong> in rolv. If needed, click <strong>Resend verification email</strong>.</li>
+</ol>
+<p>If you forget your password, click <strong>Forgot password?</strong> on the sign-in screen. Reset emails also come from <strong><a href="mailto:noreply@rolv.io">noreply@rolv.io</a></strong>. Google sign-in accounts are already verified.</p>
+<h3>Account Types</h3>
 <ul>
-<li><strong>Free Tier:</strong> Local execution with custom API keys. You can browse the Cloud Library; downloading recipes requires Academic or Pro.</li>
-<li><strong>Academic Tier (🎓):</strong> Assigned when you sign up with an institutional email that Rolv recognizes as academic (university or research institute). Includes 5 active recipe workspace slots, 200 daily Cloud RAG queries, and access to <strong>Publish-to-Earn</strong> rewards.</li>
-<li><strong>Pro &amp; Pro+ Tiers:</strong> Unlimited recipe workspace slots, unlimited Cloud RAG queries, and monthly compute credit allocations.</li>
+<li><strong>Free Account:</strong> Run local analyses, use your own API keys in Settings, and browse the Cloud Library. Includes 1 remote compute slot.</li>
+<li><strong>Academic Account (🎓):</strong> Assigned automatically for recognized university and research-institute email addresses. Adds Cloud Library recipe downloads, recipe publishing, daily Cloud library searches allowance, and 3 remote compute slots.</li>
 </ul>
-<h2>Your First Chat</h2>
-<p>After logging in, you&#39;ll see the <strong>Welcome Screen</strong> with example prompts like:</p>
-<ul>
-<li><em>Analyze my RNA-seq data</em></li>
-<li><em>Help me cluster single-cell</em></li>
-<li><em>Build a QC pipeline</em></li>
-<li><em>Find differentially expressed genes</em></li>
-</ul>
-<p>Click any prompt or type your own in the input box at the bottom. Press <strong>Enter</strong> to send.</p>
+<hr>
+<h2>Starting a Chat</h2>
+<p>On the Welcome screen, click an example prompt or enter your own request in the input box at the bottom. Press <strong>Enter</strong> to send. Press <strong>Shift+Enter</strong> to insert a new line.</p>
 <h2>Working Directory</h2>
-<p>Rolv does <strong>not</strong> ask for a folder on every message. Literature and web search work without one. When a tool needs disk access (running code, listing or reading workspace files, inspecting plots, or proposing graph changes), you will see <strong>Choose a project folder</strong>:</p>
+<p>rolv does not require a project folder for every message. Literature search and general questions work without a folder.</p>
+<p>When a tool must read files or run code on disk, rolv shows <strong>Choose a project folder</strong>:</p>
 <ul>
-<li><strong>Empty Rolv folder</strong> — <code>~/.rolv/sessions/&lt;session-id&gt;</code>. Copy or move your data in after choosing this.</li>
-<li><strong>Folder that already has my data</strong> — Pick the directory where your tables already live. Outputs go there too.</li>
+<li><strong>Empty rolv folder:</strong> Uses a managed folder at <code>~/.rolv/sessions/&lt;session-id&gt;</code>. Copy your input files there.</li>
+<li><strong>Folder that already has my data:</strong> Uses an existing folder on your computer. Output files write to the same folder.</li>
 </ul>
-<p>You can postpone with <strong>Ask later</strong>; Rolv will ask again when a disk tool needs a folder. Change it later with the folder icon in the chat header.</p>
+<p>Click <strong>Ask later</strong> to skip folder selection until a disk tool runs. Click the folder icon in the chat header to select or change the folder at any time.</p>
 <h2>The Sidebar</h2>
-<p>The sidebar is your navigation hub:</p>
+<p>Use the sidebar to switch views, manage sessions, and open tools:</p>
 <table>
 <thead>
 <tr>
-<th>Element</th>
-<th>What it does</th>
+<th>Control</th>
+<th>Function</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>Chat</strong> button</td>
-<td>Start a new chat conversation</td>
+<td><strong>Chat</strong></td>
+<td>Start a new chat session.</td>
 </tr>
 <tr>
-<td><strong>Graph</strong> button</td>
-<td>Create a new empty graph pipeline</td>
+<td><strong>Graph</strong></td>
+<td>Start a new empty graph pipeline.</td>
 </tr>
 <tr>
-<td><strong>Recipes</strong> button</td>
-<td>Open the recipe library</td>
+<td><strong>Recipes</strong></td>
+<td>Open the Local Library and Cloud Library.</td>
 </tr>
 <tr>
-<td><strong>Reviews</strong> button</td>
-<td>View community change requests</td>
+<td><strong>Reviews</strong></td>
+<td>View pending change requests for recipes you maintain.</td>
 </tr>
 <tr>
 <td><strong>Search bar</strong></td>
-<td>Search across all chats, graphs, and messages</td>
+<td>Search chats, graphs, and messages.</td>
 </tr>
 <tr>
-<td><strong>Pinned</strong> section</td>
-<td>Sessions you&#39;ve pinned for quick access</td>
+<td><strong>Pinned</strong></td>
+<td>Keep important sessions at the top of the list.</td>
 </tr>
 <tr>
-<td><strong>Recent</strong> section</td>
-<td>Your latest sessions, newest first</td>
+<td><strong>Recent</strong></td>
+<td>Open recent sessions, sorted newest first.</td>
 </tr>
 </tbody></table>
 <h3>Session Actions</h3>
-<p>Hover over any session in the sidebar to reveal:</p>
+<p>Move the pointer over any session in the sidebar to see these icons:</p>
 <ul>
-<li>📌 <strong>Pin/Unpin</strong> — Keep important sessions at the top</li>
-<li>🗑️ <strong>Delete</strong> — Permanently remove the session</li>
+<li><strong>Pin / Unpin (📌):</strong> Move a session to or from the Pinned list.</li>
+<li><strong>Delete (🗑️):</strong> Permanently delete the session from local storage.</li>
 </ul>
-<p>Click a session title to open it (unnamed sessions get a short auto-title after the first real message or graph content). Rolv restores the last <strong>Chat</strong> or <strong>Graph</strong> view you used for that session. If you have never opened it, graph-only sessions start in Graph View and conversational sessions start in Chat View.</p>
-<h3>Sidebar Controls</h3>
+<p>When you click a session, rolv opens the last view (<strong>Chat</strong> or <strong>Graph</strong>) you used for that session. New sessions receive a short title after the first real message or graph edit.</p>
+<h3>Sidebar Controls and Footer</h3>
 <ul>
-<li><strong>Collapse</strong> — Click the panel icon (top-right of sidebar) to hide it</li>
-<li><strong>Expand</strong> — Click the floating panel icon (top-left) when sidebar is hidden</li>
+<li>Click the panel icon at the top-right of the sidebar to collapse it. Click the floating panel icon at the top-left to expand it again.</li>
+<li><strong>Settings (⚙️):</strong> Open token usage, walkthroughs, execution settings, and API settings.</li>
+<li><strong>Send Feedback &amp; Feature Requests (💬):</strong> Open the feedback dialog to send bug reports or feature ideas directly to the rolv team.</li>
+<li><strong>Documentation (?):</strong> Open this manual inside rolv.</li>
+<li><strong>Theme toggle (☀️ / 🌙):</strong> Switch between light mode and dark mode.</li>
 </ul>
-<h2>Dark &amp; Light Mode</h2>
-<p>Click the sun/moon icon at the bottom of the sidebar to toggle between dark and light themes. Your preference is saved automatically.</p>
 <hr>
 <p><strong>Next:</strong> <a href="chat-view.html">Chat View →</a></p>
 

@@ -68,134 +68,126 @@
             <main class="docs-main">
                 <article class="docs-content">
                     <h1>Chat View</h1>
-<p>The Chat View is your conversational interface with the rolv AI agent. Send messages, attach files, and watch the agent analyze data, write code, and produce results.</p>
-<h2>Sending Messages</h2>
+<p>Use Chat View to ask scientific questions, attach data files, run code, and inspect results.</p>
+<h2>Sending and Editing Messages</h2>
 <ul>
-<li>Type your message in the input box at the bottom</li>
-<li>Press <strong>Enter</strong> to send, <strong>Shift+Enter</strong> for a new line</li>
-<li>The AI agent will respond with a combination of reasoning, code, and results</li>
-<li>Hover a message <strong>you</strong> sent to <strong>copy</strong> or <strong>edit</strong> it. Saving resends from that turn; later turns are dropped</li>
+<li>Type a prompt in the input box and press <strong>Enter</strong> to send.</li>
+<li>Press <strong>Shift+Enter</strong> to add a new line.</li>
+<li>Move the pointer over one of your sent messages to copy or edit it. Saving an edited message re-runs the conversation from that message and drops later turns.</li>
 </ul>
-<h2>Attachments</h2>
-<p>Click the <strong>📎 paperclip</strong>, paste, or drag-and-drop:</p>
+<h2>Attaching Files</h2>
+<p>Click the <strong>paperclip icon (📎)</strong>, paste from the clipboard, or drag files onto the chat area:</p>
 <ul>
-<li><strong>Images</strong> (PNG, JPG, SVG) — charts, plots, screenshots</li>
-<li><strong>Tables and data</strong> (CSV, TSV, Parquet, RDS, Excel, …) — the full file is saved in the session folder so later code can read it. Chat only sends a short preview to the model</li>
-<li><strong>Scripts and documents</strong> (R, Python, PDF, Markdown, …)</li>
+<li><strong>Images (PNG, JPG, SVG):</strong> Attached plots and figures.</li>
+<li><strong>Tables and Data (CSV, TSV, Parquet, RDS, Excel):</strong> rolv saves the full file in your session folder and sends only a short preview to the AI model.</li>
+<li><strong>Scripts and Documents (R, Python, Bash, PDF, Markdown):</strong> Attached code or reference files.</li>
 </ul>
-<p>Attached files appear above the input. Hover to remove them.</p>
-<h2>How Chat Picks a Path</h2>
-<p>Chat starts in <strong>execute</strong> (it does not jump into planning from words like “pipeline”). For an analysis request it searches the recipe library first and keeps only recipes that actually fit the task. It may stop with <strong>Use Recipe</strong>. It only enters planning when you ask for a canvas workflow from scratch.</p>
-<h2>Confirming a question</h2>
-<p>When chat asks whether to proceed (load a recipe, replace the main file, edit a protected node), the <strong>next short reply is read by the app</strong>:</p>
+<p>Hover over an attachment chip above the input box to remove it before sending.</p>
+<h2>How Chat Selects a Workflow</h2>
+<p>Chat starts in execution mode. For analysis tasks, rolv searches the recipe library first and shows matching recipes. Chat builds a new graph from scratch only when you ask for a custom workflow.</p>
+<h2>Confirming Proposed Actions</h2>
+<p>When chat asks whether to load a recipe, replace a file, or edit a protected node, your next short reply confirms or cancels:</p>
 <ul>
-<li><strong>yes</strong> / <strong>ok</strong> / <strong>y</strong> / <strong>run it</strong> / <strong>run the recipe</strong> — do that saved action</li>
-<li><strong>no</strong> / <strong>cancel</strong> — don’t do it</li>
-<li>Anything else — treated as a new request; the old question is dropped</li>
+<li><strong>yes / ok / y / run it / run the recipe:</strong> Run the proposed action.</li>
+<li><strong>no / cancel:</strong> Cancel the proposed action.</li>
+<li>Any longer message starts a new request and clears the pending question.</li>
 </ul>
-<p>You can also pick a recipe by name (“run Universal EDA for tables”) or position (“do 2”).</p>
-<h2>Use Recipe vs saying “run it”</h2>
-<p>These are different on purpose:</p>
+<p>You can also select a suggested recipe by name or position (for example, <code>do 2</code>).</p>
+<h2>Use Recipe vs. Saying &quot;run it&quot;</h2>
 <table>
 <thead>
 <tr>
-<th>You do this</th>
-<th>What happens</th>
+<th>Action</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Click <strong>Use Recipe</strong> on a card, or <strong>Run Recipe</strong> in the library</td>
-<td>Starts a <strong>new graph session</strong> with that recipe</td>
+<td>Click <strong>Use Recipe</strong> on a recipe card, or <strong>Run Recipe</strong> in the library</td>
+<td>Opens a <strong>new graph session</strong> with that recipe.</td>
 </tr>
 <tr>
-<td>Type the recipe name, “run it”, or “yes” in <strong>this</strong> chat</td>
-<td>Loads the recipe into the <strong>current</strong> session</td>
+<td>Reply <code>run it</code>, <code>yes</code>, or the recipe name inside the current chat</td>
+<td>Loads the recipe into the <strong>current session</strong> and replaces its graph.</td>
 </tr>
 </tbody></table>
-<p>A Cloud Library hit that is not on disk yet is downloaded first in both cases.</p>
+<p>If a Cloud Library recipe is not on your disk yet, rolv downloads it first.</p>
 <h2>Auto-Run</h2>
-<p>The <strong>Auto-Run</strong> toggle in the chat header controls whether the agent automatically executes generated code:</p>
+<p>The <strong>Auto-Run</strong> toggle in the chat header controls automatic code execution:</p>
 <ul>
-<li><strong>On</strong> (default) — Rolv executes code and continues the agent loop</li>
-<li><strong>Off</strong> — Turning off asks for confirmation. Rolv only <em>suggests</em> code; the loop pauses after suggesting a code block (search and list tools can still continue). Run suggested code yourself if you want.</li>
+<li><strong>On (default):</strong> rolv runs generated Python, R, or Bash code automatically and reads the output.</li>
+<li><strong>Off:</strong> Turning Auto-Run off asks for confirmation. When off, rolv suggests code blocks and pauses so you can run or review them manually.</li>
 </ul>
-<p>This setting is saved per-session.</p>
-<h2>Stopping the Agent</h2>
-<p>While the agent is working, the send button becomes a red <strong>Stop</strong> square. That cancels the current chat run.</p>
-<h2>Scientific Critic &amp; Output Auditing</h2>
-<p>When producing complex analyses, figures, or statistical tables, the agent can invoke an isolated <strong>Scientific Critic sub-agent</strong>. The critic audits generated plots and data files for:</p>
-<ul>
-<li>Legibility and proper axis scaling.</li>
-<li>Statistical plausibility and biological consistency.</li>
-<li>Accurate root-cause attribution (distinguishing between plotting code glitches vs. upstream data anomalies like empty joins or missing columns).</li>
-</ul>
-<h2>Research &amp; Direct Citations</h2>
-<p>When answering questions using scientific papers, trials, or public data (via PubMed, ClinicalTrials.gov, GEO, patents, or web search), Rolv formats citations as direct clickable links to the original sources, so you can inspect the study, trial record, or dataset immediately.</p>
+<p>Auto-Run is saved per session.</p>
+<h2>Stopping a Run</h2>
+<p>While the agent works, the send button changes to a red <strong>Stop</strong> square. Click <strong>Stop</strong> to cancel the active run.</p>
+<h2>Scientific Critic Auditing</h2>
+<p>When creating complex plots or statistical tables, rolv can run an isolated <strong>Scientific Critic</strong> sub-agent. The critic checks figure readability, axis labels, and statistical or biological consistency, and separates plotting errors from upstream data issues.</p>
+<h2>Literature Citations</h2>
+<p>When answering questions from PubMed, GEO, ClinicalTrials.gov, patents, or the web, rolv formats citations as clickable links so you can open the source record directly.</p>
 <h2>Agent Activity</h2>
-<p>As the agent works, an <strong>Agent activity</strong> panel lists durable steps (search, file listing, code, results) instead of a blank “Thinking…” placeholder. If the model writes a short preamble before tools, that text is shown as the activity label.</p>
+<p>While rolv works, the activity panel lists each tool step instead of a blank loading screen:</p>
 <table>
 <thead>
 <tr>
 <th>Step Type</th>
-<th>What it means</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>💭 <strong>Activity / preamble</strong></td>
-<td>What the agent is doing, or a short reasoning line</td>
+<td><strong>Thinking / Preamble</strong></td>
+<td>Current action or short reasoning note.</td>
 </tr>
 <tr>
-<td>💻 <strong>Code</strong></td>
-<td>Python, R, or Bash the agent wrote</td>
+<td><strong>Code</strong></td>
+<td>Python, R, or Bash script written by the agent.</td>
 </tr>
 <tr>
-<td>📋 <strong>Code Result</strong></td>
-<td>Output (stdout, stderr, exit code) from executed code</td>
+<td><strong>Code Result</strong></td>
+<td>Execution stdout, stderr, and exit code.</td>
 </tr>
 <tr>
-<td>⚠️ <strong>Warning</strong></td>
-<td>Important notices or potential issues</td>
+<td><strong>Warning</strong></td>
+<td>Error, cap, or runtime notice.</td>
 </tr>
 <tr>
-<td>📋 <strong>Plan Confirmation</strong></td>
-<td>The agent proposes a plan for your approval</td>
+<td><strong>Plan Confirmation</strong></td>
+<td>Proposed workflow plan waiting for your approval.</td>
 </tr>
 </tbody></table>
 <h2>Session Header</h2>
-<p>The header bar shows:</p>
 <ul>
-<li><strong>Session title</strong> — Click to rename. New sessions get a short auto-title after the first real message (trivial openers like <code>hi</code> wait for a real reply)</li>
-<li><strong>📁 Working Directory</strong> — Empty until a disk tool needs a folder; then click to choose or change. The folder picker opens at the current session folder when one is set. Click the external link icon to open in Finder</li>
-<li><strong>Auto-Run toggle</strong> — Enable/disable automatic code execution (confirm when turning off)</li>
-<li><strong>Step into Graph →</strong> — When this chat has no graph yet, review which scripts to keep (or open an empty canvas). If a graph already exists, the button only switches view.</li>
+<li><strong>Title:</strong> Click to rename the session.</li>
+<li><strong>Working Directory (📁):</strong> Set or change the session folder. Click the external link icon to open the folder in your file manager.</li>
+<li><strong>Auto-Run:</strong> Toggle automatic code execution.</li>
+<li><strong>Step into Graph →:</strong> Convert chat scripts into a visual pipeline, or switch to the session&#39;s existing graph.</li>
 </ul>
-<h2>Chat and Graph</h2>
-<p>A session can have both a conversation and a canvas. Switch with the header buttons:</p>
+<h2>Moving Between Chat and Graph</h2>
+<p>A session can contain both a chat thread and a graph:</p>
 <ul>
-<li><strong>Step into Graph →</strong> — Opens Graph View. If this chat has <strong>no graph yet</strong> and scripts have already been run, Rolv stays in the chat and shows a review card proposing a workflow:<ul>
-<li><strong>Approve &amp; Build Workflow</strong>: Automatically adapts your working scripts into standalone canvas nodes, connecting file inputs and outputs into a visual DAG.</li>
-<li><strong>Request Changes</strong>: Type your adjustments directly in chat to refine the steps or script selection.</li>
-<li><strong>Empty graph</strong>: Opens a blank canvas if you prefer to build from scratch.</li>
-<li>If the chat has no scripts, Rolv builds a pipeline from the conversation. If a graph <strong>already exists</strong>, the button simply switches view to the canvas. Asking in chat to convert your analysis into a workflow displays this same review card.</li>
+<li>If a session has executed scripts but no graph yet, clicking <strong>Step into Graph →</strong> opens a review card in chat:<ul>
+<li><strong>Approve &amp; Build Workflow:</strong> Convert working scripts into connected graph nodes.</li>
+<li><strong>Request Changes:</strong> Refine the script selection in chat.</li>
+<li><strong>Empty graph:</strong> Open a blank canvas.</li>
 </ul>
 </li>
-<li><strong>← Back to Chat</strong> — In Graph View, returns to the conversation. Hidden on graph-only sessions that never had chat.</li>
+<li>If a graph already exists, <strong>Step into Graph →</strong> switches directly to Graph View.</li>
+<li>In Graph View, click <strong>← Back to Chat</strong> to return to the conversation. Chat remains active even after a graph exists.</li>
 </ul>
-<p>Rolv <strong>remembers</strong> Chat vs Graph per session. Leave in Chat, click another session, come back — you land in Chat again.</p>
-<p>The original chat stays writable after a graph exists — you can keep sending messages there.</p>
-<h3>When a graph already exists</h3>
-<p>Chat can bind files, run the workflow, inspect nodes, and add steps without rebuilding:</p>
-<ul>
-<li>A <strong>second attached table</strong> (merge / also-this) becomes another Data Input variable (for example <code>METADATA_FILE</code>). It does not replace <code>INPUT_FILE</code>.</li>
-<li>Chat can <strong>inspect</strong> files or <strong>prototype</strong> a short script, then put the working code on the canvas as a node.</li>
-<li><strong>Autonomous failure recovery</strong> — If a step fails during a chat workflow run, the agent diagnoses the error logs, fixes script code or input parameters, and automatically reruns the step within a bounded retry budget before concluding with a final summary.</li>
-<li>After a graph run, chat <strong>inspects outputs</strong> and writes findings (including plots). The skip/ran log stays in the activity panel.</li>
-</ul>
+<p>When you run a graph from chat and a step fails, rolv inspects the logs, adjusts code or inputs, and retries up to 2 recovery attempts before writing the final summary.</p>
 <h2>Ask a Human Expert</h2>
-<p><img src="human-expert-modal.png" alt="Ask a Human Expert Modal"></p>
-<p>Click the <strong>🎓 graduation cap</strong> button to submit a question to a human expert. You can optionally attach your conversation as context. This is an experimental service we are testing, delays could occur.</p>
-<h2>Usage Limits</h2>
-<p>If you exceed your daily or monthly token quota, a modal will appear showing your usage. You can configure a custom LLM in <a href="settings.html">Settings</a> (OpenAI, Groq, Ollama, or OpenRouter presets) to bypass rolv&#39;s quotas.</p>
+<p>Click the <strong>graduation cap icon (🎓)</strong> in the chat header to send a scientific or methods question to a human expert. You can attach the current conversation for context. This service is experimental, so replies can take time.</p>
+<h2>rolv Improvement Reports</h2>
+<p>When rolv detects repeated recoverable workflow failures, environment setup errors, or loop retries (5 weighted friction points stored locally), it offers to send an anonymized diagnostic report.</p>
+<ul>
+<li>In <strong>Chat View</strong>, an ephemeral banner appears above the input box.</li>
+<li>Outside Chat View (for example in Graph View), a floating toast appears so you can review and send without leaving your graph.</li>
+<li>Click <strong>Review &amp; Send</strong> to edit the title, description, and your own notes before sending.</li>
+<li>File paths, email addresses, and secrets are removed automatically before upload.</li>
+<li>For <strong>private or local recipes</strong>, recipe names, identifiers, and code diffs are never shared. For <strong>cloud recipes</strong>, you can uncheck recipe details in <strong>Attached technical details</strong>.</li>
+<li>Use <strong>Snooze 14d</strong> to hide prompts for 14 days, <strong>Turn off</strong> to disable prompts, or configure automatic sending in <a href="settings.html">Settings</a>.</li>
+</ul>
+<h2>Token Quota Alerts</h2>
+<p>If your account reaches its daily or monthly token limit, rolv shows a quota dialog. Configure a custom LLM provider in <a href="settings.html#api-hub">Settings</a> to continue using your own API key or a local Ollama model.</p>
 <hr>
 <p><strong>Next:</strong> <a href="graph-view.html">Graph View →</a></p>
 

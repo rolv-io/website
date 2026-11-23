@@ -68,9 +68,9 @@
             <main class="docs-main">
                 <article class="docs-content">
                     <h1>Reviews</h1>
-<p>The Reviews panel lets you manage <strong>Change Requests</strong> — contributions submitted by other users to recipes you maintain.</p>
+<p>Use <strong>Reviews</strong> to manage <strong>Change Requests</strong> submitted by users for cloud recipes you maintain.</p>
 <h2>Accessing Reviews</h2>
-<p>Click <strong>Reviews</strong> in the sidebar. A badge shows the count of pending change requests.</p>
+<p>Click <strong>Reviews</strong> in the sidebar. A numeric badge shows pending change requests.</p>
 <h2>Change Request Lifecycle</h2>
 <pre><code>pending → ai_reviewed → approved → merged
                       ↘ rejected
@@ -86,82 +86,82 @@
 </thead>
 <tbody><tr>
 <td><strong>Pending</strong></td>
-<td>Just submitted, awaiting review</td>
+<td>Newly submitted and waiting for review.</td>
 </tr>
 <tr>
 <td><strong>AI Reviewed</strong></td>
-<td>The AI has analyzed and commented on the contribution</td>
+<td>Summarized and prioritized by AI triage.</td>
 </tr>
 <tr>
 <td><strong>Approved</strong></td>
-<td>A reviewer has approved it (ready to merge)</td>
+<td>Approved by a maintainer or admin; ready to merge.</td>
 </tr>
 <tr>
 <td><strong>Rejected</strong></td>
-<td>A reviewer declined the contribution</td>
+<td>Declined by a reviewer.</td>
 </tr>
 <tr>
 <td><strong>Merged</strong></td>
-<td>Changes have been applied to the recipe</td>
+<td>Applied to the cloud recipe.</td>
 </tr>
 <tr>
 <td><strong>Stale</strong></td>
-<td>The recipe has changed since this request was submitted</td>
+<td>Target recipe changed after the request was submitted.</td>
 </tr>
 <tr>
 <td><strong>Conflict</strong></td>
-<td>The proposed changes conflict with the current recipe</td>
+<td>Proposed edits conflict with the current recipe version.</td>
 </tr>
 </tbody></table>
 <h2>Maintainer Permissions</h2>
 <ul>
-<li><strong>Admins:</strong> Have full review and merge permissions across all platform recipes.</li>
-<li><strong>Maintainers:</strong> When an author&#39;s recipe is approved, they gain <strong>Maintainer Status</strong> on that recipe, allowing them to review, approve, and merge Change Requests submitted by other community members.</li>
+<li><strong>Admins:</strong> Review, approve, reject, and merge change requests across all cloud recipes.</li>
+<li><strong>Maintainers:</strong> Authors of approved cloud recipes gain maintainer permission on their recipes to review and merge community change requests.</li>
 </ul>
-<h2>AI Assessment &amp; Security Risk Scanning</h2>
-<p>Each change request is automatically analyzed by AI and passed through an automated <strong>Security Risk Scanner</strong>, which provides:</p>
+<h2>AI Triage and Auto-Merge</h2>
+<p>When a user submits a change request, rolv runs automated AI triage to produce:</p>
 <ul>
-<li><strong>Summary comment</strong> — What the contribution does and potential impacts</li>
-<li><strong>Security &amp; Malicious Code Warning</strong> — Automatically flags unsafe shell execution (<code>rm -rf /</code>, <code>curl | bash</code>) or un-sanitized code. High-risk requests are automatically <strong>quarantined</strong>.</li>
-<li><strong>Priority</strong> — High, Medium, or Low urgency</li>
+<li><strong>Summary:</strong> Plain-language overview of the proposed change.</li>
+<li><strong>Priority:</strong> <code>High</code>, <code>Medium</code>, or <code>Low</code> urgency based on bug severity, data correctness, or documentation impact.</li>
+<li><strong>Duplicate Check:</strong> Flags requests that repeat earlier change requests on the same recipe.</li>
+<li><strong>Reasoning:</strong> Short note explaining the assessment.</li>
 </ul>
+<p><em>(Security risk scanning and automatic quarantine run on recipe submissions and updates, described in <a href="recipes.html#publishing-security-checks-and-quarantine">Recipes</a>.)</em></p>
 <h2>Reviewing a Change Request</h2>
 <ol>
-<li>Click a change request to expand it</li>
-<li>Read the AI assessment</li>
-<li>Review the <strong>diff view</strong> showing proposed changes</li>
-<li>Optionally add a comment</li>
-<li>Choose an action:</li>
+<li>Click a change request to expand it.</li>
+<li>Read the AI assessment and inspect the diff view.</li>
+<li>Add an optional review comment.</li>
+<li>Select an action:</li>
 </ol>
 <table>
 <thead>
 <tr>
 <th>Action</th>
-<th>When to use</th>
+<th>Use When</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>Approve</strong></td>
-<td>The contribution looks good</td>
+<td>The proposed changes are valid.</td>
 </tr>
 <tr>
 <td><strong>Reject</strong></td>
-<td>The contribution isn&#39;t suitable</td>
+<td>The request should not be applied.</td>
 </tr>
 <tr>
 <td><strong>Merge</strong></td>
-<td>Apply approved changes to the recipe (only available after approval)</td>
+<td>Apply an approved request to the cloud recipe.</td>
 </tr>
 <tr>
 <td><strong>Auto-merge</strong></td>
-<td>Let the AI merge stale contributions automatically</td>
+<td>Let AI merge a stale change request against the newer recipe version.</td>
 </tr>
 </tbody></table>
 <h2>Contribution Types</h2>
-<p>Users can submit two kinds of contributions:</p>
 <ul>
-<li><strong>Troubleshooting only</strong> — Just the <code>troubleshooting.md</code> file with error fixes and workarounds</li>
-<li><strong>Full recipe</strong> — Complete recipe changes including code, workflow, and documentation</li>
+<li><strong>Troubleshooting only:</strong> Updates <code>troubleshooting.md</code> with observed errors and fixes.</li>
+<li><strong>Full recipe:</strong> Updates workflow scripts, graph structure, environment files, or documentation.</li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="settings.html">Settings →</a></p>

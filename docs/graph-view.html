@@ -68,231 +68,218 @@
             <main class="docs-main">
                 <article class="docs-content">
                     <h1>Graph View</h1>
-<p>The Graph View lets you build, inspect, and execute directed acyclic graph (DAG) pipelines. Each node is a processing step — write code, run research, or manage data inputs/outputs.</p>
+<p>Use Graph View to build, inspect, and run directed acyclic graph (DAG) pipelines. Each node is one step: code execution, AI research, or data management.</p>
 <h2>Creating a Graph</h2>
-<p>There are two ways to create a graph:</p>
+<p>Create a graph in two ways:</p>
 <ol>
-<li><strong>From the sidebar</strong> — Click the <strong>Graph</strong> button to create a new empty graph</li>
-<li><strong>From a chat</strong> — Click <strong>&quot;Step into Graph →&quot;</strong> in the chat header. If the session has no graph yet and scripts have been run, Rolv shows a review card in the chat first: approve the scripts to keep, change the selection by typing, or open an empty canvas. Approving builds the workflow and leaves you in the chat; click the button again to open the canvas. You can ask in chat to make a workflow from the analysis and get the same card. If the chat has no scripts, Rolv builds a pipeline from the conversation and opens the canvas. If a graph already exists, the button only switches to Graph View.</li>
+<li><strong>From the sidebar:</strong> Click <strong>Graph</strong> to open a new empty canvas.</li>
+<li><strong>From Chat View:</strong> Click <strong>Step into Graph →</strong> in the chat header. If scripts ran in chat and no graph exists yet, approve the workflow review card first, then switch to Graph View.</li>
 </ol>
-<h2>Chat and Graph</h2>
-<p>When this session still has a conversation, the graph header shows <strong>← Back to Chat</strong>. That returns to Chat View without tearing down the pipeline.</p>
-<p>Rolv remembers whether you last left the session in Chat or Graph. Clicking it in the sidebar restores that view. Graph-only sessions (sidebar <strong>Graph</strong>, never used chat) stay in Graph View and hide Back to Chat.</p>
+<h2>Switching Between Chat and Graph</h2>
+<p>If a session includes a chat history, the graph header displays <strong>← Back to Chat</strong>. Click it to return to the conversation without deleting your pipeline. Graph-only sessions hide <strong>← Back to Chat</strong>.</p>
+<p>rolv remembers whether you last used Chat View or Graph View for each session.</p>
 <h2>The Canvas</h2>
 <p><img src="graph-header.png" alt="Graph Header &amp; Canvas Controls"></p>
-<p>The graph canvas is an interactive workspace powered by ReactFlow:</p>
+<p>Use the interactive ReactFlow canvas to organize steps:</p>
 <ul>
-<li><strong>Click on empty space</strong> — Opens the node creation dialog</li>
-<li><strong>Click a node</strong> — Opens the Node Inspector panel on the right</li>
-<li><strong>Drag nodes</strong> — Rearrange the layout</li>
-<li><strong>Connect nodes</strong> — Drag from one node&#39;s handle to another to create edges</li>
-<li><strong>Zoom/Pan</strong> — Use scroll wheel and drag</li>
+<li><strong>Click empty space:</strong> Open the node creation prompt.</li>
+<li><strong>Click a node:</strong> Open the Node Inspector on the right side.</li>
+<li><strong>Drag a node:</strong> Move the node on the canvas.</li>
+<li><strong>Drag from a handle to another node:</strong> Connect nodes with an edge.</li>
+<li><strong>Scroll and drag background:</strong> Zoom and pan the canvas.</li>
 </ul>
 <h2>Node Types</h2>
 <h3>Compute Nodes (💻)</h3>
-<p>Execute <strong>Python</strong>, <strong>R</strong>, or <strong>Bash</strong>. These are the workhorse nodes of your pipeline. Use them whenever you need a <strong>repeatable loop</strong> — for example “search PubMed for every gene in this list” or “score every row in a table.” The script writes files to your working directory (the project folder on disk). Later nodes open those files by name.</p>
+<p>Compute nodes run <strong>Python</strong>, <strong>R</strong>, or <strong>Bash</strong> scripts. Use compute nodes for calculations, statistical tests, plotting, file processing, and loops over many items. Compute scripts read and write files inside the session working directory.</p>
 <h3>Research Nodes (📖)</h3>
-<p>A research node is an <strong>AI assistant that reads, searches, and writes a report</strong> — it does <strong>not</strong> run Python or R. Think of it as a careful reader, not a calculator.</p>
-<p>Use a research node when a person would need judgment: “Does this abstract support MYCN as a neuroblastoma target?” or “Summarize what this plot is showing.” Do <strong>not</strong> use it as a bulk downloader for 20 genes. For that, put the loop in a compute node, then connect a research node that <em>interprets</em> the file.</p>
+<p>Research nodes use an AI assistant to read workspace files, search literature, and write Markdown reports. A research node does not execute Python or R scripts.</p>
+<p>Use a compute node when you need scripts or large bulk downloads, then pass output files to a research node for interpretation.</p>
 <p><img src="graph-research-mode.png" alt="Research Mode Configuration"></p>
-<p>Click the research node and open the <strong>Instructions</strong> tab. You will see three <strong>research modes</strong> (radio buttons) and, below them, an optional <strong>Structured output</strong> checkbox.</p>
-<h4>Research modes</h4>
+<p>Open a research node and select the <strong>Instructions</strong> tab to configure its mode, structured output, and batch iteration.</p>
+<h4>Research Modes</h4>
 <table>
 <thead>
 <tr>
 <th>Mode</th>
-<th>What the node can do</th>
-<th>When to pick it</th>
+<th>Allowed Tools</th>
+<th>Use When</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>Interpret / simple agent</strong></td>
-<td>Read files and plots in your project folder. <strong>No</strong> PubMed, GEO, or web search.</td>
-<td>You already have results (a table, a figure, a JSON file) and want the AI to explain them.</td>
+<td>Read local files and inspect plots only. No web, PubMed, or GEO search.</td>
+<td>You want the AI to interpret tables or figures already on disk.</td>
 </tr>
 <tr>
 <td><strong>Literature review</strong></td>
-<td>Search papers and the web (PubMed, GEO, patents, clinical trials, …). <strong>Cannot</strong> open your local files.</td>
-<td>You only need published literature, not your own tables.</td>
+<td>Search PubMed, GEO, ClinicalTrials.gov, patents, and the web only. Cannot read local files.</td>
+<td>You need literature evidence without local files.</td>
 </tr>
 <tr>
 <td><strong>Full</strong> (default)</td>
-<td>Files <strong>and</strong> search.</td>
-<td>The task needs both: e.g. read a gene list, then look up papers.</td>
+<td>Both local file tools and external search tools.</td>
+<td>The step must inspect local results and search literature.</td>
 </tr>
 </tbody></table>
-<p>The mode only changes which <strong>tools</strong> the assistant is allowed to use. It does not change how many times it may search (see structured output below).</p>
-<h4>How a research node “sees” the previous node</h4>
-<p>Drawing an arrow <strong>into</strong> a research node does <strong>not</strong> plug the previous file in like a USB cable. The arrow means two simpler things:</p>
+<h4>How Research Nodes Receive Upstream Context</h4>
+<p>An edge into a research node guarantees two things:</p>
 <ol>
-<li><strong>Run order</strong> — parents run first.</li>
-<li><strong>A briefing</strong> — Rolv pastes a text summary into the research prompt: the parent’s name, snippets of logs, and paths of files that parent listed as results. On a full workflow run that briefing is shortened (about 4,000 characters per parent).</li>
+<li>Parent nodes run first.</li>
+<li>rolv passes a short text summary of parent labels, log excerpts, and output file names (up to about 4,000 characters per parent).</li>
 </ol>
-<p>If the parent wrote a file such as <code>scores.tsv</code>, the research node still has to <strong>open</strong> it with its file-reading tool. Name the file in the Instructions (“Read <code>scores.tsv</code> and judge each row”) so it does not have to guess.</p>
-<h4>Structured output (JSON for the next node)</h4>
-<p>Tick <strong>Structured output</strong> when a <strong>later compute node</strong> must read the answer as data — a table of genes and scores — not as a long essay.</p>
-<p>You can provide <strong>field names</strong> (comma-separated, e.g. <code>gene, evidence_level, rationale, pmids</code>), or <strong>leave the field list blank</strong> to let Rolv automatically infer a suitable 3–5 column schema from your instructions and chosen research mode.</p>
-<h4>Batch iteration across items (ForEach)</h4>
-<p>For large datasets (e.g. top 20 or 50 differentially expressed genes), tick <strong>Batch iteration across items (ForEach)</strong>:</p>
+<p>Name required files clearly in the research <strong>Instructions</strong> (for example, <code>Read scores.tsv and summarize the top hits</code>) so the assistant opens those files directly.</p>
+<h4>Structured Output (JSON for Downstream Nodes)</h4>
+<p>Enable <strong>Structured output</strong> when a downstream compute node must read tabular JSON instead of a long essay:</p>
 <ul>
-<li><strong>Parallel Worker Pool:</strong> Runs research queries over each row/item concurrently (up to 100 items) with live progress logging (<code>[1/10] Gene: TP53...</code>).</li>
-<li><strong>Flexible Data Extraction:</strong> Reads items directly from CSV, TSV, JSON arrays, or plain text lines from upstream files (e.g. <code>deseq2_results.csv</code>).</li>
-<li><strong>Unified Artifacts:</strong> Automatically compiles individual findings into both a structured JSON dataset (<code>&lt;slug&gt;-results.json</code>) and an aggregated Markdown report (<code>&lt;slug&gt;-report.md</code>).</li>
-<li><strong>Optional Strict Fact-Checking:</strong> Verifies all assembled row entries against raw tool context before writing final reports.</li>
+<li>Enter comma-separated field names (for example, <code>gene, evidence_level, pmids</code>), or leave the field list blank so rolv infers a schema.</li>
+<li>Structured output creates <code>{label}_node_output.json</code> and <code>{label}_node_output.md</code> alongside <code>{label}_report.md</code>.</li>
 </ul>
-<h4>Reading your files</h4>
-<p>By default the file tool only <strong>peeks</strong>: the first ~20 rows of a spreadsheet, or ~100 lines of a text file. The result is labelled <strong>complete</strong> or <strong>truncated</strong> so the assistant knows whether it saw everything. For a whole table, structured-output mode is told to request a fuller read (up to 2,000 lines). Huge files are still capped so the AI is not flooded.</p>
-<h4>Output tab vs files on disk</h4>
-<p>The <strong>Output</strong> tab is the report you read in the app. After a successful research run, the same markdown is always written to the working directory as <code>{label}_report.md</code> (from the node title) and registered in <code>output.json</code>, so a later node can open it by name. A node called “Literature review” produces <code>literature_review_report.md</code>.</p>
-<p>With <strong>Structured output</strong>, you also get <code>{label}_node_output.json</code> (the table) and <code>{label}_node_output.md</code> (the same table as a grid). Downstream compute should load the JSON.</p>
-<p>A long prose report can still <strong>stop mid-table</strong> if the writer spends its whole answer on the first gene. Structured output and ForEach batch iteration avoid that by forcing a row-per-item JSON table instead of an essay.</p>
+<h4>Batch Iteration Across Items (ForEach)</h4>
+<p>Enable <strong>Batch iteration across items (ForEach)</strong> to run separate research queries across rows in a file (default 20 items, maximum 100 items):</p>
+<ul>
+<li>Reads items from CSV, TSV, JSON arrays, or plain text lines in a target file.</li>
+<li>Processes items in parallel with progress updates (<code>[1/10] ...</code>).</li>
+<li>Writes a unified JSON array (<code>&lt;slug&gt;-results.json</code>) and a combined Markdown report (<code>&lt;slug&gt;-report.md</code>).</li>
+<li>Supports optional strict fact-checking against retrieved tool outputs.</li>
+</ul>
+<h4>File Peeks and Output Files</h4>
+<p>By default, research file reads peek at the first ~20 table rows or ~100 text lines. In structured-output mode, the assistant can request larger reads (up to 2,000 lines).</p>
+<p>After a research node succeeds, rolv displays the report in the <strong>Output</strong> tab, writes <code>{label}_report.md</code> to disk, and registers it in <code>output.json</code>.</p>
 <h3>Data Input Node</h3>
-<p>Optional. Define input variables and file paths for your pipeline. Saved as <code>input.json</code> in the working directory. Features:</p>
+<p>Define pipeline input variables and file bindings. rolv writes these values into <code>input.json</code> in the working directory before compute nodes run.</p>
 <ul>
-<li><strong>Add variables</strong> — Key-value pairs (e.g., <code>INPUT_FILE → /path/to/data.csv</code>)</li>
-<li><strong>Descriptions</strong> — Optional notes for each variable</li>
-<li><strong>Smart Validate</strong> — Automatically checks if tabular files (CSV/TSV) are valid</li>
-<li><strong>Test data</strong> — A script in R, Python, or Bash that creates small sample files in the session folder. Recipes do not ship those files. See <a href="#test-data">Test data</a> below.</li>
+<li>Add key-value inputs (for example, <code>INPUT_FILE</code>) and descriptions.</li>
+<li>Validate tabular files (CSV/TSV).</li>
+<li>Expand <strong>Test data</strong> to write or run a sample-data generator script (see <a href="#test-data">Test data</a>).</li>
 </ul>
-<p>A graph can have <strong>at most one</strong> Data Input and one Data Output (fixed ids). New graphs start empty — add them from the canvas prompt when you need them. Workflows built from chat add a Data Output node if one is missing. Select a node and press Delete or Backspace to remove it.</p>
-<p>When you <strong>Save as Recipe</strong>, names, descriptions, and default values are stored. A local file path is cleared so the recipe stays shareable. Running the recipe writes those keys into <code>input.json</code>.</p>
+<p>A graph can have at most one Data Input node and one Data Output node. Select any node and press <strong>Delete</strong> or <strong>Backspace</strong> to remove it.</p>
+<p>When you click <strong>Save as Recipe</strong>, rolv keeps input variable names, descriptions, and non-path defaults while clearing local file paths so recipes stay portable.</p>
 <h3>Test data</h3>
-<p>Open the Data Input node and expand <strong>Test data</strong>. Choose <strong>R</strong>, <strong>Python</strong>, or <strong>Bash</strong>.</p>
-<p>Click <strong>Starter</strong>. Rolv looks at each input’s name and description, and at the scripts that read those inputs, then fills the editor. Above each sample file, a comment says what that file should contain and asks you to replace the placeholder. The script ends by writing <code>test_input.json</code>, for example:</p>
-<pre><code class="language-json">{
-  &quot;INPUT_FILE&quot;: &quot;mock_input.csv&quot;,
-  &quot;ID_COLUMN&quot;: &quot;gene&quot;
-}
-</code></pre>
-<p>The names in that file are the same names as on the Data Input card. File values are the sample files the script just created. Other values, such as a column name or a number, are written there too.</p>
-<p>Edit the placeholders so the files match what the pipeline reads. Then click <strong>Generate Data</strong>. Rolv runs the script, copies <code>test_input.json</code> onto the input fields, and saves <code>input.json</code>. Pipeline steps read <code>input.json</code>. They do not read <code>test_input.json</code>.</p>
-<p><strong>Generate &amp; Run</strong> does the same copy and then runs the workflow. The canvas <strong>Run</strong> menu has <strong>Run with Test Data</strong>, which does this in one step.</p>
-<p>You need to be signed in for <strong>Starter</strong>, so it can read the pipeline. If the editor is empty and Starter cannot reach the model, Rolv inserts a short outline you can edit. If a script is already there, Rolv asks before replacing it, and leaves it in place when Starter fails.</p>
+<p>Open the Data Input node and expand <strong>Test data</strong> to generate mock input files before running with real data:</p>
+<ol>
+<li>Select <strong>R</strong>, <strong>Python</strong>, or <strong>Bash</strong>.</li>
+<li>Click <strong>Starter</strong>. rolv reads your pipeline scripts and fills the editor with a starter generator script that ends by writing <code>test_input.json</code>.</li>
+<li>Replace placeholder values so the mock files match your pipeline&#39;s expected columns and formats.</li>
+<li>Click <strong>Generate Data</strong> to run the script, copy <code>test_input.json</code> values into Data Input fields, and save <code>input.json</code>.</li>
+</ol>
+<p>Pipeline nodes always read <code>input.json</code> (never <code>test_input.json</code>). Click <strong>Run → Run with Test Data</strong> on the graph toolbar to generate sample data and run the workflow in one step. You must be signed in to use AI generation in <strong>Starter</strong>.</p>
 <h3>Data Output Node</h3>
-<p>Optional. Tracks output artifacts produced by the pipeline. Reads from <code>output.json</code> in the working directory. After a compute node succeeds, new workspace files are captioned and appended to that ledger (Graph Run, chat workflow runs, and inspector play). Research reports are registered the same way. The panel shows file names, descriptions, which node produced them, and timestamps. Not executed as code.</p>
+<p>Tracks artifact files produced by pipeline runs via <code>output.json</code> in the working directory. Shows filenames, AI-generated descriptions, source nodes, and timestamps. This node does not run code.</p>
 <h2>What the arrows between nodes mean</h2>
-<p>An arrow from A → B means <strong>“B runs after A, and B may be told about A.”</strong> It does <strong>not</strong> automatically pass A’s spreadsheet into B.</p>
-<p><strong>Compute nodes</strong> share one project folder. Node A must <strong>write a file</strong> (for example <code>hits.tsv</code>). Node B’s script must <strong>open that same name</strong>. If B never mentions <code>hits.tsv</code>, the arrow does nothing for B’s data. The Data Input node’s variables go into <code>input.json</code> (usually <code>INPUT_FILE</code>); that is the one automatic path.</p>
-<p><strong>Research nodes</strong> receive a <strong>text briefing</strong> from connected parents (names, log snippets, file paths), then may open those files themselves. See <a href="#research-nodes-">Research Nodes</a> above.</p>
-<p>If two nodes should share data, give the file a clear name in the compute script <strong>and</strong> mention that name in the next node’s instructions or code.</p>
+<p>An arrow from node <code>A</code> to node <code>B</code> sets <strong>execution order</strong>: <code>A</code> runs before <code>B</code>. It does <strong>not</strong> automatically pass Python or R variables in memory.</p>
+<ul>
+<li><strong>Compute nodes</strong> share one working directory. Node <code>A</code> must write a file (for example, <code>hits.tsv</code>), and node <code>B</code> must open that filename. Both nodes read shared parameters from <code>input.json</code>.</li>
+<li><strong>Research nodes</strong> receive a text summary from parent nodes and read files from the working directory by name.</li>
+</ul>
 <h2>Adding Nodes</h2>
 <p><img src="graph-ai-node-prompt.png" alt="AI Node Generator Prompt Bar"></p>
-<p>Click on empty canvas space to open the node creation prompt. You can:</p>
+<p>Click empty canvas space to open the node generator bar:</p>
 <ul>
-<li><strong>Type a description</strong> — AI generates the node (code, label, description) automatically</li>
-<li><strong>Leave blank</strong> — Creates an empty node for manual coding</li>
-<li><strong>Choose node type</strong> — Select Compute, Research, Data Input, or Data Output</li>
+<li>Enter a description to generate a labeled node with AI.</li>
+<li>Leave the text box blank to create an empty node.</li>
+<li>Choose <strong>AUTO</strong>, <strong>COMPUTE</strong>, <strong>RESEARCH</strong>, <strong>Input</strong>, or <strong>Output</strong>.</li>
 </ul>
-<p>If you click the ➕ button on an existing node, the new node is automatically connected downstream.</p>
+<p>Click the <strong>+</strong> handle below any node to create and connect a new downstream node.</p>
 <h2>Node Inspector</h2>
 <p><img src="graph-node-inspector.png" alt="Node Inspector Panel"></p>
-<p>Click any node to open the inspector panel on the right side. It includes:</p>
-<h3>Header</h3>
+<p>Click any node to open the Node Inspector on the right side.</p>
+<h3>Header Controls</h3>
 <ul>
-<li><strong>Node title</strong> — Click to rename</li>
-<li><strong>Compute/Research toggle</strong> — Switch between code execution and AI research (hidden on Data Input/Output)</li>
-<li><strong>Pin button</strong> — Pinned nodes skip staleness checks</li>
-<li><strong>Shield (touch-last / protected)</strong> — When auto-correct heals a failing pipeline, it prefers editing other nodes first and only touches a touch-last node as a last resort. Optional reason is sent to the model when editing.</li>
-<li><strong>Status indicator</strong> — Pending, Running, Success, Failed, Correcting, or Stale</li>
+<li><strong>Title:</strong> Click to rename the node.</li>
+<li><strong>Compute / Research toggle:</strong> Switch node type (not shown on Data Input or Data Output nodes).</li>
+<li><strong>Pin button (📌):</strong> Exempt the node from staleness re-runs.</li>
+<li><strong>Shield button (🛡️):</strong> Mark the node as protected (<strong>touch-last</strong>). Auto-correct edits other nodes first and modifies a protected node only as a last resort.</li>
+<li><strong>Status badge:</strong> Displays <code>Pending</code>, <code>Running</code>, <code>Success</code>, <code>Failed</code>, <code>Correcting</code>, or <code>Stale</code>.</li>
 </ul>
-<h3>Description</h3>
-<p>A brief summary of what the node does. Useful for understanding the pipeline at a glance.</p>
-<h3>Execution Target</h3>
-<p>For compute nodes, choose where code runs:</p>
+<h3>Node Settings and Tabs</h3>
 <ul>
-<li><strong>Global Default</strong> — Uses the global setting (usually local)</li>
-<li><strong>Local Device</strong> — Run on your machine</li>
-<li><strong>SSH: [Server Name]</strong> — Run on a configured remote server (see <a href="settings.html">Settings</a>)</li>
+<li><strong>Description:</strong> Short note explaining inputs, steps, and outputs.</li>
+<li><strong>Execution Target (compute nodes):</strong> Choose <strong>Global Default</strong>, <strong>Local Device</strong>, or a saved remote target from <a href="settings.html">Settings</a>.</li>
 </ul>
-<h3>Tabs</h3>
 <table>
 <thead>
 <tr>
 <th>Tab</th>
 <th>Available For</th>
-<th>What it shows</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>Code</strong></td>
 <td>Compute</td>
-<td>Code editor with R / Python / bash highlighting, line numbers, and find (<code>Cmd/Ctrl-F</code>). Expand opens a full-window overlay. The sun/moon control on the editor is separate from the app theme.</td>
+<td>Edit Python, R, or Bash code (<code>Cmd/Ctrl-F</code> search, expand view, per-node self-correct toggle, max retries).</td>
 </tr>
 <tr>
 <td><strong>Instructions</strong></td>
 <td>Research</td>
-<td>Editable prompt for what to research</td>
+<td>Configure research mode, prompt, structured output, and ForEach settings.</td>
 </tr>
 <tr>
 <td><strong>Talk to Node</strong></td>
 <td>Both</td>
-<td>Chat with the AI about this specific node</td>
+<td>Chat with the AI to inspect or edit this node.</td>
 </tr>
 <tr>
 <td><strong>Logs</strong></td>
 <td>Both</td>
-<td>Execution output (stdout/stderr)</td>
+<td>Inspect stdout, stderr, and auto-heal logs.</td>
 </tr>
 <tr>
 <td><strong>Results</strong></td>
 <td>Compute</td>
-<td>Output files produced by the node</td>
+<td>View files produced by the node.</td>
 </tr>
 <tr>
 <td><strong>Output</strong></td>
 <td>Research</td>
-<td>Rendered markdown research results</td>
+<td>Read the rendered Markdown report.</td>
 </tr>
 </tbody></table>
 <h2>Pending Code Changes</h2>
-<p>When you chat with a node and the AI proposes code changes, they appear as a <strong>pending change</strong> — you must explicitly <strong>Apply</strong> or <strong>Discard</strong> before the node updates.</p>
+<p>When <strong>Talk to Node</strong> proposes a code change, it appears as a pending diff. Click <strong>Apply</strong> or <strong>Discard</strong> before running the node.</p>
 <h2>Running the Pipeline</h2>
-<h3>Run All / Run with Test Data</h3>
-<p>Click <strong>▶ Run Workflow</strong> to execute the entire pipeline. The Run button includes a dropdown arrow with two options:</p>
+<h3>Run Workflow and Run with Test Data</h3>
+<p>Click <strong>▶ Run Workflow</strong> in the header to run the DAG in topological order:</p>
 <ul>
-<li><strong>Run Workflow</strong> — Executes all nodes in topological order (dependencies first). Data Input and Data Output are skipped (bindings still write <code>input.json</code>).</li>
-<li><strong>Run with Test Data</strong> — Runs the test-data script, copies <code>test_input.json</code> onto the Data Input fields, writes <code>input.json</code>, and then runs the workflow. The Data Input node needs a test script first. Use <strong>Starter</strong> on that node to create one.</li>
+<li><strong>Run Workflow:</strong> Runs pending or stale nodes. Writes <code>input.json</code> from Data Input bindings.</li>
+<li><strong>Run with Test Data:</strong> Appears in the Run dropdown when a Data Input node has a test script. Generates sample data, updates <code>input.json</code>, and runs the workflow.</li>
 </ul>
-<p>While a run is in progress, the button becomes <strong>Stop</strong> — clicking it terminates the current execution process.</p>
-<h3>Smart Skip</h3>
-<p>Nodes that already succeeded and aren&#39;t stale are automatically skipped during a full run — saving time on re-execution.</p>
-<h3>Staleness</h3>
-<p>A node becomes <strong>stale</strong> when any of its upstream parents have been re-executed after it. Stale nodes show a warning indicator and will re-run during the next workflow execution.</p>
-<blockquote>
-<p><strong>Tip:</strong> Pin a node to exempt it from staleness checks — useful for expensive computations you don&#39;t want to re-run.</p>
-</blockquote>
+<p>While running, click <strong>Stop</strong> to cancel the active local execution.</p>
+<h3>Smart Skip and Staleness</h3>
+<ul>
+<li><strong>Smart Skip:</strong> Nodes with <code>Success</code> status that are not stale are skipped during full workflow runs.</li>
+<li><strong>Staleness:</strong> When an upstream parent runs again, downstream nodes become <strong>Stale</strong> so they re-run automatically on the next workflow run. Pin a node to skip staleness checks.</li>
+</ul>
 <h2>Self-Correction (Auto-Correct)</h2>
-<p>When enabled, if a node fails during execution:</p>
+<p>When enabled on a node and in Graph Actions:</p>
 <ol>
-<li>The error is sent to the AI agent</li>
-<li>The AI proposes a fix to the code</li>
-<li>The fixed code is automatically executed</li>
-<li>Up to <strong>3</strong> retry attempts by default (per-node <strong>Max retries</strong> in the inspector)</li>
+<li>rolv sends failure logs to the AI error-diagnosis and code-editor service.</li>
+<li>If an upstream node caused the failure, rolv repairs that parent (respecting protected touch-last nodes) before editing the downstream node.</li>
+<li>rolv saves the previous code to code history, applies the fix, and retries (up to <strong>3</strong> attempts by default, configurable per node up to <strong>5</strong>).</li>
 </ol>
-<p>Each correction is logged in the node&#39;s <strong>Error Log</strong> with the error, fix description, and code before/after.</p>
-<p>When running workflows from chat, the orchestrator also performs <strong>Autonomous Workflow Recovery</strong>: the agent inspects the node logs, fixes script code or input bindings, and automatically re-executes the failed step within a bounded recovery budget (up to 2 retries) before finalizing its response.</p>
 <h2>Graph Actions &amp; Settings</h2>
-<p>Click the <strong>Slider Icon (⚙️)</strong> in the graph header to open <strong>Graph Actions</strong>:</p>
+<p>Click the <strong>Sliders icon</strong> in the graph header to open <strong>Graph Actions</strong>:</p>
 <p><img src="graph-actions-settings.png" alt="Graph Statistics &amp; Directives Settings"></p>
 <ul>
-<li><strong>Graph Statistics:</strong> Real-time count of total nodes and active connections.</li>
-<li><strong>Strict Fact-Checking:</strong> Adds a secondary LLM pass during code generation to eliminate hallucinations.</li>
-<li><strong>Auto-Correct Failures:</strong> Toggle automatic AI self-healing retries for failing nodes.</li>
-<li><strong>Session AI Directives:</strong> Session-specific instructions (e.g., <em>&quot;Use ggplot2 with theme_minimal for all plots&quot;</em>), appended to global instructions.</li>
+<li><strong>Graph Statistics:</strong> Total nodes and connection count.</li>
+<li><strong>Strict Fact-Checking:</strong> Adds a second LLM verification pass during code generation.</li>
+<li><strong>Auto-Correct Failures:</strong> Enables or disables automatic retry fixes for failing nodes.</li>
+<li><strong>Session AI Directives:</strong> Session-level instructions appended after your global instructions.</li>
 </ul>
-<h2>Workflow Actions &amp; Export Options</h2>
+<h2>Workflow Actions &amp; Export</h2>
 <p><img src="graph-workflow-actions.png" alt="Workflow Actions &amp; Save as Recipe"></p>
-<p>From the bottom of <strong>Graph Actions</strong>, export or convert your workflow:</p>
+<p>At the bottom of <strong>Graph Actions</strong>, export or package your graph:</p>
 <ul>
-<li><strong>Build Report:</strong> Collate all node outputs into a structured executive report using LLM reasoning.</li>
-<li><strong>Create Code Repo:</strong> Extract all compute scripts into a standalone code folder.</li>
-<li><strong>Write <code>rolv_manifest.json</code>:</strong> Export execution lineage, node contracts, and parameters into the session working directory.</li>
-<li><strong>Dump Recipe Snapshot:</strong> Export a full logic snapshot for complete reproducibility.</li>
-<li><strong>Export to JSON:</strong> Download the raw graph DAG configuration file.</li>
-<li><strong>Save as Recipe:</strong> Convert the live graph into a reusable <strong>Recipe bundle</strong>. Data Input/Output stay I/O nodes (not fake compute). Env files (<code>python-requirements.txt</code>, <code>r-packages.txt</code>, <code>system-tools.txt</code>) are filled with versions where known; Python stdlib and R base packages are skipped. This is the recommended first step before editing in <strong>Recipe Designer</strong>. Recipes exported before this round-trip still need a fresh <strong>Save as Recipe</strong> to restore purple/green I/O nodes.</li>
+<li><strong>Build Report:</strong> Combine node outputs into a structured Markdown report.</li>
+<li><strong>Create Code Repo:</strong> Export compute scripts into a standalone code folder.</li>
+<li><strong>Write <code>rolv_manifest.json</code>:</strong> Save lineage, node contracts, and parameters to the working directory.</li>
+<li><strong>Dump Recipe Snapshot:</strong> Export a full reproducible bundle snapshot.</li>
+<li><strong>Export to JSON:</strong> Download the raw graph DAG JSON.</li>
+<li><strong>Save as Recipe:</strong> Convert the graph into a reusable recipe bundle with detected <code>python-requirements.txt</code>, <code>r-packages.txt</code>, and <code>system-tools.txt</code> files.</li>
 </ul>
 <h2>Ask a Human Expert</h2>
-<p>Click the <strong>🎓 graduation cap</strong> button to submit a question to a human expert. You can optionally attach your conversation as context. This is an experimental service we are testing, delays could occur.</p>
+<p><img src="human-expert-modal.png" alt="Ask a Human Expert Modal"></p>
+<p>Click the <strong>graduation cap icon (🎓)</strong> on the canvas to send a scientific question to a human expert. You can attach the current workflow state for context. This service is experimental, so replies can take time.</p>
 <hr>
 <p><strong>Next:</strong> <a href="recipes.html">Recipes →</a></p>
 
