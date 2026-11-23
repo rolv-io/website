@@ -1,39 +1,39 @@
 # Terms of Service
 
-Last updated: May 1, 2026
+Last updated: November 23, 2026
 
-Welcome to **rolv**. Please read these Terms of Service ("Terms") carefully before using the rolv application and website operated by **rolv technologies LLC** ("us", "we", or "our").
+Welcome to **rolv**. By accessing or using the rolv desktop application or website (the "Service"), operated by **the rolv project** ("we", "our", or "us"), you agree to these Terms of Service. If you do not agree, do not use the Service.
 
-## 1. Acceptance of Terms
+## 1. Description of Service
 
-By accessing or using our service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the service.
+rolv is a desktop application for AI-assisted data analysis, workflow building, and literature research. The Service is currently provided free of charge for research, evaluation, and personal use. We may change, suspend, or discontinue any part of the Service at any time without notice.
 
-## 2. Description of Service
+## 2. No Warranties ("As Is")
 
-rolv provides a desktop application for AI-assisted data analysis, enabling users to execute analytical workflows, build data graphs, and perform AI-assisted web and patent searches. The service includes free access for local models and a paid subscription tier providing access to cloud compute, optimized cloud models, and a premium recipe database.
+THE SERVICE IS PROVIDED **"AS IS"** AND **"AS AVAILABLE"**, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, RELIABILITY, OR NON-INFRINGEMENT.
 
-## 3. Subscriptions
+## 3. User Responsibility for Code and Scientific Outputs
 
-Some parts of the Service are billed on a subscription basis ("Subscription(s)"). You will be billed in advance on a recurring and periodic basis (such as monthly). Billing cycles are set on a regular basis.
+rolv uses AI models and automated code execution that can produce inaccurate, incomplete, or harmful code, analyses, or interpretations. You are solely responsible for:
 
-Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns.
+- Reviewing and verifying all generated scripts, commands, and results before relying on or publishing them.
+- Backing up your files and data before running workflows.
+- Ensuring your use complies with all applicable laws, institutional policies, and data-privacy regulations.
 
-## 4. Accounts
+rolv is **not** a medical device and does **not** provide medical, clinical, diagnostic, legal, or other professional advice.
 
-When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.
+## 4. Limitation of Liability
 
-## 5. Intellectual Property
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL **the rolv project**, ITS CONTRIBUTORS, MAINTAINERS, OR AFFILIATES BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES WHATSOEVER — INCLUDING LOSS OF DATA, LOSS OF PROFITS, SYSTEM OR FILE DAMAGE, COMPUTE COSTS, OR SCIENTIFIC, CLINICAL, OR BUSINESS DECISIONS — ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE SERVICE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-The Service and its original content, features, and functionality are and will remain the exclusive property of rolv technologies LLC and its licensors.
+## 5. Accounts and Acceptable Use
 
-## 6. Limitation of Liability
+You are responsible for maintaining the security of your account and any third-party API keys you configure. Do not abuse, overload, reverse-engineer, or attempt to bypass usage limits on our cloud gateway. We may suspend or terminate access at our discretion.
 
-In no event shall rolv technologies LLC, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service.
+## 6. Changes to These Terms
 
-## 7. Changes
+We may update these Terms at any time by posting a revised version on this page. Continued use of the Service after changes constitutes acceptance of the updated Terms.
 
-We reserve the right, at our sole discretion, to modify or replace these Terms at any time.
+## 7. Contact
 
-## 8. Contact Us
-
-If you have any questions about these Terms, please contact us at [hello@rolv.io](mailto:hello@rolv.io).
+Questions about these Terms can be sent to [hello@rolv.io](mailto:hello@rolv.io).
