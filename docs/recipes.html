@@ -197,8 +197,8 @@
 <td>Converts a <code>Snakefile</code> or Snakemake folder into graph nodes. Large rewrites spend many tokens and reject pipelines that cannot be converted safely.</td>
 </tr>
 <tr>
-<td><strong>GitHub</strong></td>
-<td>Clones a public repository containing a rolv recipe, a folder of scripts, or a Snakemake pipeline.</td>
+<td><strong>Git / Repository</strong></td>
+<td>Imports one or more rolv recipes from GitHub (root, <code>/tree</code>, or <code>/blob</code> subfolders), GitLab (cloud or self-hosted), Bitbucket, or direct <code>.tar.gz</code>/<code>.tgz</code> archives. Re-syncing uses HTTP <code>ETag</code> caching to update existing recipes without creating duplicates.</td>
 </tr>
 </tbody></table>
 <p>A progress chip shows scanning, code extraction, DAG construction, and validation steps in real time.</p>
@@ -262,6 +262,41 @@
 <td>Replaces local files with the latest cloud version (creates a restore point first; Academic accounts).</td>
 </tr>
 </tbody></table>
+<h2>Using Recipes from External Agents (MCP)</h2>
+<p>After you connect an external coding agent in <a href="settings.html#mcp-server-claude-code-cursor-and-other-agents">Settings → Execution Tools → MCP Server</a>, the agent receives six tools and one specification resource (<code>rolv://spec/recipe-format</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>search_recipes</code></td>
+<td>Search your local recipes (folders and rolv Desktop <code>vault.db</code>) and the Cloud Recipe Library (Academic or Pro).</td>
+</tr>
+<tr>
+<td><code>inspect_recipe</code></td>
+<td>Read <code>recipe.md</code>, <code>input.json</code> defaults, expected outputs, and node details (including <code>touch_last</code> protection flags).</td>
+</tr>
+<tr>
+<td><code>get_recipe_spec</code></td>
+<td>Return the canonical rolv Recipe Package specification so agents author compliant recipes.</td>
+</tr>
+<tr>
+<td><code>validate_recipe</code></td>
+<td>Check frontmatter, DAG structure, safety rules, personal-path hygiene, secrets, and <code>env/</code> dependencies.</td>
+</tr>
+<tr>
+<td><code>patch_recipe_node</code></td>
+<td>Update one node script after compliance checks pass. Blocks <code>touch_last</code> nodes unless <code>force: true</code> is set, and keeps <code>recipe.md</code> unchanged.</td>
+</tr>
+<tr>
+<td><code>run_recipe</code></td>
+<td>Materialize the recipe into <code>working_dir</code>, populate <code>input.json</code> (or run <code>test_setup</code> when <code>use_test_data: true</code>), execute the DAG, stream node logs, and return <code>output.json</code> plus <code>*_report.md</code> paths.</td>
+</tr>
+</tbody></table>
+<p>After an external agent creates or patches a recipe, open the recipe in rolv Desktop to inspect visual diffs, run <strong>Sync docs with pipeline</strong>, or submit updates to the Cloud Library.</p>
 <h2>Recipe Sharing</h2>
 <p>When AI improves a cloud-origin recipe locally, rolv can submit those changes upstream. Set this behavior in <a href="settings.html">Settings</a>:</p>
 <ul>

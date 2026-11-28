@@ -171,7 +171,15 @@
 <li><strong>Execution Target:</strong> Choose <strong>Target: Local Device</strong> or a saved remote target from <a href="settings.html#remote-compute">Settings</a>.</li>
 </ul>
 <p>A colored dot appears on the <strong>Runtime</strong> button when a project version pin or a remote target is active.</p>
+<p>To run one compute step on a remote target while the rest of the workflow stays local, ask Chat to move that node to a named SSH target (for example, <code>Run the docking node on mdc-gpu-tunnel</code>). rolv resolves the target by its display name and marks that node stale for the next run.</p>
 <p>When you change a pinned Python or R version, rolv recreates the session environment if the installed version does not match. If you select a version before you assign a working directory, rolv applies the pin after you choose a folder. When you save a recipe, rolv copies the project version pins into the recipe files.</p>
+<h2>Clickable Session File Links</h2>
+<p>When Chat mentions a file inside your current working directory, rolv verifies that the file exists and makes the filename clickable:</p>
+<ul>
+<li><strong>Viewable files</strong> (tables, plots, PDFs, reports, and text files): Click the link to open the file directly.</li>
+<li><strong>Scripts and executables</strong> (<code>.py</code>, <code>.R</code>, <code>.sh</code>, or binary files): Click the link to reveal the file in Finder or File Explorer instead of running it.</li>
+</ul>
+<p>Links outside the active working directory are blocked for safety.</p>
 <h2>Moving Between Chat and Graph</h2>
 <p>A session can contain both a chat thread and a graph:</p>
 <ul>

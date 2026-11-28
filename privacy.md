@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: November 23, 2026
+Last updated: November 28, 2026
 
 **the rolv project** ("we", "our", or "us") operates the rolv desktop application and website. This Privacy Policy explains what data we collect when you use rolv and how you control it.
 
@@ -18,8 +18,8 @@ When you create an account or sign in (via email or Google Sign-In using Firebas
 - **Cloud Token Counts:** When you use rolv's cloud AI gateway, we record token counts to enforce daily and monthly usage limits.
 - **Improvement Reports (Optional):** When repeated workflow or environment failures occur, rolv can prepare a redacted diagnostic report. You can review, edit, snooze, or disable these reports in **Settings → Execution Tools → rolv Improvement Reports**. File paths, email addresses, and secrets are stripped automatically before sending.
 
-### C. Cloud AI Processing
-When you use rolv's cloud AI gateway, the prompts and excerpts required to answer your request are sent to our servers and upstream AI model providers solely to return your result. We do not use your prompts or analytical data to train AI models.
+### C. Cloud AI Processing (Sovereign EU AI)
+Datasets never leave your machine. Managed cloud inference runs on European AI infrastructure, or connect your own local Ollama/API model. When you use rolv's cloud AI gateway, only the prompts and excerpts required to answer your request are sent to return your result. We do not use your prompts or analytical data to train AI models.
 
 ## 3. Data Retention and Deletion
 

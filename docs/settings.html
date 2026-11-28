@@ -100,7 +100,8 @@
 <h3>R Version</h3>
 <p>Select the default R version (<code>4.2.3</code>–<code>4.6.1</code>, default <code>4.4.1</code>) managed via Mamba. After changing the R version, start a new session or remove old <code>~/.rolv/envs/_template_r*</code> caches so new environments use the selected version. To pin a version for one project, use the <strong>Runtime</strong> menu in <a href="chat-view.html#runtime-settings">Chat View</a> or <a href="graph-view.html#runtime-settings">Graph View</a>.</p>
 <h3>Mamba Path</h3>
-<p>If <code>mamba</code> or <code>micromamba</code> is not on your system <code>PATH</code>, enter the full path to the executable. Leave this field empty for automatic detection.</p>
+<p>By default, rolv installs and uses a pinned <code>micromamba</code> (<code>2.3.0-0</code>) binary in <code>~/.rolv/bin/</code>. This prevents version conflicts across operating systems.</p>
+<p>To use a different <code>mamba</code> or <code>micromamba</code> binary, enter its full path in <strong>Mamba Path</strong>. Leave this field empty to use the rolv-managed binary.</p>
 <h3>Remote Compute</h3>
 <p>Add SSH targets to run compute nodes on remote servers. Your account includes a remote compute slot cap (<strong>Free: 1</strong>, <strong>Academic: 3</strong>).</p>
 <p>To add an SSH target:</p>
@@ -140,6 +141,18 @@
 </ol>
 <h3>Global AI Instructions</h3>
 <p>Enter directives appended to every AI request (for example, <code>Always use Python instead of R</code> or <code>Set random seeds for reproducibility</code>).</p>
+<h3>MCP Server (Claude Code, Cursor, and Other Agents)</h3>
+<p>Connect external MCP-compatible coding agents to rolv&#39;s local recipe engine. Supported clients include Claude Code, Cursor, Claude Desktop, Windsurf, VS Code, Codex CLI, and Gemini CLI.</p>
+<p>To connect an external agent:</p>
+<ol>
+<li>Sign in to rolv Desktop.</li>
+<li>Open <strong>Settings → Execution Tools</strong>.</li>
+<li>Under <strong>MCP Server</strong>, click <strong>Install for Claude Code</strong>, <strong>Install for Cursor</strong>, or <strong>Install for Claude Desktop</strong>.</li>
+<li>For any other MCP client, click <strong>Copy MCP Config JSON</strong> and paste the block into your client&#39;s MCP configuration file.</li>
+<li>Restart your external coding agent.</li>
+</ol>
+<p>External agents run recipes locally using your computer&#39;s rolv environments and pay for their own LLM tokens. Local recipe tools are free on all tiers. Cloud Recipe Library search requires a rolv Academic or Pro account.</p>
+<p>See <a href="recipes.html#using-recipes-from-external-agents-mcp">Recipes — Using Recipes from External Agents (MCP)</a> for the full list of MCP tools.</p>
 <h2>API Hub</h2>
 <p>Use <strong>API Hub</strong> to connect your own LLM or local embedding model.</p>
 <h3>Custom LLM Provider</h3>

@@ -210,6 +210,7 @@
       "reaction_count": 0,
       "comment_count": 1,
       "child_comment_count": 1,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -247,9 +248,9 @@
       "meter_type": "none",
       "live_stream_id": null,
       "is_published": true,
-      "restacks": 1,
+      "restacks": 2,
       "reactions": {
-        "\u2764": 0
+        "\u2764": 1
       },
       "top_exclusions": [],
       "pins": [],
@@ -428,9 +429,10 @@
         }
       ],
       "reaction": null,
-      "reaction_count": 0,
+      "reaction_count": 1,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -468,7 +470,7 @@
       "meter_type": "none",
       "live_stream_id": null,
       "is_published": true,
-      "restacks": 1,
+      "restacks": 2,
       "reactions": {
         "\u2764": 1
       },
@@ -652,6 +654,7 @@
       "reaction_count": 1,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -830,6 +833,7 @@
       "reaction_count": 0,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -1022,6 +1026,7 @@
       "reaction_count": 0,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -1236,6 +1241,7 @@
       "reaction_count": 0,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -1414,6 +1420,7 @@
       "reaction_count": 0,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -1621,6 +1628,7 @@
       "reaction_count": 0,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
@@ -1693,7 +1701,7 @@
       "voiceoverUpload": null,
       "has_voiceover": false,
       "description": "This new paper describes a large-scale GI organoid biobank with multi-omics profiling and CRISPR-based dependency maps to identify context-specific gene vulnerabilities and potential drug targets.",
-      "body_html": "<p>This <a href=\"https://www.nature.com/articles/s41586-026-10830-y\">new paper</a> describes a large-scale GI organoid biobank with multi-omics profiling and CRISPR-based dependency maps to identify context-specific gene vulnerabilities and potential drug targets. It highlights allele- and pathway-specific dependencies, core fitness gene sets, and pharmacogenomic associations in KRAS-mutant GI cancers, with open data resources for reanalysis.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!kg-t!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!kg-t!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 424w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 848w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1272w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!kg-t!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png\" width=\"1456\" height=\"851\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:851,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:733123,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/210571561?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!kg-t!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 424w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 848w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1272w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1456w\" sizes=\"100vw\" fetchpriority=\"high\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Image source <a href=\"https://www.nature.com/articles/s41586-026-10830-y\">https://www.nature.com/articles/s41586-026-10830-y</a></figcaption></figure></div><p></p><h2>How could it benefit our lab's research?</h2><ul><li><p><strong>Biomarker discovery: </strong>Provides a framework of gene\u2013biomarker associations and integrated multi-omics linking mutations, expression, and drug response that we can adapt to our cohorts. We can use it in <a href=\"https://github.com/BIMSBbioinfo/flexynesis\">flexynesis</a> potentially integrating it with cell lines, PDX, and patient data.</p></li><li><p><strong>Target prioritization and validation</strong>: The paper identifies core fitness genes and context-specific dependencies that could guide target selection and rational combination strategies in GI cancers. The CRISPR analysis corrected via copy numbers can be used in our workflows.</p></li><li><p><strong>Data/resource blueprint</strong>: <a href=\"https://cellmodelpassports.sanger.ac.uk/passports?model_type=organoid\">Open data</a> and modular analysis approaches (libraries, correction methods, fitness definitions) provide a template for building our autonomous analysis framework and sharing results. </p><p></p><p></p></li></ul><h2>Similar research/resources (not exhaustive)</h2><ul><li><p><a href=\"https://www.nature.com/articles/s41586-026-10843-7\">Neiswender et al.</a> CRISPR screens on 10 different cancer types using organoids + multi-omics data. Very similar to the paper above in terms of methods.</p></li><li><p><a href=\"https://pubmed.ncbi.nlm.nih.gov/26479923/\">Novartis PDX</a>: Drug screens on many PDX models + multi-omics data</p></li><li><p><a href=\"https://depmap.org/portal/\">Depmap</a>: Drug and CRISPR screens on thousands of cancer cell lines + multi-omics data</p></li><li><p><a href=\"https://pubmed.ncbi.nlm.nih.gov/36346366\">Goodwin CM et al</a>. : GI cancer organoid models with KRAS mutations; genome-wide CRISPR screening followed by clinical trial. Not a perfect match but interesting.</p><ul><li><p></p></li></ul><p></p></li></ul><div class=\"subscription-widget-wrap-editor\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe&quot;,&quot;language&quot;:&quot;en&quot;}\" data-component-name=\"SubscribeWidgetToDOM\"><div class=\"subscription-widget show-subscribe\"><div class=\"preamble\"><p class=\"cta-caption\">Thanks for reading &gt;_ Hacks &amp; Recipes! Subscribe for free to receive new posts and support my work.</p></div><form class=\"subscription-widget-subscribe\"><input type=\"email\" class=\"email-input\" name=\"email\" placeholder=\"Type your email\u2026\" tabindex=\"-1\"><input type=\"submit\" class=\"button primary\" value=\"Subscribe\"><div class=\"fake-input-wrapper\"><div class=\"fake-input\"></div><div class=\"fake-button\"></div></div></form></div></div>",
+      "body_html": "<p>This <a href=\"https://www.nature.com/articles/s41586-026-10830-y\">new paper</a> describes a large-scale GI organoid biobank with multi-omics profiling and CRISPR-based dependency maps to identify context-specific gene vulnerabilities and potential drug targets. It highlights allele- and pathway-specific dependencies, core fitness gene sets, and pharmacogenomic associations in KRAS-mutant GI cancers, with open data resources for reanalysis.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/$s_!kg-t!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png\" data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/$s_!kg-t!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 424w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 848w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1272w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/$s_!kg-t!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png\" width=\"1456\" height=\"851\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:851,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:733123,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://biodatahacks.substack.com/i/210571561?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}\" class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/$s_!kg-t!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 424w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 848w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1272w, https://substackcdn.com/image/fetch/$s_!kg-t!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09b470ef-2dcc-408c-bb96-34baa8ea467b_1796x1050.png 1456w\" sizes=\"100vw\" fetchpriority=\"high\"></picture><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke-width=\"1.5\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon-noB79L\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Image source <a href=\"https://www.nature.com/articles/s41586-026-10830-y\">https://www.nature.com/articles/s41586-026-10830-y</a></figcaption></figure></div><p></p><h2>How could it benefit our lab's research?</h2><ul><li><p><strong>Biomarker discovery: </strong>Provides a framework of gene\u2013biomarker associations and integrated multi-omics linking mutations, expression, and drug response that we can adapt to our cohorts. We can use it in <a href=\"https://github.com/BIMSBbioinfo/flexynesis\">flexynesis</a> potentially integrating it with cell lines, PDX, and patient data.</p></li><li><p><strong>Target prioritization and validation</strong>: The paper identifies core fitness genes and context-specific dependencies that could guide target selection and rational combination strategies in GI cancers. The CRISPR analysis corrected via copy numbers can be used in our workflows.</p></li><li><p><strong>Data/resource blueprint</strong>: <a href=\"https://cellmodelpassports.sanger.ac.uk/passports?model_type=organoid\">Open data</a> and modular analysis approaches (libraries, correction methods, fitness definitions) provide a template for building our autonomous analysis framework and sharing results. </p><p></p><p></p></li></ul><h2>Similar research/resources (not exhaustive)</h2><ul><li><p><a href=\"https://www.nature.com/articles/s41586-026-10843-7\">Neiswender et al.</a> CRISPR screens on 10 different cancer types using organoids + multi-omics data. Very similar to the paper above in terms of methods.</p></li><li><p><a href=\"https://pubmed.ncbi.nlm.nih.gov/26479923/\">Novartis PDX</a>: Drug screens on many PDX models + multi-omics data</p></li><li><p><a href=\"https://depmap.org/portal/\">Depmap</a>: Drug and CRISPR screens on thousands of cancer cell lines + multi-omics data</p></li><li><p><a href=\"https://pubmed.ncbi.nlm.nih.gov/36346366\">Goodwin CM et al</a>. : GI cancer organoid models with KRAS mutations; genome-wide CRISPR screening followed by clinical trial. Not a perfect match but interesting.</p><ul><li><p></p></li></ul><p></p></li></ul><div class=\"subscription-widget-wrap-editor\" data-attrs=\"{&quot;url&quot;:&quot;https://biodatahacks.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe&quot;,&quot;language&quot;:&quot;en&quot;}\" data-component-name=\"SubscribeWidgetToDOM\"><div class=\"subscription-widget show-subscribe\"><div class=\"preamble\"><p class=\"cta-caption\">Thanks for reading &gt;_ Hacks &amp; Recipes! Subscribe for free to receive new posts and support my work.</p></div><form class=\"subscription-widget-subscribe\"><input type=\"email\" class=\"email-input\" name=\"email\" placeholder=\"Type your email\u2026\" tabindex=\"-1\"><input type=\"submit\" class=\"button primary\" value=\"Subscribe\"><div class=\"fake-input-wrapper\"><div class=\"fake-input\"></div><div class=\"fake-button\"></div></div></form></div></div>",
       "has_dynamic_content": false,
       "truncated_body_text": "This new paper describes a large-scale GI organoid biobank with multi-omics profiling and CRISPR-based dependency maps to identify context-specific gene vulnerabilities and potential drug targets. It highlights allele- and pathway-specific dependencies, core fitness gene sets, and pharmacogenomic associations in KRAS-mutant GI cancers, with open data re\u2026",
       "wordcount": 264,
@@ -1835,6 +1843,7 @@
       "reaction_count": 0,
       "comment_count": 0,
       "child_comment_count": 0,
+      "tts_on_demand": false,
       "is_geoblocked": false,
       "is_editor_preview": false,
       "hasCashtag": false
